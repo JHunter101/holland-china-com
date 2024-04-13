@@ -1,0 +1,94 @@
+@tailwind base;
+
+:root {
+	--main-bg-color: #fff;
+	--main-accent-color: #000;
+	--alt-bg-color: #ebebeb;
+	--alt-accent-color: #be132d;
+
+	--main-font: 'SF Pro Display';
+	--alt-font: 'Gobold Thin';
+	--mono-font: 'Share-TechMono';
+}
+
+.post-event {
+}
+
+.post-news {
+}
+
+.post-event,
+.post-news {
+	align-items: stretch;
+	padding: min(8vh, 2rem) 0;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	gap: min(4vh, 1rem);
+}
+
+.post-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-text .post-ps {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	margin-bottom: min(4vh, 1rem);
+}
+
+.post-text .read-more {
+	text-align: right;
+	font-size: min(3vw, 1rem);
+	font-weight: bold;
+	margin-top: auto;
+}
+
+.post-text p {
+	text-align: justify;
+}
+
+.post-image img {
+	aspect-ratio: 16 / 9;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.post-data {
+	justify-content: flex-start;
+}
+
+@media screen and (min-width: 1200px) {
+	.post-image img {
+		aspect-ratio: 21 / 9;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+	.post-text .post-ps {
+		-webkit-line-clamp: 3;
+	}
+}
+
+#logo-dump {
+	flex-wrap: wrap;
+}
+
+#logo-dump div {
+	height: 10vh;
+	padding: min(4vh, 1rem);
+}
+
+#logo-dump img {
+	height: 100%;
+	width: auto;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
