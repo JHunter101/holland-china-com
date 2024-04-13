@@ -546,7 +546,6 @@ p {
 
 .show-menu {
 	opacity: 1;
-	top: min(15vw, 5rem);
 	pointer-events: initial;
 }
 
@@ -571,6 +570,7 @@ p {
 	width: inherit;
 	z-index: 1;
 	flex-direction: column;
+	transition: display 5.5s ease;
 }
 
 .dropdown:hover .dropdown-content {
@@ -593,7 +593,7 @@ p {
 
 @media (min-width: 1200px) {
 	.dropdown-content {
-		top: min(16vh, 4rem);
+		padding-top: min(4vh, 1rem);
 		position: absolute;
 	}
 
