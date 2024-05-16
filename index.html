@@ -1,451 +1,380 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Holland China</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="dep/fractal-api-v1.0.1/css/fractal-css.css"
-		/>
-		<link rel="stylesheet" type="text/css" href="dist/css/output.css" />
-		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
-		<script src="dist/dep/fractal-api-v1.0.1/ts/nav.js"></script>
-		<script src="dist/src/ts/xxxxxx.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
 
-	<body>
-		<header id="js-nav-bar" class="header js-nav-bar--transparent">
-			<nav class="nav">
-				<div class="flex-container nav__data">
-					<a href="index.html" class="nav__logo"> Holland China </a>
-					<div
-						class="nav__toggle"
-						id="nav-toggle"
-						onclick="showMenu('nav-toggle', 'nav-menu')"
-					>
-						<i class="ri-menu-line nav__burger"></i>
-						<i class="ri-close-line nav__close"></i>
-					</div>
-				</div>
-				<!--=============== NAV MENU ===============-->
-				<div class="nav__menu desktop-only" id="nav-menu">
-					<ul class="nav__list">
-						<li>
-							<a class="nav__link flex-container" href="about.html"
-								>About Us</a
-							>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="news.html"
-								>News</a
-							>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="events.html"
-								>Events</a
-							>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="services.html"
-								>Services</a
-							>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="partners.html"
-								>Partners
-							</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="contacts.html"
-								>Contacts</a
-							>
-						</li>
+   <head>
+      <title>Holland China</title>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+      <link rel="stylesheet" type="text/css" href="dep/fractal-api-v1.0.1/css/fractal-css.css" />
+      <link rel="stylesheet" type="text/css" href="dist/css/output.css" />
+      <script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
+      <script src="dist/dep/fractal-api-v1.0.1/ts/nav.js"></script>
+      <script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
+      <script src="dist/src/ts/xxxxxx.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+   </head>
 
-						<li id="nav-lan" class="dropdown">
-							<a class="nav__link flex-container dropbtn">
-								EN
-								<i class="ri-arrow-down-s-fill"></i>
-							</a>
-							<div class="dropdown-content">
-								<a class="nav__link flex-container" href="#">EN</a>
-								<a class="nav__link flex-container" href="#">NL</a>
-								<a class="nav__link flex-container" href="#">中文</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<main class="section--fill-height">
-			<section
-				class="section--accent section--fill-height background-overlay"
-			>
-				<img
-					class="background-overlay__image"
-					src="res/banner-background.jpeg"
-					alt="Event Sample"
-				/>
-				<div class="background-overlay__text">
-					<h1 class="title text--center">Holland China</h1>
-					<h2 class="subtitle text--center">Slogan</h2>
-				</div>
-			</section>
+   <body>
+      <header id="js-nav-bar" class="header js-nav-bar--transparent">
+         <nav class="nav">
+            <div class="flex-container nav__data">
+               <a href="index.html" class="nav__logo"> Holland China </a>
+               <div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu desktop-only" id="nav-menu">
+               <ul class="nav__list">
+                  <li>
+                     <a class="nav__link flex-container" href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="about.html">About Us</a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="news.html">News</a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="events.html">Events</a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="services.html">Services</a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="partners.html">Partners
+                     </a>
+                  </li>
+                  <li>
+                     <a class="nav__link flex-container" href="contacts.html">Contacts</a>
+                  </li>
+                  <li id="nav-lan" class="dropdown">
+                     <a class="nav__link flex-container dropbtn">
+                        <i class="flag-icon flag-icon-gb"></i>
+                        <i class="ri-arrow-down-s-fill"></i>
+                     </a>
+                     <div class="dropdown-content">
+                        <a class="nav__link flex-container" href="#" onclick="loadEN()"><i
+                              class="flag-icon flag-icon-gb"></i>
+                        </a>
+                        <a class="nav__link flex-container" href="#" onclick="loadNL()"><i
+                              class="flag-icon flag-icon-nl"></i></a>
+                        <a class="nav__link flex-container" href="#" onclick="loadZH()"><i
+                              class="flag-icon flag-icon-cn"></i>
+                        </a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <main class="section--fill-height">
+         <section class="section--accent section--fill-height background-overlay">
+            <img class="background-overlay__image" src="res/banner-background.jpeg" alt="Event Sample" />
+            <div class="background-overlay__text section-tuck--tight">
+               <div class='box--light flex-container flex-container-col'>
+                  <h1 class="header--large text--center slide-down-1">
+                     Streamline Chinese business connections, negotiation, and
+                     event organization efficiently.
+                  </h1>
+                  <ul>
+                     <li class='slide-down-2'><i class="ri-check-line"></i>Matchmaking</li>
+                     <li class='slide-down-3'><i class="ri-check-line"></i>Business strategy consulting</li>
+                     <li class='slide-down-4'><i class="ri-check-line"></i>Cross culture business training</li>
+                     <li class='slide-down-5'><i class="ri-check-line"></i>Special events organising</li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section id="home-event" class="section-tuck">
+            <div class="section-container flex-natural section-border">
+               <h1 class="subtitle">Our Next Event</h1>
+               <div class="post-event flex-container-responsive flex-container">
+                  <div class="flex-item post-text">
+                     <a class="header--medium" href="#">
+                        Unlocking the Secrets of 'The Dream of the Red Chamber':
+                        A Journey in Translation</a>
+                     <div class="subheader post-data flex-container flex-row">
+                        <h3 class="">
+                           <span></span>
+                           <span>2022/03/25 13:00</span>
+                           -
+                           <span>2022/03/25 16:00</span>
+                           <br />
+                           <span class="">Koninklijke Industrieele Groote Club
+                           </span>
+                           <br />
+                           <span class="">Dam 27, 1012 JS Amsterdam, The Netherlands</span>
+                        </h3>
+                     </div>
+                     <div class="post-ps">
+                        <p>
+                           Op 15 april organiseert China Tafel Committee van
+                           Koninklijke IGC, Koninklijke Industrieele Groote Club
+                           een lezing over het vertalen van een 2.000 pagina's
+                           tellende klassieke roman 'De droom van de Rode Kamer'
+                           in 13 jaar. Mark Leenhouts zal over zijn bijzondere
+                           ervaring vertellen. 'De Droom van de Rode Kamer' is
+                           de grootste Chinese roman aller tijden, het boek dat
+                           iedere Chinees kent. Waarom is deze achttiende-eeuwse
+                           klassieker van 2000 pagina's, onlangs in het
+                           Nederlands vertaald, nog altijd zo geliefd? Zijn het
+                           de beschrijvingen van de rijke cultuur, de
+                           taoïstisch-boeddhistische bespiegelingen over schijn
+                           en wezen, of zit het hem in de personages, die ook nu
+                           nog, en ook buiten China, zo levendig overkomen?
+                           Zeker zit het hem in de taal, maar voor welke
+                           uitdagingen stelt dat de vertalers? Mark Leenhouts
+                           vertaalde samen met Anne Sytske Keijser en Silvia
+                           Marijnissen 'De Droom van de Rode Kamer', waarvoor
+                           zij de Filter Vertaalprijs wonnen. Lezing: gratis
+                           toegang Diner: optioneel Programma: 18:00 uur Borrel
+                           19:00 uur Lezing/presentatie 20:15 Diner -
+                           tweegangenmenu voor € 40,00 inclusief twee glazen
+                           wijn (diner all-in), geserveerd met water aan tafel
+                           en koffie of thee na afloop * Dresscode in IGC: pak
+                           en stropdas. * Het gebouw van de Koninklijke
+                           Industrieele Groote Club, Dam 27 te Amsterdam.
+                           Registreren: Bent u IGC-lid, dan kunt u zich
+                           aanmelden op www.igc.nl (via Agenda). Bent u geen
+                           lid, dan kunt u zich aanmelden door dit bericht te
+                           beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
+                           China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
+                           Abasi MSc RA Jos Hellebrekers Cees Caro On April
+                           15th, China Tafel Committee of Koninklijke IGC will
+                           organize a lecture about translating a 2,000-page
+                           classical novel 'The Dream of the Red Chamber' in 13
+                           years. Mark Leenhouts will tell us about his special
+                           experience. 'The Dream of the Red Chamber' is the
+                           greatest Chinese novel of all time, the book that
+                           every Chinese knows. Why is this eighteenth-century
+                           classic of 2000 pages, recently translated into
+                           Dutch, still so popular? Is it the descriptions of
+                           the rich culture, the Taoist-Buddhist reflections on
+                           appearance and essence, or is it the characters, who
+                           still seem so vivid today, and also outside China?
+                           Certainly it is in the language, but what challenges
+                           does that pose for translators? Mark Leenhouts,
+                           together with Anne Sytske Keijser and Silvia
+                           Marijnissen, translated 'The Dream of the Red
+                           Chamber', for which they won the Filter Translation
+                           Prize. Lecture: free entree Dinner: optional Program:
+                           18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
+                           PM Dinner - two-course menu for €40.00 including two
+                           glasses of wine (dinner all-in), served with water at
+                           the table and coffee or tea afterwards * Dress code
+                           in IGC: suit & tie. To register: If you are an IGC
+                           member, you can register at www.igc.nl (via Agenda).
+                           If you are not a member, you can register by replying
+                           to this message to carla.vaz@ohp.nl.
+                        </p>
+                     </div>
+                     <a class="read-more" href="">Read More</a>
+                  </div>
+                  <div class="flex-item post-image">
+                     <img src="res/sample event.jpeg" alt="Wallpaper Background Image" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="home-news" class="section-tuck">
+            <div class="section-container flex-natural section-border">
+               <h1 class="subtitle">Latest News</h1>
+               <div class="post-news flex-container-responsive flex-container">
+                  <div class="flex-item post-text">
+                     <a class="header--medium" href="#">
+                        Forging Dutch-Chinese Business Alliances: Insights from
+                        SEAN and NCBC Event in Wassenaar
+                     </a>
+                     <div class="subheader post-data flex-container flex-row">
+                        <h3 class="">
+                           <span>Posted by Xu Xiao Jia on </span>
+                           <span>2022/03/19 19:00</span>
+                        </h3>
+                     </div>
+                     <div class="post-ps">
+                        <p>
+                           On Friday March 22th, as the Chairwoman of the SEAN
+                           'Stichting Europe-Asia Network (Foundation)' and the
+                           board member of NCBC 'Netherlands China Business
+                           Council', I participated in the event co-organised by
+                           CCPIT (China Council for the Promotion of
+                           International Trade) Guangzhou and NCBC in Wassenaar.
+                           Mr. Jin Yuan, Economic & Commercial Counsellor of
+                           China in the Netherlands, Mr. Boudewijn Poldermans
+                           包德文, Vice chairman NCBC, Mr. Yang Yong, President
+                           of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
+                           Investment Projects of NFIA gave speeches. During the
+                           event, the speakers and the guests discussed various
+                           topics: Deepen economic and trade cooperation with
+                           the Netherlands and EU countries; Promote Guangzhou
+                           Business Environment; Seek potential partners in the
+                           Netherlands; Enhance exchanges in business
+                           community... NCBC en CCPIT Guangzhou will continue to
+                           jointly promote Dutch-Chinese business activities in
+                           the Netherlands and China.
+                        </p>
+                     </div>
+                     <a class="read-more" href="#">Read More</a>
+                  </div>
+                  <div class="flex-item post-image">
+                     <img src="res/sample news-1.jpeg" alt="Wallpaper Background Image" />
+                  </div>
+               </div>
+               <div class="post-news flex-container-responsive flex-container">
+                  <div class="flex-item post-text">
+                     <a class="header--medium" href="#">New Post Title</a>
+                     <div class="subheader post-data flex-container flex-row">
+                        <h3 class="">
+                           <span>Posted by Xu Xiao Jia on </span>
+                           <span>2022/03/19 19:00</span>
+                        </h3>
+                     </div>
+                     <div class="post-ps">
+                        <p>
+                           On Friday March 22th, as the Chairwoman of the SEAN
+                           'Stichting Europe-Asia Network (Foundation)' and the
+                           board member of NCBC 'Netherlands China Business
+                           Council', I participated in the event co-organised by
+                           CCPIT (China Council for the Promotion of
+                           International Trade) Guangzhou and NCBC in Wassenaar.
+                           Mr. Jin Yuan, Economic & Commercial Counsellor of
+                           China in the Netherlands, Mr. Boudewijn Poldermans
+                           包德文, Vice chairman NCBC, Mr. Yang Yong, President
+                           of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
+                           Investment Projects of NFIA gave speeches. During the
+                           event, the speakers and the guests discussed various
+                           topics: Deepen economic and trade cooperation with
+                           the Netherlands and EU countries; Promote Guangzhou
+                           Business Environment; Seek potential partners in the
+                           Netherlands; Enhance exchanges in business
+                           community... NCBC en CCPIT Guangzhou will continue to
+                           jointly promote Dutch-Chinese business activities in
+                           the Netherlands and China.
+                        </p>
+                     </div>
+                     <a class="read-more" href="#">Read More</a>
+                  </div>
+                  <div class="flex-item post-image">
+                     <img src="res/sample news-2.jpeg" alt="Wallpaper Background Image" />
+                  </div>
+               </div>
+               <div class="post-news flex-container-responsive flex-container">
+                  <div class="flex-item post-text">
+                     <a class="header--medium" href="#">New Post Title</a>
+                     <div class="subheader post-data flex-container flex-row">
+                        <h3 class="">
+                           <span>Posted by Xu Xiao Jia on </span>
+                           <span>2022/03/19 19:00</span>
+                        </h3>
+                     </div>
+                     <div class="post-ps">
+                        <p>
+                           On Friday March 22th, as the Chairwoman of the SEAN
+                           'Stichting Europe-Asia Network (Foundation)' and the
+                           board member of NCBC 'Netherlands China Business
+                           Council', I participated in the event co-organised by
+                           CCPIT (China Council for the Promotion of
+                           International Trade) Guangzhou and NCBC in Wassenaar.
+                           Mr. Jin Yuan, Economic & Commercial Counsellor of
+                           China in the Netherlands, Mr. Boudewijn Poldermans
+                           包德文, Vice chairman NCBC, Mr. Yang Yong, President
+                           of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
+                           Investment Projects of NFIA gave speeches. During the
+                           event, the speakers and the guests discussed various
+                           topics: Deepen economic and trade cooperation with
+                           the Netherlands and EU countries; Promote Guangzhou
+                           Business Environment; Seek potential partners in the
+                           Netherlands; Enhance exchanges in business
+                           community... NCBC en CCPIT Guangzhou will continue to
+                           jointly promote Dutch-Chinese business activities in
+                           the Netherlands and China.
+                        </p>
+                     </div>
+                     <a class="read-more" href="#">Read More</a>
+                  </div>
+                  <div class="flex-item post-image">
+                     <img src="res/sample news-3.jpeg" alt="Wallpaper Background Image" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="home-about" class="section-tuck">
+            <div class="section-container flex-natural">
+               <h1 class="subtitle">About Us</h1>
+               <p class='text--large text--justify'>
+                  <span class='text--alt text--bold'>HollandChina</span> streamlines product importation, development,
+                  and event organization in <span class='text--alt text--bold'>China</span>. We offer direct access to
+                  parties, negotiation support, quality assurance, event planning, marketing assistance, and exclusive
+                  VIP arrangements.
+               </p>
+               <p class="text--large text--center text--alt"><a href="about.html">Learn More</a></p>
+            </div>
+         </section>
+         <footer class="section-tuck section--alt">
+            <section class="section-container text--center">
+               <div class="flex-container flex-container-responsive-rev flex-natural">
+                  <div class="flex-item flex-container flex-container-row flex-start">
+                     <div class="flex-container flex-container-col flex-item flex-start">
+                        <h1 class="header--small">HollandChina Consulting</h1>
+                        <p><a href="mailto:xu@hollandchina.com" target="_blank">
+                              xu@hollandchina.com
+                           </a>
+                        </p>
+                        <p>KvK: 73925489</p>
+                        <p>VAT: 0023 48 269 B12</p>
+                        <p><a href='https://www.linkedin.com/company/hollandchina'><i
+                                 class="ri-linkedin-fill text--large"></i></a></p>
+                     </div>
+                     <div class="flex-container flex-container-col flex-item flex-start">
+                        <h1 class="header--small">Our Network</h1>
+                        <p><a href='hollandchina.com'>hollandchina.com</a></p>
+                        <p><a href='hollandchina.net'>hollandchina.net</a></p>
+                        <p><a href='europeasianetwork.org'>europeasianetwork.org</a></p>
+                     </div>
+                  </div>
+                  <div class="flex-item flex-container flex-container-col flex-natural">
+                     <h1 class="header--small">Our Partners</h1>
+                     <div id="logo-dump" class="flex-container flex-row">
+                        <div>
+                           <img src="res/partners/1689250661171.jpeg" alt="logo 1" />
+                        </div>
+                        <div>
+                           <img src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg" alt="logo 1" />
+                        </div>
+                        <div>
+                           <img src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png" alt="logo 1" />
+                        </div>
+                        <div>
+                           <img src="res/partners/ai-h-logo.jpg" alt="logo 1" />
+                        </div>
+                        <div>
+                           <img src="res/partners/China-Telecom-01-900x0.png" alt="logo 1" />
+                        </div>
+                        <div>
+                           <img src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
+                              alt="logo 1" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="signature" class="flex-container flex-container-responsive">
+                  <h1 id="copyright" class="text--tiny flex-item text--left">
+                     Copyright © HollandChina Consulting - All rights reserved.
+                  </h1>
+                  <div id="language-select" class="flex-container flex-container-row flex-item flex-gap--large">
+                     <a class="flex-item" href="index.html"><i class="flag-icon flag-icon-nl"></i></a>
+                     <a class="flex-item" href="index.html"><i class="flag-icon flag-icon-gb"></i></a>
+                     <a class="flex-item" href="index.html"><i class="flag-icon flag-icon-cn"></i></a>
+                  </div>
+                  <h1 id="jack-chen" class="text--tiny flex-item text--right">
+                     Designed & Developed by Jack Chen
+                  </h1>
+               </div>
+            </section>
+         </footer>
+      </main>
+   </body>
 
-			<section id="home-event" class="section-tuck">
-				<div class="section-container flex-natural section-border">
-					<h1 class="subtitle">Our Next Event</h1>
-					<div class="post-event flex-container-responsive flex-container">
-						<div class="flex-item post-text">
-							<h2 class="header--medium">
-								Unlocking the Secrets of 'The Dream of the Red Chamber':
-								A Journey in Translation
-							</h2>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span></span>
-									<span>2022/03/25 13:00</span>
-									-
-									<span>2022/03/25 16:00</span>
-									<br />
-									<span class=""
-										>Koninklijke Industrieele Groote Club
-									</span>
-									<br />
-									<span class=""
-										>Dam 27, 1012 JS Amsterdam, The Netherlands</span
-									>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									Op 15 april organiseert China Tafel Committee van
-									Koninklijke IGC, Koninklijke Industrieele Groote Club
-									een lezing over het vertalen van een 2.000 pagina's
-									tellende klassieke roman 'De droom van de Rode Kamer'
-									in 13 jaar. Mark Leenhouts zal over zijn bijzondere
-									ervaring vertellen. 'De Droom van de Rode Kamer' is
-									de grootste Chinese roman aller tijden, het boek dat
-									iedere Chinees kent. Waarom is deze achttiende-eeuwse
-									klassieker van 2000 pagina's, onlangs in het
-									Nederlands vertaald, nog altijd zo geliefd? Zijn het
-									de beschrijvingen van de rijke cultuur, de
-									taoïstisch-boeddhistische bespiegelingen over schijn
-									en wezen, of zit het hem in de personages, die ook nu
-									nog, en ook buiten China, zo levendig overkomen?
-									Zeker zit het hem in de taal, maar voor welke
-									uitdagingen stelt dat de vertalers? Mark Leenhouts
-									vertaalde samen met Anne Sytske Keijser en Silvia
-									Marijnissen 'De Droom van de Rode Kamer', waarvoor
-									zij de Filter Vertaalprijs wonnen. Lezing: gratis
-									toegang Diner: optioneel Programma: 18:00 uur Borrel
-									19:00 uur Lezing/presentatie 20:15 Diner -
-									tweegangenmenu voor € 40,00 inclusief twee glazen
-									wijn (diner all-in), geserveerd met water aan tafel
-									en koffie of thee na afloop * Dresscode in IGC: pak
-									en stropdas. * Het gebouw van de Koninklijke
-									Industrieele Groote Club, Dam 27 te Amsterdam.
-									Registreren: Bent u IGC-lid, dan kunt u zich
-									aanmelden op www.igc.nl (via Agenda). Bent u geen
-									lid, dan kunt u zich aanmelden door dit bericht te
-									beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
-									China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
-									Abasi MSc RA Jos Hellebrekers Cees Caro On April
-									15th, China Tafel Committee of Koninklijke IGC will
-									organize a lecture about translating a 2,000-page
-									classical novel 'The Dream of the Red Chamber' in 13
-									years. Mark Leenhouts will tell us about his special
-									experience. 'The Dream of the Red Chamber' is the
-									greatest Chinese novel of all time, the book that
-									every Chinese knows. Why is this eighteenth-century
-									classic of 2000 pages, recently translated into
-									Dutch, still so popular? Is it the descriptions of
-									the rich culture, the Taoist-Buddhist reflections on
-									appearance and essence, or is it the characters, who
-									still seem so vivid today, and also outside China?
-									Certainly it is in the language, but what challenges
-									does that pose for translators? Mark Leenhouts,
-									together with Anne Sytske Keijser and Silvia
-									Marijnissen, translated 'The Dream of the Red
-									Chamber', for which they won the Filter Translation
-									Prize. Lecture: free entree Dinner: optional Program:
-									18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
-									PM Dinner - two-course menu for €40.00 including two
-									glasses of wine (dinner all-in), served with water at
-									the table and coffee or tea afterwards * Dress code
-									in IGC: suit & tie. To register: If you are an IGC
-									member, you can register at www.igc.nl (via Agenda).
-									If you are not a member, you can register by replying
-									to this message to carla.vaz@ohp.nl.
-								</p>
-							</div>
-
-							<div class="read-more">Read More</div>
-						</div>
-						<div class="flex-item post-image">
-							<img
-								src="res/sample event.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="home-news" class="section-tuck">
-				<div class="section-container flex-natural section-border">
-					<h1 class="subtitle">Latest News</h1>
-					<div class="post-news flex-container-responsive flex-container">
-						<div class="flex-item post-text">
-							<h2 class="header--medium">
-								Forging Dutch-Chinese Business Alliances: Insights from
-								SEAN and NCBC Event in Wassenaar
-							</h2>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span>Posted by Xu Xiao Jia on </span>
-									<span>2022/03/19 19:00</span>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									On Friday March 22th, as the Chairwoman of the SEAN
-									'Stichting Europe-Asia Network (Foundation)' and the
-									board member of NCBC 'Netherlands China Business
-									Council', I participated in the event co-organised by
-									CCPIT (China Council for the Promotion of
-									International Trade) Guangzhou and NCBC in Wassenaar.
-									Mr. Jin Yuan, Economic & Commercial Counsellor of
-									China in the Netherlands, Mr. Boudewijn Poldermans
-									包德文, Vice chairman NCBC, Mr. Yang Yong, President
-									of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
-									Investment Projects of NFIA gave speeches. During the
-									event, the speakers and the guests discussed various
-									topics: Deepen economic and trade cooperation with
-									the Netherlands and EU countries; Promote Guangzhou
-									Business Environment; Seek potential partners in the
-									Netherlands; Enhance exchanges in business
-									community... NCBC en CCPIT Guangzhou will continue to
-									jointly promote Dutch-Chinese business activities in
-									the Netherlands and China.
-								</p>
-							</div>
-
-							<div class="read-more">Read More</div>
-						</div>
-						<div class="flex-item post-image">
-							<img
-								src="res/sample news-1.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-					</div>
-					<div class="post-news flex-container-responsive flex-container">
-						<div class="flex-item post-text">
-							<h2 class="header--medium">News Post Title 2</h2>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span>Posted by Xu Xiao Jia on </span>
-									<span>2022/03/19 19:00</span>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									On Friday March 22th, as the Chairwoman of the SEAN
-									'Stichting Europe-Asia Network (Foundation)' and the
-									board member of NCBC 'Netherlands China Business
-									Council', I participated in the event co-organised by
-									CCPIT (China Council for the Promotion of
-									International Trade) Guangzhou and NCBC in Wassenaar.
-									Mr. Jin Yuan, Economic & Commercial Counsellor of
-									China in the Netherlands, Mr. Boudewijn Poldermans
-									包德文, Vice chairman NCBC, Mr. Yang Yong, President
-									of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
-									Investment Projects of NFIA gave speeches. During the
-									event, the speakers and the guests discussed various
-									topics: Deepen economic and trade cooperation with
-									the Netherlands and EU countries; Promote Guangzhou
-									Business Environment; Seek potential partners in the
-									Netherlands; Enhance exchanges in business
-									community... NCBC en CCPIT Guangzhou will continue to
-									jointly promote Dutch-Chinese business activities in
-									the Netherlands and China.
-								</p>
-							</div>
-
-							<div class="read-more">Read More</div>
-						</div>
-						<div class="flex-item post-image">
-							<img
-								src="res/sample news-2.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-					</div>
-					<div class="post-news flex-container-responsive flex-container">
-						<div class="flex-item post-text">
-							<h2 class="header--medium">News Post Title 3</h2>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span>Posted by Xu Xiao Jia on </span>
-									<span>2022/03/19 19:00</span>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									On Friday March 22th, as the Chairwoman of the SEAN
-									'Stichting Europe-Asia Network (Foundation)' and the
-									board member of NCBC 'Netherlands China Business
-									Council', I participated in the event co-organised by
-									CCPIT (China Council for the Promotion of
-									International Trade) Guangzhou and NCBC in Wassenaar.
-									Mr. Jin Yuan, Economic & Commercial Counsellor of
-									China in the Netherlands, Mr. Boudewijn Poldermans
-									包德文, Vice chairman NCBC, Mr. Yang Yong, President
-									of CCPIT Guangzhou and Mr. Hans Kuijpers, Director
-									Investment Projects of NFIA gave speeches. During the
-									event, the speakers and the guests discussed various
-									topics: Deepen economic and trade cooperation with
-									the Netherlands and EU countries; Promote Guangzhou
-									Business Environment; Seek potential partners in the
-									Netherlands; Enhance exchanges in business
-									community... NCBC en CCPIT Guangzhou will continue to
-									jointly promote Dutch-Chinese business activities in
-									the Netherlands and China.
-								</p>
-							</div>
-
-							<div class="read-more">Read More</div>
-						</div>
-						<div class="flex-item post-image">
-							<img
-								src="res/sample news-3.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="home-about" class="section-tuck">
-				<div class="section-container flex-natural">
-					<h1 class="subtitle">About Us</h1>
-					<p>
-						You wish to import a product from China, or develop your own
-						product in China. You want direct contact with the right
-						parties, without interference from a commissioner.
-						HollandChina finds those parties for you.
-					</p>
-					<p>
-						You need the best negotiation result and the highest possible
-						quality. HollandChina's experts (from environmental technology
-						and engineering to textile and food safety) advise you during
-						negotation, and do quality assurance testing.
-					</p>
-					<p>
-						You wish to organize an event, concert tour or festival in
-						China? HollandChina helps you with programme advice, the local
-						organization, marketing, and a high seat occupancy rate. We
-						also offer a top VIP-arrangement: an 18-century style banquet
-						in the Forbidden City.
-					</p>
-				</div>
-			</section>
-			<footer class="section-tuck section--alt">
-				<section class="section-container text--center">
-					<div
-						class="flex-container flex-container-responsive flex-natural"
-					>
-						<div
-							class="flex-item flex-container flex-container-col flex-natural"
-						>
-							<h1 class="header--small">Our Partners</h1>
-							<div id="logo-dump" class="flex-container flex-row">
-								<div>
-									<img
-										src="res/partners/1689250661171.jpeg"
-										alt="logo 1"
-									/>
-								</div>
-								<div>
-									<img
-										src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg"
-										alt="logo 1"
-									/>
-								</div>
-								<div>
-									<img
-										src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png"
-										alt="logo 1"
-									/>
-								</div>
-								<div>
-									<img src="res/partners/ai-h-logo.jpg" alt="logo 1" />
-								</div>
-								<div>
-									<img
-										src="res/partners/China-Telecom-01-900x0.png"
-										alt="logo 1"
-									/>
-								</div>
-								<div>
-									<img
-										src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
-										alt="logo 1"
-									/>
-								</div>
-							</div>
-						</div>
-						<div
-							class="flex-item flex-container flex-container-row flex-start"
-						>
-							<div
-								class="flex-container flex-container-col flex-item flex-start"
-							>
-								<h1 class="header--small">HollandChina Consulting</h1>
-								<p>Luitgardeweg 32</p>
-								<p>1211 NB Hilversum (NL)</p>
-								<p>xu@hollandchina.com</p>
-								<p>Tel: +31 (0)6 2645 4372</p>
-								<p>Linkedin Will be here</p>
-								<p>KvK: 73925489</p>
-								<p>VAT: 0023 48 269 B12</p>
-							</div>
-							<div
-								class="flex-container flex-container-col flex-item flex-start"
-							>
-								<h1 class="header--small">Our Network</h1>
-								<p>hollandchina.com</p>
-								<p>hollandchina.net</p>
-								<p>europeasianetwork.org</p>
-							</div>
-						</div>
-					</div>
-
-					<div
-						id="signature"
-						class="flex-container flex-container-responsive"
-					>
-						<h1 id="copyright" class="text--tiny flex-item text--left">
-							Copyright © HollandChina Consulting - All rights reserved.
-						</h1>
-						<div
-							id="language-select"
-							class="flex-container flex-container-row flex-item"
-						>
-							<h1 class="header--small">Nederlands</h1>
-							<h1 class="header--small">English</h1>
-							<h1 class="header--small">中文</h1>
-						</div>
-						<h1 id="jack-chen" class="text--tiny flex-item text--right">
-							Designed & Developed by Jack Chen
-						</h1>
-					</div>
-				</section>
-			</footer>
-		</main>
-	</body>
 </html>

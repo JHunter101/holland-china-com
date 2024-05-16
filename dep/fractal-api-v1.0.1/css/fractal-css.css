@@ -7,10 +7,11 @@
 @import url(https://fonts.cdnfonts.com/css/share-techmono-2);
 
 :root {
-	--main-bg-color: #000;
-	--main-accent-color: #fff;
-	--alt-bg-color: #fff;
-	--alt-accent-color: #000;
+	--main-bg-color: rgb(0, 0, 0);
+	--main-accent-color: rgb(255, 255, 255);
+	--alt-bg-color: rgb(255, 255, 255);
+	--alt-accent-color: rgb(0, 0, 0);
+	--alt-accent-color-light: rgb(250, 250, 250);
 
 	--main-font: 'SF Pro Display';
 	--alt-font: 'Gobold Thin';
@@ -18,7 +19,7 @@
 }
 
 * {
-	box-sizing: border-box;
+	box-sizing: -box;
 	padding: 0;
 	margin: 0;
 }
@@ -59,32 +60,39 @@ li {
 .title {
 	font-size: min(12vw, 4rem);
 	margin-bottom: min(12vh, 3rem);
-	font-weight: 1000;
+	font-weight: bolder;
 }
 
 .subtitle {
 	font-size: min(9vw, 3rem);
 	margin-bottom: min(8vh, 2rem);
-	font-weight: 1000;
+	font-weight: bolder;
 	color: var(--alt-accent-color);
 }
 
 .header--large {
 	font-size: min(6vw, 2rem);
 	margin-bottom: min(6vh, 1.5rem);
-	font-weight: 800;
+	font-weight: bold;
 }
 
 .header--medium {
 	font-size: min(4.5vw, 1.5rem);
 	margin-bottom: min(4vh, 1rem);
-	font-weight: 600;
+	font-weight: bold;
+}
+
+html p,
+.header--small,
+.subheader,
+html span,
+html i {
+	font-size: min(3.6vw, 1.2rem);
 }
 
 html p,
 .header--small,
 .subheader {
-	font-size: min(3vw, 1rem);
 	margin-bottom: min(4vh, 1rem);
 }
 
@@ -95,16 +103,40 @@ html p,
 }
 
 .header--small {
-	font-weight: 600;
+	font-weight: bold;
 }
 
-.text--tiny {
-	font-size: min(2.25vw, 0.75rem);
-	margin-bottom: min(3vh, 0.75rem);
+.text--extra-large {
+	font-size: min(9vw, 3rem);
+	margin: 0 min(0.75vw, 0.25rem);
+}
+
+.text--large,
+.text--large * {
+	font-size: min(4.5vw, 1.5rem);
+	margin-bottom: min(4vh, 1rem);
+}
+
+.text--tiny,
+.text--tiny * {
+	font-size: min(2.4vw, 0.8rem);
+	margin-bottom: min(3.2vh, 0.8rem);
+}
+
+.text--main {
+	color: var(--main-accent-color);
+}
+
+.text--alt {
+	color: var(--alt-accent-color);
+}
+
+.text--bold {
+	font-weight: bolder;
 }
 
 p {
-	font-weight: 400;
+	font-weight: normal;
 }
 
 .text--left {
@@ -161,12 +193,33 @@ p {
 	clear: both;
 }
 
-.light-border {
+.border--light {
 	box-shadow: 0 0 4px #ddd;
 	border: 1px solid #ddd;
 }
 
+.border--left {
+	border-left: 2px solid #ddd;
+}
+
+.padding-small {
+	padding: min(4vh, 1rem) min(3vw, 1rem);
+}
+
+.w100 {
+	width: 100%;
+}
+
+.h100 {
+	height: 100%;
+}
+
 /*-------------------------------------------------------------- # Basic Shapes Section Start--------------------------------------------------------------*/
+.section-tuck--tight {
+	padding-left: 35vw;
+	padding-right: 35vw;
+}
+
 .section-tuck {
 	padding-left: 20vw;
 	padding-right: 20vw;
@@ -181,6 +234,10 @@ p {
 	.section-tuck {
 		padding-left: 5vw;
 		padding-right: 5vw;
+	}
+	.section-tuck--tight {
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 }
 
@@ -209,8 +266,13 @@ p {
 .section--alt * {
 	background-color: var(--alt-bg-color);
 }
+
 .section--fill-height {
 	height: clamp(100dvh, 100dvh, 250vh);
+}
+
+.section--fill-height-to-air {
+	min-height: calc(clamp(100dvh, 100dvh, 250vh) - min(16vh, 4rem));
 }
 
 .section--half-height {
@@ -240,9 +302,30 @@ p {
 	flex-direction: row;
 }
 
+.flex-container-responsive-rev {
+	flex-direction: row;
+}
+
+
+.flex-gap--small {
+	gap: min(4vh, 1rem);
+}
+
+.flex-gap--medium {
+	gap: min(8vh, 2rem);
+}
+
+.flex-gap--large {
+	gap: min(12vh, 3rem);
+}
+
 @media (max-width: 1200px) {
 	.flex-container-responsive {
 		flex-direction: column-reverse;
+	}
+
+	.flex-container-responsive-rev {
+	flex-direction: column;
 	}
 }
 
@@ -256,7 +339,8 @@ p {
 	justify-content: unset !important;
 }
 
-.flex-item {
+.flex-item,
+.flex-item-1 {
 	flex: 1;
 }
 
@@ -266,6 +350,10 @@ p {
 
 .flex-item-3 {
 	flex: 3;
+}
+
+.flex-item-4 {
+	flex: 4;
 }
 
 .grid-container {
@@ -305,7 +393,6 @@ p {
 
 .background-overlay__text,
 .background-overlay__text * {
-	text-transform: uppercase;
 	background: transparent;
 	font-family: var(--alt-font);
 	color: var(--main-bg-color);
@@ -397,6 +484,10 @@ p {
 	width: 100%;
 	background-color: var(--main-bg-color);
 	z-index: 100;
+}
+
+.nav-air {
+	height: min(16vh, 4rem);
 }
 
 .nav,
@@ -617,6 +708,15 @@ p {
 }
 
 /*-------------------------------------------------------------- # Buttons Section --------------------------------------------------------------*/
+.btn-medium,
+.btn-small,
+.btn-main,
+.btn-accent {
+	width: 100%;
+	text-align: center;
+    display: inline-block;
+}
+
 .btn-medium {
 	font-size: min(3vw, 1rem);
 	padding: min(2vh, 0.5rem) min(3vw, 1rem);
@@ -668,4 +768,296 @@ footer .section-container {
 	padding-top: min(4vh, 1rem);
 	border-top: min(0.25vh, 0.0625rem) solid var(--alt-accent-color);
 	justify-content: space-between;
+}
+
+
+/*-------------------------------------------------------------- # Maps --------------------------------------------------------------*/
+
+.leaf-map {
+	min-height: min(40vh, 15rem);
+}
+
+
+/*-------------------------------------------------------------- # Animations --------------------------------------------------------------*/
+
+  .slide-down-1 {
+    position: relative;
+    top: -100px;
+    -webkit-animation: slideDown 1s forwards;
+            animation: slideDown 1s forwards; 
+  }
+    .slide-down-2 {
+    position: relative;
+    top: -100px;
+    -webkit-animation: slideDown 2s forwards;
+            animation: slideDown 2s forwards; 
+  }
+    .slide-down-3 {
+    position: relative;
+    top: -100px;
+    -webkit-animation: slideDown 3s forwards;
+            animation: slideDown 3s forwards; 
+  }
+    .slide-down-4 {
+    position: relative;
+    top: -100px;
+    -webkit-animation: slideDown 4s forwards;
+            animation: slideDown 4s forwards; 
+  }
+  .slide-down-5 {
+    position: relative;
+    top: -100px;
+    -webkit-animation: slideDown 5s forwards;
+            animation: slideDown 5s forwards; 
+  }
+
+
+  @-webkit-keyframes slideDown {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      top: 0;
+    }
+  }
+
+  @keyframes slideDown {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      top: 0;
+    }
+  }
+
+  .slide-right-1 {
+    position: relative;
+    left: -100px;
+    -webkit-animation: slideRight 1s forwards;
+            animation: slideRight 1s forwards; 
+  }
+    .slide-right-2 {
+    position: relative;
+    left: -100px;
+    -webkit-animation: slideRight 2s forwards;
+            animation: slideRight 2s forwards; 
+  }
+    .slide-right-3 {
+    position: relative;
+    left: -100px;
+    -webkit-animation: slideRight 3s forwards;
+            animation: slideRight 3s forwards; 
+  }
+    .slide-right-4 {
+    position: relative;
+    left: -100px;
+    -webkit-animation: slideRight 4s forwards;
+            animation: slideRight 4s forwards; 
+  }
+  .slide-right-5 {
+    position: relative;
+    left: -100px;
+    -webkit-animation: slideRight 5s forwards;
+            animation: slideRight 5s forwards; 
+  }
+    @-webkit-keyframes slideRight {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes slideRight {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      left: 0;
+    }
+  }
+
+  .slide-left-1 {
+    position: relative;
+    right: -100px;
+    -webkit-animation: slideLeft 1s forwards;
+            animation: slideLeft 1s forwards; 
+  }
+    .slide-left-2 {
+    position: relative;
+    right: -100px;
+    -webkit-animation: slideLeft 2s forwards;
+            animation: slideLeft 2s forwards; 
+  }
+    .slide-left-3 {
+    position: relative;
+    right: -100px;
+    -webkit-animation: slideLeft 3s forwards;
+            animation: slideLeft 3s forwards; 
+  }
+    .slide-left-4 {
+    position: relative;
+    right: -100px;
+    -webkit-animation: slideLeft 4s forwards;
+            animation: slideLeft 4s forwards; 
+  }
+  .slide-left-5 {
+    position: relative;
+    right: -100px;
+    -webkit-animation: slideLeft 5s forwards;
+            animation: slideLeft 5s forwards; 
+  }
+    @-webkit-keyframes slideLeft {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes slideLeft {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      right: 0;
+    }
+  }
+
+  .slide-up-1 {
+    position: relative;
+    bottom: -100px;
+    -webkit-animation: slideUp 1s forwards;
+            animation: slideUp 1s forwards; 
+  }
+    .slide-up-2 {
+    position: relative;
+    bottom: -100px;
+    -webkit-animation: slideUp 2s forwards;
+            animation: slideUp 2s forwards; 
+  }
+    .slide-up-3 {
+    position: relative;
+    bottom: -100px;
+    -webkit-animation: slideUp 3s forwards;
+            animation: slideUp 3s forwards; 
+  }
+    .slide-up-4 {
+    position: relative;
+    bottom: -100px;
+    -webkit-animation: slideUp 4s forwards;
+            animation: slideUp 4s forwards; 
+  }
+  .slide-up-5 {
+    position: relative;
+    bottom: -100px;
+    -webkit-animation: slideUp 5s forwards;
+            animation: slideUp 5s forwards; 
+  }
+    @-webkit-keyframes slideUp {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes slideUp {
+	0% {
+	opacity: 0;
+	}
+	75% {
+	opacity: 0;
+	}
+    100% {
+      bottom: 0;
+    }
+  }
+
+  /*-------------------------------------------------------------- #  --------------------------------------------------------------*/
+
+.pinned-banner {
+	background-color: var(--alt-accent-color-light);
+	border-bottom: 1px solid var(--alt-accent-color);
+	padding: min(1vh, 0.25rem) min(3vw, 1rem);
+}
+
+.pinned-banner,
+.pinned-banner * {
+	color: var(--alt-accent-color);
+}
+
+.pinned-banner * {
+	background-color: transparent;
+    float: left;
+	margin-right: min(1.5vw, 0.5rem);
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.event-date {
+	border: 2px solid #ddd;
+	border-radius: min(3vw, 1rem);
+}
+
+.event-month {
+	background-color: var(--alt-accent-color);
+	border-bottom: 1px solid #ddd;
+  	border-radius: min(3vw, 1rem) min(3vw, 1rem) 0 0;
+	padding: min(0.25vh, 0.0625rem) min(6vw, 2rem);
+	width: 100%;
+}
+
+.event-month p {
+	color: var(--alt-accent-color-light);
+	text-transform: uppercase;
+}
+
+.event-day {
+	border-top: 1px solid #ddd;
+  	border-radius: 0 0 min(3vw, 1rem) min(3vw, 1rem);
+	padding: min(3vh, 0.75rem) min(6vw, 2rem);
+		width: 100%;
+}
+
+.event-month p, .event-day p {
+	margin: 0;
+	background: transparent;
+}
+
+
+@media (max-width: 1200px) {
+	.event-date,
+	 .event-day,
+	.event-month {
+		width: 100%;
+		border-radius: 0;
+	}
+
 }
