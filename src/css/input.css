@@ -135,35 +135,12 @@
 	margin-right: min(2vw, 0.5rem);
 }
 
-#partners .partners-partner h2 {
-	border-bottom: min(0.5vh, 0.125rem) solid var(--alt-accent-color);
-	padding-bottom: min(1vw, 0.33rem);
-}
-
-#partners .partners-partner {
-	align-items: stretch;
-	padding: min(8vh, 2rem) 0;
-	border-bottom: 1px solid #ddd;
-	border-top: 1px solid #ddd;
-	gap: min(4vh, 1rem);
-}
-
 #partners .partners-partner img {
-	padding: min(4vh, 1rem) min(3vw, 1rem);
-	aspect-ratio: 4 / 1;
 	height: 100%;
+	aspect-ratio: 4 / 1;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
-
-@media screen and (min-width: 1200px) {
-
-	#partners .partners-partner h2,
-	#partners .partners-partner p {
-		text-align: justify;
-	}
-}
-
 
 .box--light {
 	background-color: rgba(190, 19, 45, 0.85);
@@ -171,7 +148,7 @@
 	padding: min(12vh, 3rem) min(12vw, 4rem);
 }
 
-#_news .post-image img {
+#_news .swiper-slide img {
 	aspect-ratio: 16 / 9;
 }
 
@@ -201,3 +178,14 @@
 	border-radius: 50%;
 }
 
+#partners .partners-partner .partner-logo {
+	min-height: min(36vh, 9rem);
+}
+
+#partners .partners-partner .partner-text {
+	min-height: min(36vh, 9rem);
+}
+
+#about .team-member {
+	min-height: min(36vh, 9rem);
+}

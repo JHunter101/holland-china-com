@@ -4,14 +4,17 @@
 	<head>
 		<title>Holland China</title>
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
 		<link rel="stylesheet" type="text/css" href="dep/fractal-api-v1.0.1/css/fractal-css.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/output.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
 		<script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
 		<script src="dist/src/ts/myData.js"></script>
-		<script src="dist/src/ts/news.js"></script>
+		<script src="dist/src/ts/post.js"></script>
 		<script src="dist/src/ts/this.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
@@ -53,7 +56,7 @@
 						</li>
 						<li id="nav-lan" class="dropdown">
 							<a class="nav__link flex-container dropbtn">
-								<i id='nav-lan-current' class="flag-icon flag-icon-gb"></i>
+								<i class="flag-icon flag-icon-gb"></i>
 								<i class="ri-arrow-down-s-fill"></i>
 							</a>
 							<div class="dropdown-content">
@@ -73,13 +76,28 @@
 		</header>
 		<section class="nav-air"></section>
 		<main class="section--fill-height">
-			<section id="news" class="section-tuck">
-				<div id='news-pinned' class="section-container flex-natural section-border">
-					<h1 class="subtitle">Latest News</h1>
-
-					<div class='pinned-banner'> <i class="ri-pushpin-line"></i> <span>Pinned</span></div>
-				</div>
-				<div id='news-normal' class="section-container flex-natural">
+			<section id="_news" class="section-tuck">
+				<div id='article' class="post-news flex-container-col flex-container">
+					<div class="flex-item post-image">
+						<img id='post-main-image' src="" />
+					</div>
+					<div id='post-title' class="flex-item post-text header--medium no-margin">
+					</div>
+					<div class="subheader post-data flex-container flex-row">
+						<h3 class="">
+							<span>Posted by Xu Xiao Jia on </span>
+							<span id='post-date'></span>
+						</h3>
+					</div>
+					<div class="post-ps">
+						<p id='post-text' class=''>
+						</p>
+					</div>
+					<div class="swiper mySwiper">
+						<div id='post-alt-images' class="swiper-wrapper">
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
 
 				</div>
 			</section>
@@ -147,6 +165,30 @@
 				</section>
 			</footer>
 		</main>
+
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 'auto',
+				loop: true,
+				spaceBetween: 30,
+				centeredSlides: true,
+				autoHeight: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+
+		</script>
 	</body>
 
 </html>

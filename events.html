@@ -1,607 +1,151 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>Holland China</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-			rel="stylesheet"
-		/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="dep/fractal-api-v1.0.1/css/fractal-css.css"
-		/>
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+		<link rel="stylesheet" type="text/css" href="dep/fractal-api-v1.0.1/css/fractal-css.css" />
 		<link rel="stylesheet" type="text/css" href="dist/css/output.css" />
 		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
-      <script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
-		<script src="dist/src/ts/xxxxxx.js"></script>
+		<script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
+		<script src="dist/src/ts/this.js"></script>
+		<script src="dist/src/ts/event.js"></script>
+		<script src="dist/src/ts/myData.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 
 	<body>
-      <header id="js-nav-bar" class="header js-nav-bar--solid">
-         <nav class="nav">
-            <div class="flex-container nav__data">
-               <a href="index.html" class="nav__logo"> Holland China </a>
-               <div
-                  class="nav__toggle"
-                  id="nav-toggle"
-                  onclick="showMenu('nav-toggle', 'nav-menu')"
-                  >
-                  <i class="ri-menu-line nav__burger"></i>
-                  <i class="ri-close-line nav__close"></i>
-               </div>
-            </div>
-            <!--=============== NAV MENU ===============-->
-            <div class="nav__menu desktop-only" id="nav-menu">
-               <ul class="nav__list">
-                  <li>
-                     <a class="nav__link flex-container" href="index.html"
-                        >Home</a
-                        >
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="about.html"
-                        >About Us</a
-                        >
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="news.html"
-                        >News</a
-                        >
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="events.html"
-                        >Events</a
-                        >
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="services.html"
-                        >Services</a
-                        >
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="partners.html"
-                        >Partners
-                     </a>
-                  </li>
-                  <li>
-                     <a class="nav__link flex-container" href="contacts.html"
-                        >Contacts</a
-                        >
-                  </li>
-                  <li id="nav-lan" class="dropdown">
-                     <a class="nav__link flex-container dropbtn">
-                     <i class="flag-icon flag-icon-gb"></i>
-                     <i class="ri-arrow-down-s-fill"></i>
-                     </a>
-                     <div class="dropdown-content">
-                        <a
-                           class="nav__link flex-container"
-                           href="#"
-                           onclick="loadEN()"
-                           ><i class="flag-icon flag-icon-gb"></i>
-                        </a
-                           >
-                        <a
-                           class="nav__link flex-container"
-                           href="#"
-                           onclick="loadNL()"
-                           ><i class="flag-icon flag-icon-nl"></i></a
-                           >
-                        <a
-                           class="nav__link flex-container"
-                           href="#"
-                           onclick="loadZH()"
-                           ><i class="flag-icon flag-icon-cn"></i>
-                        </a
-                           >
-                     </div>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </header>
+		<header id="js-nav-bar" class="header js-nav-bar--solid">
+			<nav class="nav">
+				<div class="flex-container nav__data">
+					<a href="index.html" class="nav__logo"> Holland China </a>
+					<div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
+						<i class="ri-menu-line nav__burger"></i>
+						<i class="ri-close-line nav__close"></i>
+					</div>
+				</div>
+				<!--=============== NAV MENU ===============-->
+				<div class="nav__menu desktop-only" id="nav-menu">
+					<ul class="nav__list">
+						<li>
+							<a class="nav__link flex-container" href="index.html">Home</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="about.html">About Us</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="news.html">News</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="events.html">Events</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="services.html">Services</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="partners.html">Partners
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="contacts.html">Contacts</a>
+						</li>
+						<li id="nav-lan" class="dropdown">
+							<a class="nav__link flex-container dropbtn">
+								<i id='nav-lan-current' class="flag-icon flag-icon-gb"></i>
+								<i class="ri-arrow-down-s-fill"></i>
+							</a>
+							<div class="dropdown-content">
+								<a class="nav__link flex-container" href="." onclick="loadEN()"><i
+										class="flag-icon flag-icon-gb"></i>
+								</a>
+								<a class="nav__link flex-container" href="." onclick="loadNL()"><i
+										class="flag-icon flag-icon-nl"></i></a>
+								<a class="nav__link flex-container" href="." onclick="loadZH()"><i
+										class="flag-icon flag-icon-cn"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 		<main class="section--fill-height">
 			<section class="nav-air"></section>
 			<section id="home-event" class="section-tuck">
-				<div class="section-container flex-natural section-border">
+				<div id='events-upcoming' class="section-container flex-natural section-border">
 					<h1 class="subtitle">Upcoming Events</h1>
-					<div class="post-event flex-container-responsive flex-container">
-						<div class="flex-item-2 post-text">
-							<a class="header--medium" href="#">
-								Unlocking the Secrets of 'The Dream of the Red Chamber':
-								A Journey in Translation</a
-							>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span class=""
-										>Koninklijke Industrieele Groote Club
-									</span>
-									<br />
-									<span class=""
-										>Dam 27, 1012 JS Amsterdam, The Netherlands</span
-									>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									Op 15 april organiseert China Tafel Committee van
-									Koninklijke IGC, Koninklijke Industrieele Groote Club
-									een lezing over het vertalen van een 2.000 pagina's
-									tellende klassieke roman 'De droom van de Rode Kamer'
-									in 13 jaar. Mark Leenhouts zal over zijn bijzondere
-									ervaring vertellen. 'De Droom van de Rode Kamer' is
-									de grootste Chinese roman aller tijden, het boek dat
-									iedere Chinees kent. Waarom is deze achttiende-eeuwse
-									klassieker van 2000 pagina's, onlangs in het
-									Nederlands vertaald, nog altijd zo geliefd? Zijn het
-									de beschrijvingen van de rijke cultuur, de
-									taoïstisch-boeddhistische bespiegelingen over schijn
-									en wezen, of zit het hem in de personages, die ook nu
-									nog, en ook buiten China, zo levendig overkomen?
-									Zeker zit het hem in de taal, maar voor welke
-									uitdagingen stelt dat de vertalers? Mark Leenhouts
-									vertaalde samen met Anne Sytske Keijser en Silvia
-									Marijnissen 'De Droom van de Rode Kamer', waarvoor
-									zij de Filter Vertaalprijs wonnen. Lezing: gratis
-									toegang Diner: optioneel Programma: 18:00 uur Borrel
-									19:00 uur Lezing/presentatie 20:15 Diner -
-									tweegangenmenu voor € 40,00 inclusief twee glazen
-									wijn (diner all-in), geserveerd met water aan tafel
-									en koffie of thee na afloop * Dresscode in IGC: pak
-									en stropdas. * Het gebouw van de Koninklijke
-									Industrieele Groote Club, Dam 27 te Amsterdam.
-									Registreren: Bent u IGC-lid, dan kunt u zich
-									aanmelden op www.igc.nl (via Agenda). Bent u geen
-									lid, dan kunt u zich aanmelden door dit bericht te
-									beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
-									China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
-									Abasi MSc RA Jos Hellebrekers Cees Caro On April
-									15th, China Tafel Committee of Koninklijke IGC will
-									organize a lecture about translating a 2,000-page
-									classical novel 'The Dream of the Red Chamber' in 13
-									years. Mark Leenhouts will tell us about his special
-									experience. 'The Dream of the Red Chamber' is the
-									greatest Chinese novel of all time, the book that
-									every Chinese knows. Why is this eighteenth-century
-									classic of 2000 pages, recently translated into
-									Dutch, still so popular? Is it the descriptions of
-									the rich culture, the Taoist-Buddhist reflections on
-									appearance and essence, or is it the characters, who
-									still seem so vivid today, and also outside China?
-									Certainly it is in the language, but what challenges
-									does that pose for translators? Mark Leenhouts,
-									together with Anne Sytske Keijser and Silvia
-									Marijnissen, translated 'The Dream of the Red
-									Chamber', for which they won the Filter Translation
-									Prize. Lecture: free entree Dinner: optional Program:
-									18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
-									PM Dinner - two-course menu for €40.00 including two
-									glasses of wine (dinner all-in), served with water at
-									the table and coffee or tea afterwards * Dress code
-									in IGC: suit & tie. To register: If you are an IGC
-									member, you can register at www.igc.nl (via Agenda).
-									If you are not a member, you can register by replying
-									to this message to carla.vaz@ohp.nl.
-								</p>
-							</div>
-
-							<a class="read-more" href="#">Read More</a>
-						</div>
-						<div class="flex-item-2 post-image">
-							<img
-								src="res/sample event.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-
-						<div class='flex-item-1 flex-container'>
-							<div class='event-date flex-container flex-container-col'>
-								<div class='event-month flex-container'>
-									<p class='header--medium text--center'>Mar</p>
-								</div>
-								<div class='event-day flex-container'>
-									<p class='header--large text--center'>25</p>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
-				<div class="section-container flex-natural">
+				<div id='events-past' class="section-container flex-natural">
 					<h1 class="subtitle">Previous Events</h1>
-					<div class="post-event flex-container-responsive flex-container">
-						<div class="flex-item-2 post-text">
-							<a class="header--medium" href="#">
-								Unlocking the Secrets of 'The Dream of the Red Chamber':
-								A Journey in Translation</a
-							>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span class=""
-										>Koninklijke Industrieele Groote Club
-									</span>
-									<br />
-									<span class=""
-										>Dam 27, 1012 JS Amsterdam, The Netherlands</span
-									>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									Op 15 april organiseert China Tafel Committee van
-									Koninklijke IGC, Koninklijke Industrieele Groote Club
-									een lezing over het vertalen van een 2.000 pagina's
-									tellende klassieke roman 'De droom van de Rode Kamer'
-									in 13 jaar. Mark Leenhouts zal over zijn bijzondere
-									ervaring vertellen. 'De Droom van de Rode Kamer' is
-									de grootste Chinese roman aller tijden, het boek dat
-									iedere Chinees kent. Waarom is deze achttiende-eeuwse
-									klassieker van 2000 pagina's, onlangs in het
-									Nederlands vertaald, nog altijd zo geliefd? Zijn het
-									de beschrijvingen van de rijke cultuur, de
-									taoïstisch-boeddhistische bespiegelingen over schijn
-									en wezen, of zit het hem in de personages, die ook nu
-									nog, en ook buiten China, zo levendig overkomen?
-									Zeker zit het hem in de taal, maar voor welke
-									uitdagingen stelt dat de vertalers? Mark Leenhouts
-									vertaalde samen met Anne Sytske Keijser en Silvia
-									Marijnissen 'De Droom van de Rode Kamer', waarvoor
-									zij de Filter Vertaalprijs wonnen. Lezing: gratis
-									toegang Diner: optioneel Programma: 18:00 uur Borrel
-									19:00 uur Lezing/presentatie 20:15 Diner -
-									tweegangenmenu voor € 40,00 inclusief twee glazen
-									wijn (diner all-in), geserveerd met water aan tafel
-									en koffie of thee na afloop * Dresscode in IGC: pak
-									en stropdas. * Het gebouw van de Koninklijke
-									Industrieele Groote Club, Dam 27 te Amsterdam.
-									Registreren: Bent u IGC-lid, dan kunt u zich
-									aanmelden op www.igc.nl (via Agenda). Bent u geen
-									lid, dan kunt u zich aanmelden door dit bericht te
-									beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
-									China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
-									Abasi MSc RA Jos Hellebrekers Cees Caro On April
-									15th, China Tafel Committee of Koninklijke IGC will
-									organize a lecture about translating a 2,000-page
-									classical novel 'The Dream of the Red Chamber' in 13
-									years. Mark Leenhouts will tell us about his special
-									experience. 'The Dream of the Red Chamber' is the
-									greatest Chinese novel of all time, the book that
-									every Chinese knows. Why is this eighteenth-century
-									classic of 2000 pages, recently translated into
-									Dutch, still so popular? Is it the descriptions of
-									the rich culture, the Taoist-Buddhist reflections on
-									appearance and essence, or is it the characters, who
-									still seem so vivid today, and also outside China?
-									Certainly it is in the language, but what challenges
-									does that pose for translators? Mark Leenhouts,
-									together with Anne Sytske Keijser and Silvia
-									Marijnissen, translated 'The Dream of the Red
-									Chamber', for which they won the Filter Translation
-									Prize. Lecture: free entree Dinner: optional Program:
-									18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
-									PM Dinner - two-course menu for €40.00 including two
-									glasses of wine (dinner all-in), served with water at
-									the table and coffee or tea afterwards * Dress code
-									in IGC: suit & tie. To register: If you are an IGC
-									member, you can register at www.igc.nl (via Agenda).
-									If you are not a member, you can register by replying
-									to this message to carla.vaz@ohp.nl.
-								</p>
-							</div>
 
-							<a class="read-more" href="#">Read More</a>
-						</div>
-						<div class="flex-item-2 post-image">
-							<img
-								src="res/sample event.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-
-						<div class='flex-item-1 flex-container'>
-							<div class='event-date flex-container flex-container-col'>
-								<div class='event-month flex-container'>
-									<p class='header--medium text--center'>Mar</p>
-								</div>
-								<div class='event-day flex-container'>
-									<p class='header--large text--center'>25</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="post-event flex-container-responsive flex-container">
-						<div class="flex-item-2 post-text">
-							<a class="header--medium" href="#">
-								Unlocking the Secrets of 'The Dream of the Red Chamber':
-								A Journey in Translation</a
-							>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span class=""
-										>Koninklijke Industrieele Groote Club
-									</span>
-									<br />
-									<span class=""
-										>Dam 27, 1012 JS Amsterdam, The Netherlands</span
-									>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									Op 15 april organiseert China Tafel Committee van
-									Koninklijke IGC, Koninklijke Industrieele Groote Club
-									een lezing over het vertalen van een 2.000 pagina's
-									tellende klassieke roman 'De droom van de Rode Kamer'
-									in 13 jaar. Mark Leenhouts zal over zijn bijzondere
-									ervaring vertellen. 'De Droom van de Rode Kamer' is
-									de grootste Chinese roman aller tijden, het boek dat
-									iedere Chinees kent. Waarom is deze achttiende-eeuwse
-									klassieker van 2000 pagina's, onlangs in het
-									Nederlands vertaald, nog altijd zo geliefd? Zijn het
-									de beschrijvingen van de rijke cultuur, de
-									taoïstisch-boeddhistische bespiegelingen over schijn
-									en wezen, of zit het hem in de personages, die ook nu
-									nog, en ook buiten China, zo levendig overkomen?
-									Zeker zit het hem in de taal, maar voor welke
-									uitdagingen stelt dat de vertalers? Mark Leenhouts
-									vertaalde samen met Anne Sytske Keijser en Silvia
-									Marijnissen 'De Droom van de Rode Kamer', waarvoor
-									zij de Filter Vertaalprijs wonnen. Lezing: gratis
-									toegang Diner: optioneel Programma: 18:00 uur Borrel
-									19:00 uur Lezing/presentatie 20:15 Diner -
-									tweegangenmenu voor € 40,00 inclusief twee glazen
-									wijn (diner all-in), geserveerd met water aan tafel
-									en koffie of thee na afloop * Dresscode in IGC: pak
-									en stropdas. * Het gebouw van de Koninklijke
-									Industrieele Groote Club, Dam 27 te Amsterdam.
-									Registreren: Bent u IGC-lid, dan kunt u zich
-									aanmelden op www.igc.nl (via Agenda). Bent u geen
-									lid, dan kunt u zich aanmelden door dit bericht te
-									beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
-									China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
-									Abasi MSc RA Jos Hellebrekers Cees Caro On April
-									15th, China Tafel Committee of Koninklijke IGC will
-									organize a lecture about translating a 2,000-page
-									classical novel 'The Dream of the Red Chamber' in 13
-									years. Mark Leenhouts will tell us about his special
-									experience. 'The Dream of the Red Chamber' is the
-									greatest Chinese novel of all time, the book that
-									every Chinese knows. Why is this eighteenth-century
-									classic of 2000 pages, recently translated into
-									Dutch, still so popular? Is it the descriptions of
-									the rich culture, the Taoist-Buddhist reflections on
-									appearance and essence, or is it the characters, who
-									still seem so vivid today, and also outside China?
-									Certainly it is in the language, but what challenges
-									does that pose for translators? Mark Leenhouts,
-									together with Anne Sytske Keijser and Silvia
-									Marijnissen, translated 'The Dream of the Red
-									Chamber', for which they won the Filter Translation
-									Prize. Lecture: free entree Dinner: optional Program:
-									18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
-									PM Dinner - two-course menu for €40.00 including two
-									glasses of wine (dinner all-in), served with water at
-									the table and coffee or tea afterwards * Dress code
-									in IGC: suit & tie. To register: If you are an IGC
-									member, you can register at www.igc.nl (via Agenda).
-									If you are not a member, you can register by replying
-									to this message to carla.vaz@ohp.nl.
-								</p>
-							</div>
-
-							<a class="read-more" href="#">Read More</a>
-						</div>
-						<div class="flex-item-2 post-image">
-							<img
-								src="res/sample event.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-
-						<div class='flex-item-1 flex-container'>
-							<div class='event-date flex-container flex-container-col'>
-								<div class='event-month flex-container'>
-									<p class='header--medium text--center'>Mar</p>
-								</div>
-								<div class='event-day flex-container'>
-									<p class='header--large text--center'>25</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="post-event flex-container-responsive flex-container">
-						<div class="flex-item-2 post-text">
-							<a class="header--medium" href="#">
-								Unlocking the Secrets of 'The Dream of the Red Chamber':
-								A Journey in Translation</a
-							>
-							<div class="subheader post-data flex-container flex-row">
-								<h3 class="">
-									<span class=""
-										>Koninklijke Industrieele Groote Club
-									</span>
-									<br />
-									<span class=""
-										>Dam 27, 1012 JS Amsterdam, The Netherlands</span
-									>
-								</h3>
-							</div>
-							<div class="post-ps">
-								<p>
-									Op 15 april organiseert China Tafel Committee van
-									Koninklijke IGC, Koninklijke Industrieele Groote Club
-									een lezing over het vertalen van een 2.000 pagina's
-									tellende klassieke roman 'De droom van de Rode Kamer'
-									in 13 jaar. Mark Leenhouts zal over zijn bijzondere
-									ervaring vertellen. 'De Droom van de Rode Kamer' is
-									de grootste Chinese roman aller tijden, het boek dat
-									iedere Chinees kent. Waarom is deze achttiende-eeuwse
-									klassieker van 2000 pagina's, onlangs in het
-									Nederlands vertaald, nog altijd zo geliefd? Zijn het
-									de beschrijvingen van de rijke cultuur, de
-									taoïstisch-boeddhistische bespiegelingen over schijn
-									en wezen, of zit het hem in de personages, die ook nu
-									nog, en ook buiten China, zo levendig overkomen?
-									Zeker zit het hem in de taal, maar voor welke
-									uitdagingen stelt dat de vertalers? Mark Leenhouts
-									vertaalde samen met Anne Sytske Keijser en Silvia
-									Marijnissen 'De Droom van de Rode Kamer', waarvoor
-									zij de Filter Vertaalprijs wonnen. Lezing: gratis
-									toegang Diner: optioneel Programma: 18:00 uur Borrel
-									19:00 uur Lezing/presentatie 20:15 Diner -
-									tweegangenmenu voor € 40,00 inclusief twee glazen
-									wijn (diner all-in), geserveerd met water aan tafel
-									en koffie of thee na afloop * Dresscode in IGC: pak
-									en stropdas. * Het gebouw van de Koninklijke
-									Industrieele Groote Club, Dam 27 te Amsterdam.
-									Registreren: Bent u IGC-lid, dan kunt u zich
-									aanmelden op www.igc.nl (via Agenda). Bent u geen
-									lid, dan kunt u zich aanmelden door dit bericht te
-									beantwoorden aan carla.vaz@ohp.nl. Tot op 15e april.
-									China-Tafel Committee Koninklijke IGC Xiaojia Xu Alim
-									Abasi MSc RA Jos Hellebrekers Cees Caro On April
-									15th, China Tafel Committee of Koninklijke IGC will
-									organize a lecture about translating a 2,000-page
-									classical novel 'The Dream of the Red Chamber' in 13
-									years. Mark Leenhouts will tell us about his special
-									experience. 'The Dream of the Red Chamber' is the
-									greatest Chinese novel of all time, the book that
-									every Chinese knows. Why is this eighteenth-century
-									classic of 2000 pages, recently translated into
-									Dutch, still so popular? Is it the descriptions of
-									the rich culture, the Taoist-Buddhist reflections on
-									appearance and essence, or is it the characters, who
-									still seem so vivid today, and also outside China?
-									Certainly it is in the language, but what challenges
-									does that pose for translators? Mark Leenhouts,
-									together with Anne Sytske Keijser and Silvia
-									Marijnissen, translated 'The Dream of the Red
-									Chamber', for which they won the Filter Translation
-									Prize. Lecture: free entree Dinner: optional Program:
-									18:00 PM Drinks 19:00 PM Lecture/Presentation 20:15
-									PM Dinner - two-course menu for €40.00 including two
-									glasses of wine (dinner all-in), served with water at
-									the table and coffee or tea afterwards * Dress code
-									in IGC: suit & tie. To register: If you are an IGC
-									member, you can register at www.igc.nl (via Agenda).
-									If you are not a member, you can register by replying
-									to this message to carla.vaz@ohp.nl.
-								</p>
-							</div>
-
-							<a class="read-more" href="#">Read More</a>
-						</div>
-						<div class="flex-item-2 post-image">
-							<img
-								src="res/sample event.jpeg"
-								alt="Wallpaper Background Image"
-							/>
-						</div>
-
-						<div class='flex-item-1 flex-container'>
-							<div class='event-date flex-container flex-container-col'>
-								<div class='event-month flex-container'>
-									<p class='header--medium text--center'>Mar</p>
-								</div>
-								<div class='event-day flex-container'>
-									<p class='header--large text--center'>25</p>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
 			<footer class="section-tuck section--alt">
-				<section class="section-container text--center">
-					<div
-						class="flex-container flex-container-responsive flex-natural"
-					>
-						<div
-							class="flex-item flex-container flex-container-col flex-natural"
-						>
-							<h1 class="header--small">Our Partners</h1>
+				<section class="section-container flex-gap--small">
+					<div class="flex-container flex-container-responsive-rev flex-natural flex-gap--small">
+						<div class="flex-item flex-container flex-container-row flex-start flex-gap--small">
+							<div class="flex-container flex-container-col flex-item flex-start">
+								<h1 class="header--small">HollandChina Consulting</h1>
+								<p><a href="mailto:xu@hollandchina.com" target="_blank">
+										xu@hollandchina.com
+									</a>
+								</p>
+								<p>KvK: 73925489</p>
+								<p>VAT: 0023 48 269 B12</p>
+								<p><a href='https://www.linkedin.com/company/hollandchina'><i
+											class="ri-linkedin-fill text--large"></i></a></p>
+							</div>
+							<div class="flex-container flex-container-col flex-item flex-start">
+								<h1 class="header--small">Our Network</h1>
+								<p><a href='hollandchina.com'>hollandchina.com</a></p>
+								<p><a href='hollandchina.net'>hollandchina.net</a></p>
+								<p><a href='europeasianetwork.org'>europeasianetwork.org</a></p>
+							</div>
+						</div>
+						<div class="flex-item flex-container flex-container-col flex-natural">
+							<h1 class="header--small text--center">Our Partners</h1>
 							<div id="logo-dump" class="flex-container flex-row">
 								<div>
-									<img
-										src="res/partners/1689250661171.jpeg"
-										alt="logo 1"
-									/>
+									<img src="res/partners/1689250661171.jpeg" alt="logo 1" />
 								</div>
 								<div>
-									<img
-										src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg"
-										alt="logo 1"
-									/>
+									<img src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg"
+										alt="logo 1" />
 								</div>
 								<div>
-									<img
-										src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png"
-										alt="logo 1"
-									/>
+									<img src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png" alt="logo 1" />
 								</div>
 								<div>
 									<img src="res/partners/ai-h-logo.jpg" alt="logo 1" />
 								</div>
 								<div>
-									<img
-										src="res/partners/China-Telecom-01-900x0.png"
-										alt="logo 1"
-									/>
+									<img src="res/partners/China-Telecom-01-900x0.png" alt="logo 1" />
 								</div>
 								<div>
-									<img
-										src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
-										alt="logo 1"
-									/>
+									<img src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
+										alt="logo 1" />
 								</div>
-							</div>
-						</div>
-						<div
-							class="flex-item flex-container flex-container-row flex-start"
-						>
-							<div
-								class="flex-container flex-container-col flex-item flex-start"
-							>
-								<h1 class="header--small">HollandChina Consulting</h1>
-								<p>xu@hollandchina.com</p>
-								<p>Linkedin Will be here</p>
-								<p>KvK: 73925489</p>
-								<p>VAT: 0023 48 269 B12</p>
-							</div>
-							<div
-								class="flex-container flex-container-col flex-item flex-start"
-							>
-								<h1 class="header--small">Our Network</h1>
-								<p>hollandchina.com</p>
-								<p>hollandchina.net</p>
-								<p>europeasianetwork.org</p>
 							</div>
 						</div>
 					</div>
-
-					<div
-						id="signature"
-						class="flex-container flex-container-responsive"
-					>
+					<div id="signature" class="flex-container flex-container-responsive flex--center flex-gap--small">
 						<h1 id="copyright" class="text--tiny flex-item text--left">
 							Copyright © HollandChina Consulting - All rights reserved.
 						</h1>
-						<div
-                     id="language-select"
-                     class="flex-container flex-container-row flex-item"
-                     >
-                     <h1 class="header--small"><i class="flag-icon flag-icon-nl"></i></h1>
-                     <h1 class="header--small"><i class="flag-icon flag-icon-gb"></i></h1>
-                     <h1 class="header--small"><i class="flag-icon flag-icon-cn"></i></h1>
-                  </div>
-						<h1 id="jack-chen" class="text--tiny flex-item text--right">
-							Designed & Developed by Jack Chen
-						</h1>
+						<div id="language-select" class="flex-container flex-container-row flex-item flex-gap--large">
+							<a class="flex-item" href="."><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
+							<a class="flex-item" href="." onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
+							<a class="flex-item" href="." onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
+						</div>
+					<h1 id="jack-chen" class="text--tiny flex-item text--right">
+						Designed & Developed by Jack Chen
+					</h1>
 					</div>
 				</section>
 			</footer>
 		</main>
 	</body>
+
 </html>
