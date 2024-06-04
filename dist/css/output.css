@@ -530,7 +530,7 @@ video {
 .post-news {
 }
 
-.post-event,
+.post-events,
 .post-news {
   align-items: stretch;
   padding: min(8vh, 2rem) 0;

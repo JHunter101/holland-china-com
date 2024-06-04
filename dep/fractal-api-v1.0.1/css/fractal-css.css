@@ -1109,7 +1109,7 @@ footer .section-container {
 	border-radius: min(3vw, 1rem);
 }
 
-.event-month {
+.event-cal-top {
 	background-color: var(--alt-accent-color);
 	border-bottom: 1px solid #ddd;
 	border-radius: min(3vw, 1rem) min(3vw, 1rem) 0 0;
@@ -1117,20 +1117,23 @@ footer .section-container {
 	width: 100%;
 }
 
-.event-month p {
+.event-cal-top p,
+.event-cal-top p * {
 	color: var(--alt-accent-color-light);
 	text-transform: uppercase;
 }
 
-.event-day {
+.event-cal-bot {
 	border-top: 1px solid #ddd;
 	border-radius: 0 0 min(3vw, 1rem) min(3vw, 1rem);
 	padding: min(2vh, 0.5rem) min(7.5vw, 2.5rem);
 	width: 100%;
 }
 
-.event-month p,
-.event-day p {
+.event-cal-top p,
+.event-cal-top p *,
+.event-cal-bot p,
+.event-cal-bot p * {
 	margin: 0;
 	background: transparent;
 }
@@ -1139,8 +1142,8 @@ footer .section-container {
 @media (max-width: 1200px) {
 
 	.event-date,
-	.event-day,
-	.event-month {
+	.event-cal-bot,
+	.event-cal-top {
 		width: 100%;
 		border-radius: 0;
 	}
