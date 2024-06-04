@@ -21,7 +21,7 @@
 				<div class="flex-container nav__data">
 					<a href="index.html" class="nav__logo"> Holland China </a>
 					<div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
-						<i class="ri-menu-line nav__burger"></i>
+						<i class="carbon--language nav__burger"></i>
 						<i class="ri-close-line nav__close"></i>
 					</div>
 				</div>
@@ -29,41 +29,67 @@
 				<div class="nav__menu desktop-only" id="nav-menu">
 					<ul class="nav__list">
 						<li>
-							<a class="nav__link flex-container" href="index.html">Home</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="about.html">About Us</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="news.html">News</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="events.html">Events</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="services.html">Services</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="partners.html">Partners
+							<a class="nav__link flex-container" href="index.html">
+								<lan class='gb'>Home</lan>
+								<lan class='nl'>Start</lan>
+								<lan class='cn'>首页</lan>
 							</a>
 						</li>
 						<li>
-							<a class="nav__link flex-container" href="contacts.html">Contacts</a>
+							<a class="nav__link flex-container" href="about.html">
+								<lan class='gb'>About</lan>
+								<lan class='nl'>Over</lan>
+								<lan class='cn'>关于</lan>
+							</a>
 						</li>
+						<li>
+							<a class="nav__link flex-container" href="news.html">
+								<lan class='gb'>News</lan>
+								<lan class='nl'>Nieuws</lan>
+								<lan class='cn'>新闻</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="events.html">
+								<lan class='gb'>Events</lan>
+								<lan class='nl'>Evenementen</lan>
+								<lan class='cn'>事件</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="services.html">
+								<lan class='gb'>Services</lan>
+								<lan class='nl'>Diensten</lan>
+								<lan class='cn'>服务</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="partners.html">
+								<lan class='gb'>Partners</lan>
+								<lan class='nl'>Partners</lan>
+								<lan class='cn'>合作伙伴</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="contacts.html">
+								<lan class='gb'>Contacts</lan>
+								<lan class='nl'>Contacten</lan>
+								<lan class='cn'>联系人</lan>
+							</a>
+						</li>
+
 						<li id="nav-lan" class="dropdown">
 							<a class="nav__link flex-container dropbtn">
 								<i id='nav-lan-current' class="flag-icon flag-icon-gb"></i>
 								<i class="ri-arrow-down-s-fill"></i>
 							</a>
 							<div class="dropdown-content">
-								<a class="nav__link flex-container" href="." onclick="loadEN()"><i
-										class="flag-icon flag-icon-gb"></i>
-								</a>
-								<a class="nav__link flex-container" href="." onclick="loadNL()"><i
+								<a class="nav__link" onclick="loadEN()" href="javascript:window.location.reload();"><i
+										class="flag-icon flag-icon-gb"></i></a>
+								<a class="nav__link" onclick="loadNL()" href="javascript:window.location.reload();"><i
 										class="flag-icon flag-icon-nl"></i></a>
-								<a class="nav__link flex-container" href="." onclick="loadZH()"><i
-										class="flag-icon flag-icon-cn"></i>
-								</a>
+								<a class="nav__link" onclick="loadCN()" href="javascript:window.location.reload();"><i
+										class="flag-icon flag-icon-cn"></i></a>
 							</div>
 						</li>
 					</ul>
@@ -73,41 +99,87 @@
 		<main class="section--fill-height">
 			<section class="section--accent section--fill-height background-overlay">
 				<img class="background-overlay__image" src="res/banner-background.jpeg" alt="Event Sample" />
-				<div class="background-overlay__text">
-					<h1 class="title text--center"></h1>
-					<h2 class="subtitle text--center"></h2>
-				</div>
 			</section>
+
 			<section id="services" class="section-tuck section--fill-height-to-air">
 				<div class="section-container flex-natural">
-					<h1 class="subtitle">Our Services</h1>
+					<h1 class="subtitle text--center">
+						<lan class='gb'>Our Services</lan>
+						<lan class='nl'>Onze Diensten</lan>
+						<lan class='cn'>我们的服务</lan>
+					</h1>
 					<div class="flex-container flex-container-row">
 						<div class="service-block flex-item flex-container flex-container-col border--light w100">
 							<div class="w100">
 								<h2 class="header--medium w100">
-									Professional services for your China venture
+									<lan class='gb'>Procurement and Product Development</lan>
+									<lan class='nl'>Inkoop en Productontwikkeling</lan>
+									<lan class='cn'>采购和产品开发</lan>
 								</h2>
 							</div>
-
 							<div class="w100 flex-item-2">
 								<span>
-									<i class="ri-check-line"></i>
-									<p>Matchmaking</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
-									<p>Business strategy consulting</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
 									<p>
-										Investment in companies and real estate consulting
-										Cross culture business training
+										<lan class='gb'>We assist Chinese enterprises and institutions to develop
+											cooperation in Europe (Netherlands), and also help European enterprises and
+											institutions to find opportunities for cooperation in China. We help you
+											find products and projects that meet your requirements or help you find and
+											select trustworthy business partners. We improve communication barriers,
+											solve problems, and enhance negotiation effects.</lan>
+										<lan class='nl'>We helpen Chinese bedrijven en instellingen om
+											samenwerkingsverbanden in Europa (Nederland) te ontwikkelen, en helpen ook
+											Europese bedrijven en instellingen om samenwerkingskansen in China te
+											vinden. We helpen u om producten en projecten te vinden die aan uw eisen
+											voldoen of helpen u bij het vinden en selecteren van betrouwbare
+											zakenpartners. We verbeteren communicatiebarrières, lossen problemen op en
+											verbeteren de onderhandelingsresultaten.</lan>
+										<lan class='cn'>
+											我们协助中国的企业及不同机构在欧洲（荷兰）发展合作，同时我们也帮助欧洲的企业及机构寻找在中国的发展合作机会。我们帮助您找到适合您要求的产品及项目，或帮助您寻找并挑选值得信赖的商业伙伴。改善双方沟通障碍，解决难题，提高谈判效果。
+										</lan>
 									</p>
 								</span>
 								<span>
 									<i class="ri-check-line"></i>
-									<p>Special events organising</p>
+									<p>
+										<lan class='gb'>Provide advice during negotiations to improve efficiency</lan>
+										<lan class='nl'>Geef advies tijdens onderhandelingen om de efficiëntie te
+											verbeteren</lan>
+										<lan class='cn'>在谈判期间为您提供建议，提高谈判效率</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Provide advice on cooperation plans or order specifications
+										</lan>
+										<lan class='nl'>Geef advies over samenwerkingsplannen of orderspecificaties
+										</lan>
+										<lan class='cn'>为您的合作计划或订单规格制定提供建议</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Assist with expertise in relevant fields</lan>
+										<lan class='nl'>Assisteer met expertise in relevante vakgebieden</lan>
+										<lan class='cn'>对相关领域的专业知识提供帮助</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Professional quality supervision</lan>
+										<lan class='nl'>Professioneel kwaliteits toezicht</lan>
+										<lan class='cn'>专业的质量监督</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Professional project management</lan>
+										<lan class='nl'>Professioneel projectmanagement</lan>
+										<lan class='cn'>专业的项目管理</lan>
+									</p>
 								</span>
 							</div>
 						</div>
@@ -116,28 +188,46 @@
 						<div class="service-block flex-item flex-container flex-container-col border--light w100">
 							<div class="service-block-head w100">
 								<h2 class="header--medium w100">
-									Market research and matchmaking
+									<lan class='gb'>Investing in Europe</lan>
+									<lan class='nl'>Investeren in Europa</lan>
+									<lan class='cn'>在欧洲的投资</lan>
 								</h2>
 							</div>
 							<div class="flex-item-2 w100">
 								<span>
-									<i class="ri-check-line"></i>
 									<p>
-										Expert knowledge and 20 years of experience Direct
-										contact with the right party
+										<lan class='gb'>We assist Chinese clients in completing investments in Europe,
+											enabling you to complete your investment plans in the shortest possible
+											time.</lan>
+										<lan class='nl'>We helpen Chinese klanten bij het voltooien van investeringen in
+											Europa, zodat u uw investeringsplannen in de kortst mogelijke tijd kunt
+											voltooien.</lan>
+										<lan class='cn'>我们协助中国的客户完成在欧洲的投资，使您在最短时间内完成您的投资计划。</lan>
 									</p>
 								</span>
 								<span>
 									<i class="ri-check-line"></i>
 									<p>
-										Exclusivity: we support your interests only Also
-										available in an agency contract
+										<lan class='gb'>Improve your business plan</lan>
+										<lan class='nl'>Verbeter uw bedrijfsplan</lan>
+										<lan class='cn'>改善您的业务计划</lan>
 									</p>
 								</span>
 								<span>
 									<i class="ri-check-line"></i>
 									<p>
-										Support with sourcing and product development
+										<lan class='gb'>Provide relevant legal and tax consulting</lan>
+										<lan class='nl'>Geef relevante juridische en fiscale consultatie</lan>
+										<lan class='cn'>给予您相关的法律及税务咨询</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Assist with arranging all office facilities and staff</lan>
+										<lan class='nl'>Helpen bij het regelen van alle kantoorfaciliteiten en personeel
+										</lan>
+										<lan class='cn'>协助您安排所有办公设施及职员</lan>
 									</p>
 								</span>
 							</div>
@@ -145,55 +235,69 @@
 						<div class="service-block flex-item flex-container flex-container-col border--light w100">
 							<div class="service-block-head w100">
 								<h2 class="header--medium w100">
-									Support with sourcing and product development
+									<lan class='gb'>Property Management and Expat Services</lan>
+									<lan class='nl'>Vastgoedbeheer en Expat Services</lan>
+									<lan class='cn'>物业管理及外派人员的相关服务</lan>
 								</h2>
 							</div>
 							<div class="flex-item-2 w100">
 								<span>
-									<i class="ri-check-line"></i>
 									<p>
-										Expert domain advice whenever you need it A better
-										negotiation result
-									</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
-									<p>Expert Quality Assurance</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
-									<p>
-										Professional project management Exclusivity: we
-										support your interests only Also available in an
-										agency contract
+										<lan class='gb'>We assist investors in finding suitable real estate projects and
+											provide support for subsequent property management services. We help client
+											companies find housing for expatriates in Europe and assist with their
+											children's education needs.</lan>
+										<lan class='nl'>We helpen investeerders bij het vinden van geschikte
+											vastgoedprojecten en bieden ondersteuning bij de daaropvolgende
+											vastgoedbeheer diensten. We helpen klantbedrijven om huisvesting te vinden
+											voor expats in Europa en assisteren bij de onderwijsbehoeften van hun
+											kinderen.</lan>
+										<lan class='cn'>
+											我们帮助投资人寻找合适的地产项目，并对之后的物业管理服务提供支持。帮助客户公司派驻欧洲的人员选择住房，协助解决相关人员子女的教育需求。</lan>
 									</p>
 								</span>
 							</div>
 						</div>
 						<div class="service-block flex-item flex-container flex-container-col border--light w100">
 							<div class="service-block-head w100">
-								<h2 class="header--medium w100">Events in China</h2>
+								<h2 class="header--medium w100">
+									<lan class='gb'>Training Programs for Companies/Institutions</lan>
+									<lan class='nl'>Trainingsprogramma's voor bedrijven/instellingen</lan>
+									<lan class='cn'>针对企业/机构培训项目</lan>
+								</h2>
 							</div>
 							<div class="flex-item-2 w100">
 								<span>
-									<i class="ri-check-line"></i>
-									<p>Experience with all main event bureaux</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
-									<p>Expert knowledge of the local market</p>
-								</span>
-								<span>
-									<i class="ri-check-line"></i>
 									<p>
-										Option for an 18-century style "State banquet" in
-										the Forbidden City
+										<lan class='gb'>We customize training programs and content for companies and
+											institutions.</lan>
+										<lan class='nl'>We bieden op maat gemaakte trainingsprogramma's en inhoud voor
+											bedrijven en instellingen.</lan>
+										<lan class='cn'>我们为企业及机构量身定制培训项目及内容。</lan>
 									</p>
 								</span>
 								<span>
 									<i class="ri-check-line"></i>
 									<p>
-										Organizing and accompanying business delegations
+										<lan class='gb'>Cross-cultural</lan>
+										<lan class='nl'>Intercultureel</lan>
+										<lan class='cn'>跨文化</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Leadership</lan>
+										<lan class='nl'>Leiderschap</lan>
+										<lan class='cn'>领导力</lan>
+									</p>
+								</span>
+								<span>
+									<i class="ri-check-line"></i>
+									<p>
+										<lan class='gb'>Business Language</lan>
+										<lan class='nl'>Zakelijke taal</lan>
+										<lan class='cn'>商业语言</lan>
 									</p>
 								</span>
 							</div>
@@ -201,30 +305,55 @@
 					</div>
 				</div>
 			</section>
+
 			<footer class="section-tuck section--alt">
 				<section class="section-container flex-gap--small">
 					<div class="flex-container flex-container-responsive-rev flex-natural flex-gap--small">
 						<div class="flex-item flex-container flex-container-row flex-start flex-gap--small">
 							<div class="flex-container flex-container-col flex-item flex-start">
-								<h1 class="header--small">HollandChina Consulting</h1>
+								<h1 class="header--small">
+									<lan class='gb'>HollandChina Consulting</lan>
+									<lan class='nl'>HollandChina Consulting</lan>
+									<lan class='cn'>HollandChina Consulting</lan>
+								</h1>
 								<p><a href="mailto:xu@hollandchina.com" target="_blank">
-										xu@hollandchina.com
+										<lan class='gb'>xu@hollandchina.com</lan>
+										<lan class='nl'>xu@hollandchina.com</lan>
+										<lan class='cn'>xu@hollandchina.com</lan>
+									</a></p>
+								<p>
+									<lan class='gb'>KvK: 73925489</lan>
+									<lan class='nl'>KvK: 73925489</lan>
+									<lan class='cn'>工商注册号: 73925489</lan>
+								</p>
+								<p>
+									<lan class='gb'>VAT: 0023 48 269 B12</lan>
+									<lan class='nl'>BTW: 0023 48 269 B12</lan>
+									<lan class='cn'>增值税号: 0023 48 269 B12</lan>
+								</p>
+								<p>
+									<a href='https://www.linkedin.com/company/hollandchina'>
+										<i class="ri-linkedin-fill text--large"></i>
 									</a>
 								</p>
-								<p>KvK: 73925489</p>
-								<p>VAT: 0023 48 269 B12</p>
-								<p><a href='https://www.linkedin.com/company/hollandchina'><i
-											class="ri-linkedin-fill text--large"></i></a></p>
 							</div>
 							<div class="flex-container flex-container-col flex-item flex-start">
-								<h1 class="header--small">Our Network</h1>
-								<p><a href='hollandchina.com'>hollandchina.com</a></p>
-								<p><a href='hollandchina.net'>hollandchina.net</a></p>
-								<p><a href='europeasianetwork.org'>europeasianetwork.org</a></p>
+								<h1 class="header--small">
+									<lan class='gb'>Our Network</lan>
+									<lan class='nl'>Ons Netwerk</lan>
+									<lan class='cn'>我们的网络</lan>
+								</h1>
+								<p><a href='https://www.hollandchina.com'>hollandchina.com</a></p>
+								<p><a href='https://www.hollandchina.net'>hollandchina.net</a></p>
+								<p><a href='https://www.europeasianetwork.org'>europeasianetwork.org</a></p>
 							</div>
 						</div>
 						<div class="flex-item flex-container flex-container-col flex-natural">
-							<h1 class="header--small text--center">Our Partners</h1>
+							<h1 class="header--small text--center">
+								<lan class='gb'>Our Partners</lan>
+								<lan class='nl'>Onze Partners</lan>
+								<lan class='cn'>我们的合作伙伴</lan>
+							</h1>
 							<div id="logo-dump" class="flex-container flex-row">
 								<div>
 									<img src="res/partners/1689250661171.jpeg" alt="logo 1" />
@@ -249,17 +378,22 @@
 							</div>
 						</div>
 					</div>
-					<div id="signature" class="flex-container flex-container-responsive flex--center flex-gap--small">
-						<h1 id="copyright" class="text--tiny flex-item text--left">
-							Copyright © HollandChina Consulting - All rights reserved.
+					<div id="signature" class="flex-container flex-container-responsive flex-center flex-gap--small">
+						<h1 id="copyright" class="text--tiny flex-item text--left no-margin">
+							<lan class='gb'>Copyright © HollandChina Consulting - All rights reserved.</lan>
+							<lan class='nl'>Copyright © HollandChina Consulting - Alle rechten voorbehouden.</lan>
+							<lan class='cn'>版权所有 © HollandChina Consulting - 保留所有权利。</lan>
 						</h1>
-						<div id="language-select" class="flex-container flex-container-row flex-item flex-gap--large">
-							<a class="flex-item" href="."><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
-							<a class="flex-item" href="." onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
-							<a class="flex-item" href="." onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
+						<div id="language-select" class="flex-container flex-container-row flex-gap--large">
+							<a class="flex-item" href="javascript:window.location.reload();"><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
+							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
+							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
 						</div>
+
 						<h1 id="jack-chen" class="text--tiny flex-item text--right no-margin">
-							Designed & Developed by Jack Chen
+							<lan class='gb'>Designed & Developed by Jack Chen</lan>
+							<lan class='nl'>Ontworpen & Ontwikkeld door Jack Chen</lan>
+							<lan class='cn'>设计与开发：Jack Chen</lan>
 						</h1>
 					</div>
 				</section>

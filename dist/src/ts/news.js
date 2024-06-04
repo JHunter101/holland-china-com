@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let pinned = 0;
     let total = 0;
     const allowed = 5;
+    const thisWebsite = window.location.href; // Assuming thisWebsite is defined elsewhere
     for (const pid in posts) {
-        if (total >= allowed && pinned == 1) {
+        if (total >= allowed && pinned === 1) {
             break;
         }
-        if (total >= allowed && pinned == 0 && !posts[pid].postPinned) {
+        if (total >= allowed && pinned === 0 && !posts[pid].postPinned) {
             continue;
         }
         if (!posts[pid].postSites.includes(thisWebsite)) {
@@ -23,8 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
         myPostText.classList.add('flex-item', 'post-text');
         const myPostTextTitle = document.createElement('a');
         myPostTextTitle.classList.add('header--medium');
-        myPostTextTitle.textContent = posts[pid].postTitleCN;
         myPostTextTitle.setAttribute('href', `post.html?pid=${pid}`);
+        ['GB', 'NL', 'CN'].forEach(lang => {
+            const postTitleLang = createMultilingualElement(posts[pid][`postTitle${lang}`], lang);
+            myPostTextTitle.appendChild(postTitleLang);
+        });
         const myPostTextSub = document.createElement('div');
         myPostTextSub.classList.add('subheader', 'post-data', 'flex-container', 'flex-row');
         const myPostTextTime = document.createElement('h3');
@@ -33,11 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const myPostTextMain = document.createElement('div');
         myPostTextMain.classList.add('post-ps');
         const myPostTextMainText = document.createElement('p');
-        myPostTextMainText.textContent = posts[pid].postTextCN;
+        ['GB', 'NL', 'CN'].forEach(lang => {
+            const postTextLang = createMultilingualElement(posts[pid][`postText${lang}`], lang);
+            myPostTextMainText.appendChild(postTextLang);
+        });
         myPostTextMain.appendChild(myPostTextMainText);
         const myPostTextLink = document.createElement('a');
-        myPostTextLink.textContent = 'Read more';
         myPostTextLink.classList.add('read-more');
+        ['GB', 'NL', 'CN'].forEach(lang => {
+            const linkText = (lang === 'GB') ? 'Read more' : (lang === 'NL') ? 'Lees meer' : '阅读更多';
+            const myPostTextLinkLang = document.createElement('div');
+            myPostTextLinkLang.classList.add(lang.toLowerCase());
+            myPostTextLinkLang.textContent = linkText;
+            myPostTextLink.appendChild(myPostTextLinkLang);
+        });
         myPostTextLink.setAttribute('href', `post.html?pid=${pid}`);
         myPostText.appendChild(myPostTextTitle);
         myPostText.appendChild(myPostTextSub);
@@ -51,11 +64,15 @@ document.addEventListener('DOMContentLoaded', function () {
         myPostImageBox.appendChild(myPostImage);
         myPost.appendChild(myPostImageBox);
         if (posts[pid].postPinned) {
-            document.getElementById('news-pinned').appendChild(myPost);
+            const pinnedNewsContainer = document.getElementById('news-pinned');
+            if (pinnedNewsContainer)
+                pinnedNewsContainer.appendChild(myPost);
             pinned += 1;
         }
         else {
-            document.getElementById('news-normal').appendChild(myPost);
+            const normalNewsContainer = document.getElementById('news-normal');
+            if (normalNewsContainer)
+                normalNewsContainer.appendChild(myPost);
             total += 1;
         }
     }

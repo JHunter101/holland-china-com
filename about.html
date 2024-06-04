@@ -23,7 +23,7 @@
 				<div class="flex-container nav__data">
 					<a href="index.html" class="nav__logo"> Holland China </a>
 					<div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
-						<i class="ri-menu-line nav__burger"></i>
+						<i class="carbon--language nav__burger"></i>
 						<i class="ri-close-line nav__close"></i>
 					</div>
 				</div>
@@ -31,41 +31,67 @@
 				<div class="nav__menu desktop-only" id="nav-menu">
 					<ul class="nav__list">
 						<li>
-							<a class="nav__link flex-container" href="index.html">Home</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="about.html">About Us</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="news.html">News</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="events.html">Events</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="services.html">Services</a>
-						</li>
-						<li>
-							<a class="nav__link flex-container" href="partners.html">Partners
+							<a class="nav__link flex-container" href="index.html">
+								<lan class='gb'>Home</lan>
+								<lan class='nl'>Start</lan>
+								<lan class='cn'>首页</lan>
 							</a>
 						</li>
 						<li>
-							<a class="nav__link flex-container" href="contacts.html">Contacts</a>
+							<a class="nav__link flex-container" href="about.html">
+								<lan class='gb'>About</lan>
+								<lan class='nl'>Over</lan>
+								<lan class='cn'>关于</lan>
+							</a>
 						</li>
+						<li>
+							<a class="nav__link flex-container" href="news.html">
+								<lan class='gb'>News</lan>
+								<lan class='nl'>Nieuws</lan>
+								<lan class='cn'>新闻</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="events.html">
+								<lan class='gb'>Events</lan>
+								<lan class='nl'>Evenementen</lan>
+								<lan class='cn'>事件</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="services.html">
+								<lan class='gb'>Services</lan>
+								<lan class='nl'>Diensten</lan>
+								<lan class='cn'>服务</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="partners.html">
+								<lan class='gb'>Partners</lan>
+								<lan class='nl'>Partners</lan>
+								<lan class='cn'>合作伙伴</lan>
+							</a>
+						</li>
+						<li>
+							<a class="nav__link flex-container" href="contacts.html">
+								<lan class='gb'>Contacts</lan>
+								<lan class='nl'>Contacten</lan>
+								<lan class='cn'>联系人</lan>
+							</a>
+						</li>
+
 						<li id="nav-lan" class="dropdown">
 							<a class="nav__link flex-container dropbtn">
 								<i id='nav-lan-current' class="flag-icon flag-icon-gb"></i>
 								<i class="ri-arrow-down-s-fill"></i>
 							</a>
 							<div class="dropdown-content">
-								<a class="nav__link flex-container" href="." onclick="loadEN()"><i
-										class="flag-icon flag-icon-gb"></i>
-								</a>
-								<a class="nav__link flex-container" href="." onclick="loadNL()"><i
+								<a class="nav__link" onclick="loadEN()" href="javascript:window.location.reload();"><i
+										class="flag-icon flag-icon-gb"></i></a>
+								<a class="nav__link" onclick="loadNL()" href="javascript:window.location.reload();"><i
 										class="flag-icon flag-icon-nl"></i></a>
-								<a class="nav__link flex-container" href="." onclick="loadZH()"><i
-										class="flag-icon flag-icon-cn"></i>
-								</a>
+								<a class="nav__link" onclick="loadCN()" href="javascript:window.location.reload();"><i
+										class="flag-icon flag-icon-cn"></i></a>
 							</div>
 						</li>
 					</ul>
@@ -83,52 +109,133 @@
 			<section id="about" class="section-tuck">
 				<div class="section-container flex-natural section-border">
 
-					<h1 class="subtitle text--center">About Us</h1>
+					<h1 class="subtitle text--center">
+						<lan class='gb'>About Us</lan>
+						<lan class='nl'>Over Ons</lan>
+						<lan class='cn'>关于我们</lan>
+					</h1>
 					<div class='flex-container flex-container-responsive-rev flex-gap--small'>
 						<div class='flex-item-1 slide-right-2'>
 							<p class='text--extra-large text--right text--alt'>Musical mountains and valleys alternated
 								smoothly through the strongly bound playing and the perfect, unison phrasing.</p>
 						</div>
 						<div class='flex-item-2 slide-up-1'>
-							<p class='text--large'>
-								You wish to import a product from China, or develop your own
-								product in China. You want direct contact with the right
-								parties, without interference from a commissioner.
-								HollandChina finds those parties for you.
+							<p class='text--large text--justify'>
+								<lan class='gb'><span class='text--alt text--bold'>HollandChina Consulting</span> helps
+									Chinese and
+									European companies/institutions find cooperation opportunities for development in
+									both regions. We
+									provide consulting services and establish business relationships between Europe
+									(including the
+									Netherlands) and China. In addition to providing relevant professional consulting
+									services, we also
+									offer special PR event services in China and Europe. We also provide relevant
+									training services for
+									enterprises and institutions.</lan>
+								<lan class='nl'><span class='text--alt text--bold'>HollandChina Consulting</span> helpt
+									Chinese en
+									Europese bedrijven/instellingen bij het vinden van samenwerkingsmogelijkheden voor
+									ontwikkeling in
+									beide regio's. We bieden adviesdiensten en leggen zakelijke relaties tussen Europa
+									(inclusief
+									Nederland) en China. Naast het verlenen van relevante professionele adviesdiensten,
+									bieden wij ook
+									speciale PR-evenementendiensten in China en Europa. We bieden ook relevante
+									trainingsdiensten voor
+									bedrijven en instellingen.</lan>
+								<lan class='cn'><span class='text--alt text--bold'>荷中咨询</span>
+									帮助中国和欧洲的公司/机构寻找在两地发展合作的机会。为欧洲(及荷兰)和中国之间的业务提供咨询并建立业务关系。除了为此提供相关专业咨询服务外，还提供在中国和欧洲两地的特殊公关活动服务。同时也为企业及机构提供相关培训服务。
+								</lan>
 							</p>
-							<p class='text--large'>
-								You need the best negotiation result and the highest possible
-								quality. HollandChina's experts (from environmental technology
-								and engineering to textile and food safety) advise you during
-								negotation, and do quality assurance testing.
+							<p class='text--large text--justify'>
+								<lan class='gb'>Success often comes with both opportunities and risks. Many Chinese
+									companies and
+									institutions in Europe lacked preparation; similarly, many European and Dutch
+									companies and
+									institutions in China did not prepare adequately and did not seek effective
+									professional help,
+									which were key reasons for their eventual failure.</lan>
+								<lan class='nl'>Succes komt vaak met zowel kansen als risico's. Veel Chinese bedrijven
+									en instellingen
+									in Europa waren niet goed voorbereid; op dezelfde manier waren veel Europese en
+									Nederlandse
+									bedrijven en instellingen in China niet voldoende voorbereid en zochten ze geen
+									effectieve
+									professionele hulp, wat belangrijke redenen waren voor hun uiteindelijke mislukking.
+								</lan>
+								<lan class='cn'>
+									想取得成功往往是机会和风险并存的。在欧洲曾有很多中国企业及机构的计划缺乏准备；在中国也曾有很多欧洲及荷兰企业及机构没有做好充分的准备工作，同时也没有采纳有效的专业帮助，这些都是最终失败的重要原因。
+								</lan>
 							</p>
-							<p class='text--large'>
-								You wish to organize an event, concert tour or festival in
-								China? HollandChina helps you with programme advice, the local
-								organization, marketing, and a high seat occupancy rate. We
-								also offer a top VIP-arrangement: an 18-century style banquet
-								in the Forbidden City.
-							</p>
-							<p class='text--large'>
-								You wish to organize an event, concert tour or festival in
-								China? HollandChina helps you with programme advice, the local
-								organization, marketing, and a high seat occupancy rate. We
-								also offer a top VIP-arrangement: an 18-century style banquet
-								in the Forbidden City.
-							</p>
-							<p class='text--large'>
-								You wish to organize an event, concert tour or festival in
-								China? HollandChina helps you with programme advice, the local
-								organization, marketing, and a high seat occupancy rate. We
-								also offer a top VIP-arrangement: an 18-century style banquet
-								in the Forbidden City.
-							</p>
+							<div class='text--large text--justify'>
+								<lan class='gb'>
+									<h3>HollandChina Consulting succeeds due to the following principles:</h3>
+									<ul>
+										<li><strong>The shortest route:</strong> Skip the aimless trips! The smart
+											choice is to first
+											find targeted and valuable potential business partners, saving your time and
+											dealing directly
+											with the right people.</li>
+										<li><strong>Direct contact:</strong> We can help you make direct contact with
+											your European
+											partners in China anytime, anywhere.</li>
+										<li><strong>Loyalty:</strong> HollandChina Consulting only takes commissions
+											from the client
+											side, ensuring the rights of both parties.</li>
+										<li><strong>Our motto:</strong> Less talk, more action.</li>
+										<li><strong>Professionalism:</strong> The EU is a very large area; we know what
+											we excel at and
+											what we cannot do. You will always get the most straightforward answer from
+											us.</li>
+									</ul>
+								</lan>
+								<lan class='nl'>
+									<h3>HollandChina Consulting is succesvol door de volgende principes:</h3>
+									<ul>
+										<li><strong>De kortste route:</strong> Sla de nutteloze reizen over! De slimme
+											keuze is eerst
+											gerichte en waardevolle potentiële zakenpartners te vinden, wat tijd
+											bespaart en direct de
+											juiste mensen aanspreekt.</li>
+										<li><strong>Direct contact:</strong> Wij kunnen u helpen op elk moment en elke
+											plaats
+											rechtstreeks contact te maken met uw Europese partners in China.</li>
+										<li><strong>Loyaliteit:</strong> HollandChina Consulting haalt alleen commissie
+											van de klant,
+											wat de rechten van beide partijen waarborgt.</li>
+										<li><strong>Ons motto:</strong> Minder praten, meer doen.</li>
+										<li><strong>Professionaliteit:</strong> De EU is een zeer groot gebied; we weten
+											wat onze
+											specialiteiten zijn en wat we niet kunnen doen. U krijgt van ons altijd het
+											meest duidelijke
+											antwoord.</li>
+									</ul>
+								</lan>
+								<lan class='cn'>
+									<h3>HollandChina Consulting 荷中咨询能取得成功是因为以下原则:</h3>
+									<ul>
+										<li><strong>用最短的路线:</strong> 跳过那些毫无头绪的行程!
+											聪明的选择是先寻找到有针对性并有价值的潜在的商业伙伴，节省了您的时间，直接和值得打交道的人打交道。</li>
+										<li><strong>直接接触:</strong> 我们可以帮助您无论何时何地，都能够与您在中国的欧洲的合作伙伴直接联络。</li>
+										<li><strong>忠诚:</strong> HollandChina Consulting 荷中咨询只从客户一方提取佣金，这样确保双方的权益保障。
+										</li>
+										<li><strong>我们的座右铭:</strong> 少说，多做。</li>
+										<li><strong>专业:</strong> 欧盟是一个非常大的地区，我们知道哪些是我们所擅长的，哪些是我们不能做的。您得到的也将是我们最明确的答复。
+										</li>
+									</ul>
+								</lan>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="section-container flex-natural">
-					<h1 class="subtitle text--center">Our Team</h1>
+					<h1 class="subtitle text--center">
+						<lan class='gb'>Our Team</lan>
+						<lan class='nl'>Ons Team</lan>
+						<lan class='cn'>我们的团队</lan>
+					</h1>
+
 
 					<div id='about-team' class="flex-container flex-container-row flex-gap--medium ">
 						<div class="team-member flex-item flex-container flex-container-col flex-gap--small border--light"
@@ -199,25 +306,49 @@
 					<div class="flex-container flex-container-responsive-rev flex-natural flex-gap--small">
 						<div class="flex-item flex-container flex-container-row flex-start flex-gap--small">
 							<div class="flex-container flex-container-col flex-item flex-start">
-								<h1 class="header--small">HollandChina Consulting</h1>
+								<h1 class="header--small">
+									<lan class='gb'>HollandChina Consulting</lan>
+									<lan class='nl'>HollandChina Consulting</lan>
+									<lan class='cn'>HollandChina Consulting</lan>
+								</h1>
 								<p><a href="mailto:xu@hollandchina.com" target="_blank">
-										xu@hollandchina.com
+										<lan class='gb'>xu@hollandchina.com</lan>
+										<lan class='nl'>xu@hollandchina.com</lan>
+										<lan class='cn'>xu@hollandchina.com</lan>
+									</a></p>
+								<p>
+									<lan class='gb'>KvK: 73925489</lan>
+									<lan class='nl'>KvK: 73925489</lan>
+									<lan class='cn'>工商注册号: 73925489</lan>
+								</p>
+								<p>
+									<lan class='gb'>VAT: 0023 48 269 B12</lan>
+									<lan class='nl'>BTW: 0023 48 269 B12</lan>
+									<lan class='cn'>增值税号: 0023 48 269 B12</lan>
+								</p>
+								<p>
+									<a href='https://www.linkedin.com/company/hollandchina'>
+										<i class="ri-linkedin-fill text--large"></i>
 									</a>
 								</p>
-								<p>KvK: 73925489</p>
-								<p>VAT: 0023 48 269 B12</p>
-								<p><a href='https://www.linkedin.com/company/hollandchina'><i
-											class="ri-linkedin-fill text--large"></i></a></p>
 							</div>
 							<div class="flex-container flex-container-col flex-item flex-start">
-								<h1 class="header--small">Our Network</h1>
-								<p><a href='hollandchina.com'>hollandchina.com</a></p>
-								<p><a href='hollandchina.net'>hollandchina.net</a></p>
-								<p><a href='europeasianetwork.org'>europeasianetwork.org</a></p>
+								<h1 class="header--small">
+									<lan class='gb'>Our Network</lan>
+									<lan class='nl'>Ons Netwerk</lan>
+									<lan class='cn'>我们的网络</lan>
+								</h1>
+								<p><a href='https://www.hollandchina.com'>hollandchina.com</a></p>
+								<p><a href='https://www.hollandchina.net'>hollandchina.net</a></p>
+								<p><a href='https://www.europeasianetwork.org'>europeasianetwork.org</a></p>
 							</div>
 						</div>
 						<div class="flex-item flex-container flex-container-col flex-natural">
-							<h1 class="header--small text--center">Our Partners</h1>
+							<h1 class="header--small text--center">
+								<lan class='gb'>Our Partners</lan>
+								<lan class='nl'>Onze Partners</lan>
+								<lan class='cn'>我们的合作伙伴</lan>
+							</h1>
 							<div id="logo-dump" class="flex-container flex-row">
 								<div>
 									<img src="res/partners/1689250661171.jpeg" alt="logo 1" />
@@ -242,18 +373,23 @@
 							</div>
 						</div>
 					</div>
-					<div id="signature" class="flex-container flex-container-responsive flex--center flex-gap--small">
-						<h1 id="copyright" class="text--tiny flex-item text--left">
-							Copyright © HollandChina Consulting - All rights reserved.
+					<div id="signature" class="flex-container flex-container-responsive flex-center flex-gap--small">
+						<h1 id="copyright" class="text--tiny flex-item text--left no-margin">
+							<lan class='gb'>Copyright © HollandChina Consulting - All rights reserved.</lan>
+							<lan class='nl'>Copyright © HollandChina Consulting - Alle rechten voorbehouden.</lan>
+							<lan class='cn'>版权所有 © HollandChina Consulting - 保留所有权利。</lan>
 						</h1>
-						<div id="language-select" class="flex-container flex-container-row flex-item flex-gap--large">
-							<a class="flex-item" href="."><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
-							<a class="flex-item" href="." onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
-							<a class="flex-item" href="." onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
+						<div id="language-select" class="flex-container flex-container-row flex-gap--large">
+							<a class="flex-item" href="javascript:window.location.reload();"><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
+							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
+							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
 						</div>
-					<h1 id="jack-chen" class="text--tiny flex-item text--right">
-						Designed & Developed by Jack Chen
-					</h1>
+
+						<h1 id="jack-chen" class="text--tiny flex-item text--right no-margin">
+							<lan class='gb'>Designed & Developed by Jack Chen</lan>
+							<lan class='nl'>Ontworpen & Ontwikkeld door Jack Chen</lan>
+							<lan class='cn'>设计与开发：Jack Chen</lan>
+						</h1>
 					</div>
 				</section>
 			</footer>

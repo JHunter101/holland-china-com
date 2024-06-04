@@ -3,7 +3,6 @@ import json
 import shutil
 import os
 import re
-from datetime import datetime
 
 
 myCSV = pandas.read_csv("res/myCSV.csv")
@@ -15,9 +14,7 @@ for index, row in myCSV.iterrows():
     postID = re.sub(
         r"\D",
         "",
-        datetime.strptime(
-            row["What time should this item be posted?"], "%d/%m/%Y %H:%M:%S"
-        ).strftime("%Y/%m/%d %H:%M:%S"),
+        row["What time should this item be posted?"],
     )
 
     if row["Is this a news post or an event"] == "News":
@@ -32,38 +29,27 @@ for index, row in myCSV.iterrows():
     myPost = {
         "postID": postID,
         "postSites": row["Which Website(s) is this post for?"].split(", "),
-        "postTime": datetime.strptime(
-            row["What time should this item be posted?"], "%d/%m/%Y %H:%M:%S"
-        ).strftime("%Y/%m/%d %H:%M:%S"),
+        "postTime": row["What time should this item be posted?"],
         "postTitleCN": row["Please give the Event Title (CN)"],
         "postTextCN": row["Please give the Post Content Text (CN)"],
-        "postTitleEN": "",
-        "postTextEN": "",
-        "postTitleNL": "",
-        "postTextNL": "",
+        "postTitleGB": row["Please give the Event Title (GB)"],
+        "postTextGB": row["Please give the Post Content Text (GB)"],
+        "postTitleNL": row["Please give the Event Title (NL)"],
+        "postTextNL": row["Please give the Post Content Text (NL)"],
         "newsPinned": row["Is this an important news post? (Should it be pinned)"],
         "eventLocation": row["What location will the event be held at (name)?"],
         "eventAddress": row[
             "What location will the event be held at (address; street, postal code, country)?"
         ],
-        "eventTimeStart": (
-            ""
-            if pandas.isna(row["What time does the event start."])
-            else datetime.strptime(
-                row["What time does the event start."], "%d/%m/%Y %H:%M:%S"
-            ).strftime("%Y/%m/%d %H:%M:%S")
-        ),
-        "eventTimeEnd": (
-            ""
-            if pandas.isna(row["What time does the event finish."])
-            else datetime.strptime(
-                row["What time does the event finish."], "%d/%m/%Y %H:%M:%S"
-            ).strftime("%Y/%m/%d %H:%M:%S")
-        ),
+        "eventTimeStart": row["What time does the event start."],
+        "eventTimeEnd": row["What time does the event finish."],
         "eventSignUp": row["Add a link to the sign-up sheet."],
         "postLinkedIn": row["Add a link to a LinkedIn post, if one is available."],
         "postLink": row[
-            "Add a link to any other page that you want to refer to (only 1)"
+            "Add a link to any other page that you want to refer to (only 1)."
+        ],
+        "postLinkTitle": row[
+            "Create a title for the aforementioned link in the previous question."
         ],
         "postMainImage": row["Please upload the main cover image of the event."],
         "postOtherImages": row["Please upload any other images. (Post-Chip)"].split(
