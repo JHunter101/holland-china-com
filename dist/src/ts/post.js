@@ -26,12 +26,12 @@ function loadPostInfo(pid) {
     const postDate = document.getElementById('post-date');
     postDate.textContent = post.postTime;
     const postTitle = document.getElementById('post-title');
-    ['GB', 'NL', 'CN'].forEach(lan => {
+    ['GB', 'NL', 'CN'].forEach((lan) => {
         const postTitlelan = createMultilingualElement(post[`postTitle${lan}`], lan);
         postTitle.appendChild(postTitlelan);
     });
     const postText = document.getElementById('post-text');
-    ['GB', 'NL', 'CN'].forEach(lan => {
+    ['GB', 'NL', 'CN'].forEach((lan) => {
         const postTextlan = createMultilingualElement(post[`postText${lan}`], lan);
         postText.appendChild(postTextlan);
     });
@@ -46,5 +46,23 @@ function loadPostInfo(pid) {
             imgBox.appendChild(imgElement);
             postAltImagesElement.appendChild(imgBox);
         });
+    }
+    if (post.postLinkedIn) {
+        const postLinkedin = document.getElementById('post-linkedin');
+        const postLinkedinLink = document.getElementById('post-linkedin-link');
+        postLinkedin.classList.remove('hidden');
+        postLinkedinLink.href = post.postLinkedIn;
+    }
+    if (post.postLink) {
+        const postRelated = document.getElementById('post-related');
+        const postRelatedLink = document.getElementById('post-related-link');
+        postRelated.classList.remove('hidden');
+        postRelatedLink.href = post.postLink;
+        if (post.postLinkTitle) {
+            postRelatedLink.textContent = post.postLinkTitle;
+        }
+        else {
+            postRelatedLink.textContent = 'Link';
+        }
     }
 }

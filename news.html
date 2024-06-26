@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Holland China</title>
-		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
-		<link rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
-		<link rel="stylesheet" type="text/css" href="dep/fractal-api-v1.0.1/css/fractal-css.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="dep/fractal-api-v1.0.1/css/fractal-css.css"
+		/>
 		<link rel="stylesheet" type="text/css" href="dist/css/output.css" />
 		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
 		<script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
@@ -21,7 +29,11 @@
 			<nav class="nav">
 				<div class="flex-container nav__data">
 					<a href="index.html" class="nav__logo"> Holland China </a>
-					<div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
+					<div
+						class="nav__toggle"
+						id="nav-toggle"
+						onclick="showMenu('nav-toggle', 'nav-menu')"
+					>
 						<i class="carbon--language nav__burger"></i>
 						<i class="ri-close-line nav__close"></i>
 					</div>
@@ -31,66 +43,81 @@
 					<ul class="nav__list">
 						<li>
 							<a class="nav__link flex-container" href="index.html">
-								<lan class='gb'>Home</lan>
-								<lan class='nl'>Start</lan>
-								<lan class='cn'>首页</lan>
+								<lan class="gb">Home</lan>
+								<lan class="nl">Start</lan>
+								<lan class="cn">首页</lan>
 							</a>
 						</li>
 						<li>
 							<a class="nav__link flex-container" href="about.html">
-								<lan class='gb'>About</lan>
-								<lan class='nl'>Over</lan>
-								<lan class='cn'>关于</lan>
+								<lan class="gb">About</lan>
+								<lan class="nl">Over</lan>
+								<lan class="cn">关于</lan>
 							</a>
 						</li>
 						<li>
 							<a class="nav__link flex-container" href="news.html">
-								<lan class='gb'>News</lan>
-								<lan class='nl'>Nieuws</lan>
-								<lan class='cn'>新闻</lan>
+								<lan class="gb">News</lan>
+								<lan class="nl">Nieuws</lan>
+								<lan class="cn">新闻</lan>
 							</a>
 						</li>
 						<li>
 							<a class="nav__link flex-container" href="events.html">
-								<lan class='gb'>Events</lan>
-								<lan class='nl'>Evenementen</lan>
-								<lan class='cn'>事件</lan>
+								<lan class="gb">Events</lan>
+								<lan class="nl">Evenementen</lan>
+								<lan class="cn">事件</lan>
 							</a>
 						</li>
 						<li>
 							<a class="nav__link flex-container" href="services.html">
-								<lan class='gb'>Services</lan>
-								<lan class='nl'>Diensten</lan>
-								<lan class='cn'>服务</lan>
+								<lan class="gb">Services</lan>
+								<lan class="nl">Diensten</lan>
+								<lan class="cn">服务</lan>
 							</a>
 						</li>
 						<li>
 							<a class="nav__link flex-container" href="partners.html">
-								<lan class='gb'>Partners</lan>
-								<lan class='nl'>Partners</lan>
-								<lan class='cn'>合作伙伴</lan>
+								<lan class="gb">Partners</lan>
+								<lan class="nl">Partners</lan>
+								<lan class="cn">合作伙伴</lan>
 							</a>
 						</li>
 						<li>
-							<a class="nav__link flex-container" href="contacts.html">
-								<lan class='gb'>Contacts</lan>
-								<lan class='nl'>Contacten</lan>
-								<lan class='cn'>联系人</lan>
+							<a class="nav__link flex-container" href="contact.html">
+								<lan class="gb">Contact</lan>
+								<lan class="nl">Contact</lan>
+								<lan class="cn">联系</lan>
 							</a>
 						</li>
 
 						<li id="nav-lan" class="dropdown">
 							<a class="nav__link flex-container dropbtn">
-								<i id='nav-lan-current' class="flag-icon flag-icon-gb"></i>
+								<i
+									id="nav-lan-current"
+									class="flag-icon flag-icon-gb"
+								></i>
 								<i class="ri-arrow-down-s-fill"></i>
 							</a>
 							<div class="dropdown-content">
-								<a class="nav__link" onclick="loadEN()" href="javascript:window.location.reload();"><i
-										class="flag-icon flag-icon-gb"></i></a>
-								<a class="nav__link" onclick="loadNL()" href="javascript:window.location.reload();"><i
-										class="flag-icon flag-icon-nl"></i></a>
-								<a class="nav__link" onclick="loadCN()" href="javascript:window.location.reload();"><i
-										class="flag-icon flag-icon-cn"></i></a>
+								<a
+									class="nav__link"
+									onclick="loadEN()"
+									href="javascript:window.location.reload();"
+									><i class="flag-icon flag-icon-gb"></i
+								></a>
+								<a
+									class="nav__link"
+									onclick="loadNL()"
+									href="javascript:window.location.reload();"
+									><i class="flag-icon flag-icon-nl"></i
+								></a>
+								<a
+									class="nav__link"
+									onclick="loadCN()"
+									href="javascript:window.location.reload();"
+									><i class="flag-icon flag-icon-cn"></i
+								></a>
 							</div>
 						</li>
 					</ul>
@@ -100,117 +127,196 @@
 		<section class="nav-air"></section>
 		<main class="section--fill-height">
 			<section id="news" class="section-tuck">
-				<div id='news-pinned' class="section-container flex-natural section-border">
+				<div
+					id="news-pinned"
+					class="section-container flex-natural section-border"
+				>
 					<h1 class="subtitle">
-						<lan class='gb'>Latest News</lan>
-						<lan class='nl'>Laatste Nieuws</lan>
-						<lan class='cn'>最新消息</lan>
+						<lan class="gb">Latest News</lan>
+						<lan class="nl">Laatste Nieuws</lan>
+						<lan class="cn">新闻发布</lan>
 					</h1>
 
-					<div class='pinned-banner'> <i class="ri-pushpin-line"></i> <span>
-							<lan class='gb'>Pinned</lan>
-							<lan class='nl'>Uitgelicht</lan>
-							<lan class='cn'>置顶帖子</lan>
+					<div class="pinned-banner">
+						<i class="ri-pushpin-line"></i>
+						<span>
+							<lan class="gb">Pinned</lan>
+							<lan class="nl">Uitgelicht</lan>
+							<lan class="cn">置顶帖子</lan>
 						</span>
 					</div>
 				</div>
-				<div id='news-normal' class="section-container flex-natural">
-
-				</div>
+				<div id="news-normal" class="section-container flex-natural"></div>
 			</section>
 			<footer class="section-tuck section--alt">
 				<section class="section-container flex-gap--small">
-					<div class="flex-container flex-container-responsive-rev flex-natural flex-gap--small">
-						<div class="flex-item flex-container flex-container-row flex-start flex-gap--small">
-							<div class="flex-container flex-container-col flex-item flex-start">
+					<div
+						class="flex-container flex-container-responsive-rev flex-natural flex-gap--small"
+					>
+						<div
+							class="flex-item flex-container flex-container-row flex-start flex-gap--small"
+						>
+							<div
+								class="flex-container flex-container-col flex-item flex-start"
+							>
 								<h1 class="header--small">
-									<lan class='gb'>HollandChina Consulting</lan>
-									<lan class='nl'>HollandChina Consulting</lan>
-									<lan class='cn'>HollandChina Consulting</lan>
+									<lan class="gb">HollandChina Consulting</lan>
+									<lan class="nl">HollandChina Consulting</lan>
+									<lan class="cn">HollandChina Consulting</lan>
 								</h1>
-								<p><a href="mailto:xu@hollandchina.com" target="_blank">
-										<lan class='gb'>xu@hollandchina.com</lan>
-										<lan class='nl'>xu@hollandchina.com</lan>
-										<lan class='cn'>xu@hollandchina.com</lan>
-									</a></p>
 								<p>
-									<lan class='gb'>KvK: 73925489</lan>
-									<lan class='nl'>KvK: 73925489</lan>
-									<lan class='cn'>工商注册号: 73925489</lan>
+									<a href="mailto:xu@hollandchina.com" target="_blank">
+										<lan class="gb">xu@hollandchina.com</lan>
+										<lan class="nl">xu@hollandchina.com</lan>
+										<lan class="cn">xu@hollandchina.com</lan>
+									</a>
 								</p>
 								<p>
-									<lan class='gb'>VAT: 0023 48 269 B12</lan>
-									<lan class='nl'>BTW: 0023 48 269 B12</lan>
-									<lan class='cn'>增值税号: 0023 48 269 B12</lan>
+									<lan class="gb">KvK: 73925489</lan>
+									<lan class="nl">KvK: 73925489</lan>
+									<lan class="cn">工商注册号: 73925489</lan>
 								</p>
 								<p>
-									<a href='https://www.linkedin.com/company/hollandchina'>
-										<i class="ri-linkedin-fill text--large"></i>
+									<lan class="gb">VAT: 0023 48 269 B12</lan>
+									<lan class="nl">BTW: 0023 48 269 B12</lan>
+									<lan class="cn">增值税号: 0023 48 269 B12</lan>
+								</p>
+								<p>
+									<a
+										href="https://www.linkedin.com/company/hollandchina"
+									>
+										<i class="ri-linkedin-fill text--larger"></i>
 									</a>
 								</p>
 							</div>
-							<div class="flex-container flex-container-col flex-item flex-start">
+							<div
+								class="flex-container flex-container-col flex-item flex-start"
+							>
 								<h1 class="header--small">
-									<lan class='gb'>Our Network</lan>
-									<lan class='nl'>Ons Netwerk</lan>
-									<lan class='cn'>我们的网络</lan>
+									<lan class="gb">Our Network</lan>
+									<lan class="nl">Ons Netwerk</lan>
+									<lan class="cn">我们的网络</lan>
 								</h1>
-								<p><a href='https://www.hollandchina.com'>hollandchina.com</a></p>
-								<p><a href='https://www.hollandchina.net'>hollandchina.net</a></p>
-								<p><a href='https://www.europeasianetwork.org'>europeasianetwork.org</a></p>
+								<p>
+									<a href="https://www.hollandchina.com"
+										>hollandchina.com</a
+									>
+								</p>
+								<p>
+									<a href="https://www.hollandchina.net"
+										>hollandchina.net</a
+									>
+								</p>
+								<p>
+									<a href="https://www.europeasianetwork.org"
+										>europeasianetwork.org</a
+									>
+								</p>
 							</div>
 						</div>
-						<div class="flex-item flex-container flex-container-col flex-natural">
+						<div
+							class="flex-item flex-container flex-container-col flex-natural"
+						>
 							<h1 class="header--small text--center">
-								<lan class='gb'>Our Partners</lan>
-								<lan class='nl'>Onze Partners</lan>
-								<lan class='cn'>我们的合作伙伴</lan>
+								<lan class="gb">Our Partners</lan>
+								<lan class="nl">Onze Partners</lan>
+								<lan class="cn">我们的合作伙伴</lan>
 							</h1>
 							<div id="logo-dump" class="flex-container flex-row">
 								<div>
-									<img src="res/partners/1689250661171.jpeg" alt="logo 1" />
+									<img
+										src="res/partners/1689250661171.jpeg"
+										alt="logo 1"
+									/>
 								</div>
 								<div>
-									<img src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg"
-										alt="logo 1" />
+									<img
+										src="res/partners/243060435_3031890193688990_6111171076163496303_n.jpg"
+										alt="logo 1"
+									/>
 								</div>
 								<div>
-									<img src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png" alt="logo 1" />
+									<img
+										src="res/partners/cropped-logo-ncbc_RGB-with-chinese-1.png"
+										alt="logo 1"
+									/>
 								</div>
 								<div>
 									<img src="res/partners/ai-h-logo.jpg" alt="logo 1" />
 								</div>
 								<div>
-									<img src="res/partners/China-Telecom-01-900x0.png" alt="logo 1" />
+									<img
+										src="res/partners/China-Telecom-01-900x0.png"
+										alt="logo 1"
+									/>
 								</div>
 								<div>
-									<img src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
-										alt="logo 1" />
+									<img
+										src="res/partners/t_cnpc-china-national-petroleum-corporation2486.logowik.com.webp"
+										alt="logo 1"
+									/>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div id="signature" class="flex-container flex-container-responsive flex-center flex-gap--small">
-						<h1 id="copyright" class="text--tiny flex-item text--left no-margin">
-							<lan class='gb'>Copyright © HollandChina Consulting - All rights reserved.</lan>
-							<lan class='nl'>Copyright © HollandChina Consulting - Alle rechten voorbehouden.</lan>
-							<lan class='cn'>版权所有 © HollandChina Consulting - 保留所有权利。</lan>
+					<div
+						id="signature"
+						class="flex-container flex-container-responsive flex-center flex-gap--small"
+					>
+						<h1
+							id="copyright"
+							class="text--tiny flex-item text--left no-margin"
+						>
+							<lan class="gb"
+								>Copyright © HollandChina Consulting - All rights
+								reserved.</lan
+							>
+							<lan class="nl"
+								>Copyright © HollandChina Consulting - Alle rechten
+								voorbehouden.</lan
+							>
+							<lan class="cn"
+								>版权所有 © HollandChina Consulting -
+								保留所有权利。</lan
+							>
 						</h1>
-						<div id="language-select" class="flex-container flex-container-row flex-gap--large">
-							<a class="flex-item" href="javascript:window.location.reload();"><i class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
-							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadEN()"><i class="flag-icon flag-icon-gb"></i></a>
-							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadCN()"><i class="flag-icon flag-icon-cn"></i></a>
+						<div
+							id="language-select"
+							class="flex-container flex-container-row flex-gap--large"
+						>
+							<a
+								class="flex-item"
+								href="javascript:window.location.reload();"
+								><i
+									class="flag-icon flag-icon-nl"
+									onclick="loadNL()"
+								></i
+							></a>
+							<a
+								class="flex-item"
+								href="javascript:window.location.reload();"
+								onclick="loadEN()"
+								><i class="flag-icon flag-icon-gb"></i
+							></a>
+							<a
+								class="flex-item"
+								href="javascript:window.location.reload();"
+								onclick="loadCN()"
+								><i class="flag-icon flag-icon-cn"></i
+							></a>
 						</div>
 
-						<h1 id="jack-chen" class="text--tiny flex-item text--right no-margin">
-							<lan class='gb'>Designed & Developed by Jack Chen</lan>
-							<lan class='nl'>Ontworpen & Ontwikkeld door Jack Chen</lan>
-							<lan class='cn'>设计与开发：Jack Chen</lan>
+						<h1
+							id="jack-chen"
+							class="text--tiny flex-item text--right no-margin"
+						>
+							<lan class="gb">Designed & Developed by Jack Chen</lan>
+							<lan class="nl">Ontworpen & Ontwikkeld door Jack Chen</lan>
+							<lan class="cn">设计与开发：Jack Chen</lan>
 						</h1>
 					</div>
 				</section>
 			</footer>
 		</main>
 	</body>
-
 </html>

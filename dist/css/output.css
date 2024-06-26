@@ -524,6 +524,17 @@ video {
   --mono-font: 'Share-TechMono';
 }
 
+main ul li {
+  display: flex;
+  flex-direction: row;
+}
+
+main ul li:before {
+  content: '✓';
+  margin-right: min(2vw, 0.5rem);
+  margin-top: min(0.6vh, 0.2rem);
+}
+
 .post-event {
 }
 
@@ -614,6 +625,7 @@ video {
 
 #services .section-container {
   gap: min(4vh, 1rem);
+  padding-bottom: min(8vh, 2rem);
 }
 
 @media screen and (min-width: 1200px) {
@@ -630,8 +642,7 @@ video {
 
 #services .service-block {
   padding: min(8vh, 2rem) min(6vw, 2rem);
-  box-shadow: 0 0 8px #ddd;
-  filter: drop-shadow(4px 4px 4px #ddd);
+  box-shadow: 0 0 4px #ddd;
 }
 
 #services .service-block h2 {
@@ -639,20 +650,13 @@ video {
   padding-bottom: min(1vw, 0.33rem);
 }
 
-#services .service-block span {
+#services .service-block li {
   display: flex;
   flex-direction: row;
 }
 
 .ri-check-line {
   margin-right: min(2vw, 0.5rem);
-}
-
-#partners .partners-partner img {
-  height: 100%;
-  aspect-ratio: 4 / 1;
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 
 .box--light {
@@ -691,7 +695,7 @@ video {
   border-radius: 50%;
 }
 
-#partners .partners-partner .partner-logo {
+#about #partners .partners-partner .partner-logo {
   min-height: min(36vh, 9rem);
 }
 

@@ -9,8 +9,8 @@ const thisWebsite = 'hollandchina.com';
 function loadLan(toLoad, toHide = ['gb', 'cn', 'nl']) {
     const style = document.createElement('style');
     let css = '';
-    toHide = toHide.filter(lang => lang !== toLoad);
-    toHide.forEach(lang => {
+    toHide = toHide.filter((lang) => lang !== toLoad);
+    toHide.forEach((lang) => {
         css += `.${lang} { display: none !important; }\n`;
     });
     css += `.${toLoad} { display: block; }\n`;
@@ -56,11 +56,13 @@ function renderPosts(type, containerId, allowed) {
             console.log('this post is for the future', pid);
             continue;
         }
-        if (containerId === 'events-upcoming' && new Date(posts[pid].eventTimeStart).getTime() < Date.now()) {
+        if (containerId === 'events-upcoming' &&
+            new Date(posts[pid].eventTimeStart).getTime() < Date.now()) {
             console.log('this event is not upcoming', pid);
             continue;
         }
-        if (containerId === 'events-past' && new Date(posts[pid].eventTimeEnd).getTime() > Date.now()) {
+        if (containerId === 'events-past' &&
+            new Date(posts[pid].eventTimeEnd).getTime() > Date.now()) {
             console.log('this event is not past', pid);
             continue;
         }
@@ -83,14 +85,14 @@ function createPostElement(post, type, pid) {
     const postTextTitle = document.createElement('a');
     postTextTitle.classList.add('header--medium');
     postTextTitle.setAttribute('href', `post.html?pid=${pid}`);
-    ['GB', 'NL', 'CN'].forEach(lang => {
+    ['GB', 'NL', 'CN'].forEach((lang) => {
         const postTitleLang = createMultilingualElement(post[`postTitle${lang}`], lang);
         postTextTitle.appendChild(postTitleLang);
     });
     const postTextSub = document.createElement('div');
     postTextSub.classList.add('subheader', 'post-data', 'flex-container');
     if (type === 'events') {
-        postTextSub.classList.add('flex-container--column');
+        postTextSub.classList.add('flex-container-col');
         const PostTextLocation = document.createElement('h3');
         PostTextLocation.textContent = post.eventLocation;
         const PostTextAddress = document.createElement('h3');
@@ -101,8 +103,14 @@ function createPostElement(post, type, pid) {
     if (type === 'news') {
         postTextSub.classList.add('flex-container-row');
         const PostTextTime = document.createElement('h3');
-        ['GB', 'NL', 'CN'].forEach(lang => {
-            const PostTextTimeText = (lang === 'GB') ? `Posted by Xu Xiao Jia on ${post.postTime}` : (lang === 'NL') ? `Posted by Xu Xiao Jia on ${post.postTime}` : (lang === 'NL') ? `Posted by Xu Xiao Jia on ${post.postTime}` : '';
+        ['GB', 'NL', 'CN'].forEach((lang) => {
+            const PostTextTimeText = lang === 'GB'
+                ? `Posted by Xu Xiao Jia on ${post.postTime}`
+                : lang === 'NL'
+                    ? `Posted by Xu Xiao Jia on ${post.postTime}`
+                    : lang === 'NL'
+                        ? `Posted by Xu Xiao Jia on ${post.postTime}`
+                        : '';
             const PostTextTimeLang = document.createElement('div');
             PostTextTimeLang.classList.add(lang.toLowerCase());
             PostTextTimeLang.textContent = PostTextTimeText;
@@ -113,7 +121,7 @@ function createPostElement(post, type, pid) {
     const postTextMain = document.createElement('div');
     postTextMain.classList.add('post-ps');
     const postTextMainText = document.createElement('p');
-    ['GB', 'NL', 'CN'].forEach(lang => {
+    ['GB', 'NL', 'CN'].forEach((lang) => {
         const postTextLang = createMultilingualElement(post[`postText${lang}`], lang);
         postTextMainText.appendChild(postTextLang);
     });
@@ -121,8 +129,14 @@ function createPostElement(post, type, pid) {
     const postTextLink = document.createElement('a');
     postTextLink.classList.add('read-more');
     postTextLink.setAttribute('href', `post.html?pid=${pid}`);
-    ['GB', 'NL', 'CN'].forEach(lang => {
-        const linkText = (lang === 'GB') ? 'Read more' : (lang === 'NL') ? 'Lees meer' : (lang === 'CN') ? '阅读更多' : '';
+    ['GB', 'NL', 'CN'].forEach((lang) => {
+        const linkText = lang === 'GB'
+            ? 'Read more'
+            : lang === 'NL'
+                ? 'Lees meer'
+                : lang === 'CN'
+                    ? '阅读更多'
+                    : '';
         const postTextLinkLang = document.createElement('div');
         postTextLinkLang.classList.add(lang.toLowerCase());
         postTextLinkLang.textContent = linkText;
@@ -155,19 +169,31 @@ function createPostElement(post, type, pid) {
         postCalendarDateBoxMonth.classList.add('header--large', 'text--center');
         const postCalendarDateBoxDay = document.createElement('p');
         postCalendarDateBoxDay.classList.add('header--large', 'text--center');
-        ['GB', 'NL', 'CN'].forEach(lang => {
-            const lanCode = (lang === 'GB') ? 'en-GB' : (lang === 'NL') ? 'nl-NL' : (lang === 'CN') ? 'zh-CN' : '';
+        ['GB', 'NL', 'CN'].forEach((lang) => {
+            const lanCode = lang === 'GB'
+                ? 'en-GB'
+                : lang === 'NL'
+                    ? 'nl-NL'
+                    : lang === 'CN'
+                        ? 'zh-CN'
+                        : '';
             const postCalendarDateBoxYearLang = document.createElement('lan');
             postCalendarDateBoxYearLang.classList.add(lang.toLowerCase());
-            postCalendarDateBoxYearLang.textContent = new Date(post.eventTimeStart).toLocaleString(lanCode, { year: 'numeric' }).toUpperCase();
+            postCalendarDateBoxYearLang.textContent = new Date(post.eventTimeStart)
+                .toLocaleString(lanCode, { year: 'numeric' })
+                .toUpperCase();
             postCalendarDateBoxYear.appendChild(postCalendarDateBoxYearLang);
             const postCalendarDateBoxMonthLang = document.createElement('lan');
             postCalendarDateBoxMonthLang.classList.add(lang.toLowerCase());
-            postCalendarDateBoxMonthLang.textContent = new Date(post.eventTimeStart).toLocaleString(lanCode, { month: 'short' }).toUpperCase();
+            postCalendarDateBoxMonthLang.textContent = new Date(post.eventTimeStart)
+                .toLocaleString(lanCode, { month: 'short' })
+                .toUpperCase();
             postCalendarDateBoxMonth.appendChild(postCalendarDateBoxMonthLang);
             const postCalendarDateBoxDayLang = document.createElement('lan');
             postCalendarDateBoxDayLang.classList.add(lang.toLowerCase());
-            postCalendarDateBoxDayLang.textContent = new Date(post.eventTimeStart).toLocaleString(lanCode, { day: '2-digit' }).toUpperCase();
+            postCalendarDateBoxDayLang.textContent = new Date(post.eventTimeStart)
+                .toLocaleString(lanCode, { day: '2-digit' })
+                .toUpperCase();
             postCalendarDateBoxDay.appendChild(postCalendarDateBoxDayLang);
         });
         postCalendarDateBoxTop.appendChild(postCalendarDateBoxYear);

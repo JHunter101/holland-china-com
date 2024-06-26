@@ -6,6 +6,8 @@
 @import url(https://fonts.cdnfonts.com/css/gobold);
 @import url(https://fonts.cdnfonts.com/css/share-techmono-2);
 
+/* Base Section */
+
 :root {
 	--main-bg-color: rgb(0, 0, 0);
 	--main-accent-color: rgb(255, 255, 255);
@@ -24,12 +26,6 @@
 	margin: 0;
 }
 
-html * {
-	font-family: var(--main-font);
-	background: var(--main-bg-color);
-	color: var(--main-accent-color);
-}
-
 html body {
 	display: block;
 	margin: 0px;
@@ -39,7 +35,16 @@ html body {
 	overflow-x: hidden;
 }
 
-img{
+html body > * {
+	background: var(--main-bg-color);
+}
+
+html body * {
+	font-family: var(--main-font);
+	color: var(--main-accent-color);
+}
+
+img {
 	width: 100% !important;
 	height: 100% !important;
 	-o-object-fit: cover;
@@ -51,23 +56,73 @@ a {
 	color: var(--main-accent-color);
 }
 
-li {
+main ul {
+	margin-bottom: 1em;
+}
+
+main li {
 	list-style: none;
 }
 
-/*-------------------------------------------------------------- # Basic Text Section Start--------------------------------------------------------------*/
+main li p {
+	margin-bottom: 0.35em;
+}
+
+lan,
+lan * {
+	display: hidden;
+}
+
+/* Basic Text Section */
+
+.text--huge p,
+.text--larger p,
+.text--smaller p,
+.text--tiny p,
+span,
+i,
+a,
+lan,
+b,
+strong,
+em,
+small,
+abbr,
+cite,
+code,
+mark,
+q,
+s,
+sub,
+sup,
+time,
+u {
+	font-size: 1em;
+}
+
+html {
+	font-size: min(3vw, 1rem);
+}
+
+html p,
+.header--small,
+.subheader {
+	font-size: min(3.6vw, 1.2rem);
+	margin-bottom: 0.65em;
+}
+
+/* Titles */
 
 .title {
 	font-size: min(12vw, 4rem);
-	margin-bottom: min(12vh, 3rem);
+	margin-bottom: 0.65em;
 	font-weight: bolder;
 }
 
 .subtitle {
 	font-size: min(9vw, 3rem);
-	margin-bottom: min(8vh, 2rem);
+	margin-bottom: 0.65em;
 	font-weight: bolder;
-	color: var(--alt-accent-color);
 }
 
 .subtitle,
@@ -75,64 +130,53 @@ li {
 	color: var(--alt-accent-color);
 }
 
+/* Headers */
+
 .header--large {
 	font-size: min(6vw, 2rem);
-	margin-bottom: min(6vh, 1.5rem);
+	margin-bottom: 0.65em;
 	font-weight: bold;
 }
 
 .header--medium {
 	font-size: min(4.5vw, 1.5rem);
-	margin-bottom: min(4vh, 1rem);
+	margin-bottom: 0.65em;
 	font-weight: bold;
-}
-
-html p,
-.header--small,
-.subheader,
-html span,
-html i {
-	font-size: min(3.6vw, 1.2rem);
-}
-
-html p,
-.header--small,
-.subheader {
-	margin-bottom: min(4vh, 1rem);
-}
-
-.subheader {
-	font-style: italic;
-	border-bottom: min(0.5vh, 0.125rem) solid var(--alt-accent-color);
-	padding-bottom: min(1vw, 0.25rem);
 }
 
 .header--small {
 	font-weight: bold;
 }
 
-.text--extra-large {
-	font-size: min(9vw, 3rem);
-	margin: 0 min(0.75vw, 0.25rem);
+.subheader {
+	font-style: italic;
+	border-bottom: min(0.5vh, 0.125rem) solid var(--alt-accent-color);
+	padding-bottom: 0.33em;
 }
 
-.text--large,
-.text--large * {
-	font-size: min(4.5vw, 1.5rem);
-	margin-bottom: min(4vh, 1rem);
+/* Text Modiefiers */
+
+.text--huge {
+	font-size: 1.5em;
+	margin-bottom: 1.5em;
 }
 
-.text--small,
-.text--small * {
-	font-size: min(3vw, 1rem);
-	margin-bottom: min(4vh, 1rem);
+.text--larger {
+	font-size: 1.35em;
+	margin-bottom: 1.35em;
 }
 
-.text--tiny,
-.text--tiny * {
-	font-size: min(2.4vw, 0.8rem);
-	margin-bottom: min(3.2vh, 0.8rem);
+.text--smaller {
+	font-size: 0.85em;
+	margin-bottom: 0.85em;
 }
+
+.text--tiny {
+	font-size: 0.75em;
+	margin-bottom: 0.75em;
+}
+
+/* Text Styles */
 
 .text--main,
 .text--main * {
@@ -146,6 +190,10 @@ html p,
 
 .text--bold {
 	font-weight: bolder;
+}
+
+.text--italic {
+	font-style: italic;
 }
 
 p {
@@ -168,7 +216,11 @@ p {
 	text-align: justify;
 }
 
-/*-------------------------------------------------------------- # Basic Modifiers Section Start--------------------------------------------------------------*/
+main a:hover {
+	text-decoration: underline;
+}
+
+/* Common Modifiers */
 
 .hidden {
 	display: none !important;
@@ -188,16 +240,6 @@ p {
 
 .disable-dbl-tap-zoom {
 	touch-action: manipulation;
-}
-
-.float--left {
-	float: left;
-	margin-right: min(0.75vw, 0.25rem);
-}
-
-.float--right {
-	float: right;
-	margin-left: min(0.75vw, 0.25rem);
 }
 
 .clearfix:after {
@@ -231,7 +273,6 @@ p {
 	width: 85%;
 }
 
-
 .w65 {
 	width: 65%;
 }
@@ -260,7 +301,8 @@ p {
 	height: 35%;
 }
 
-/*-------------------------------------------------------------- # Basic Shapes Section Start--------------------------------------------------------------*/
+/* Section Manipulation */
+
 .section-tuck--tight {
 	padding-left: 35vw;
 	padding-right: 35vw;
@@ -269,6 +311,11 @@ p {
 .section-tuck {
 	padding-left: 20vw;
 	padding-right: 20vw;
+}
+
+.section-tuck--desk-wider {
+	padding-left: 15vw;
+	padding-right: 15vw;
 }
 
 .section-tuck--desk-wide {
@@ -300,8 +347,7 @@ p {
 }
 
 .section-border {
-	box-shadow: 0 4px 2px -2px var(--alt-accent-color);
-	border-bottom: 1px solid var(--alt-accent-color);
+	border-bottom: 2px solid var(--alt-accent-color);
 }
 
 .section--accent,
@@ -337,7 +383,6 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
-
 }
 
 .flex-container-col {
@@ -355,7 +400,6 @@ p {
 .flex-container-responsive-rev {
 	flex-direction: row;
 }
-
 
 .flex-gap--small {
 	gap: min(4vh, 1rem);
@@ -417,6 +461,121 @@ p {
 
 .grid-container .grid-item {
 	position: relative;
+}
+
+.grid-nest {
+	display: grid;
+	justify-items: center;
+}
+
+.grid-nest > * {
+	display: grid;
+	grid-template-rows: subgrid;
+	padding: 0 min(6vw, 2rem);
+	width: 100%;
+}
+
+.grid-nest > * > *:first-child {
+	padding-top: min(8vh, 2rem);
+}
+
+.grid-nest > * > *:last-child {
+	padding-bottom: min(8vh, 2rem);
+}
+
+#partners-grid {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+#partners-grid > * {
+	grid-row: span 3;
+}
+
+#partners-grid > * > *:nth-child(2) {
+	margin-top: auto;
+}
+
+#partners-grid img {
+	-o-object-fit: contain;
+	object-fit: contain;
+	aspect-ratio: 3 / 2;
+}
+
+#servcies-grid {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#servcies-grid > * {
+	grid-row: span 2;
+}
+
+#servcies-grid > * > *:first-child {
+	margin-top: auto;
+	border-bottom: min(0.5vh, 0.125rem) solid var(--alt-accent-color);
+	padding-bottom: min(1vw, 0.33rem);
+}
+
+#about-team-grid {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+#about-team-grid > * {
+	grid-template-rows: unset;
+	cursor: pointer;
+}
+
+#about-team-grid > *:hover {
+	background-color: #f5f5f5;
+}
+
+#about-team-grid > * > *:nth-child(2) {
+	padding: min(4vh, 1rem) 0;
+}
+
+#about-team-grid > * > *:first-child {
+	width: calc(min(48vh, 12rem) - min(8vh, 2rem));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#about-team-grid > * > *:first-child,
+#about-team-grid > * > *:last-child {
+	height: min(48vh, 12rem);
+}
+
+#about-team-grid img {
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+	#partners-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#servcies-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#about-team-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	#partners-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#servcies-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#about-team-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /*-------------------------------------------------------------- # IMG Section Start--------------------------------------------------------------*/
@@ -483,27 +642,25 @@ p {
 /*-------------------------------------------------------------- # Input & Buttons Section Start--------------------------------------------------------------*/
 
 .options-container {
-	display: grid;
-	grid-template-rows: auto 1fr;
-	grid-auto-flow: column;
-	width: 100%;
-}
-
-.options-container label {
-	display: block;
-	margin-top: min(8vh, 2rem);
-	font-size: min(4vh, 1rem);
-	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+	gap: min(4vh, 1rem);
 }
 
 .options-container select,
 .options-container input,
-.options-container button {
+.options-container button,
+.options-container textarea {
 	border: 2px solid var(--main-accent-color);
-	padding: min(2vh, 0.5rem) min(1.5vw, 0.5rem);
-	margin: min(2vh, 0.5rem) min(1.5vw, 0.5rem);
+	padding: min(4vh, 1rem) min(3vw, 1rem);
+	text-align: left;
+	font-size: min(3.6vw, 1.2rem);
+}
+
+.options-container button {
 	text-align: center;
-	font-size: min(3vw, 1rem);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -515,11 +672,11 @@ p {
 
 /*-------------------------------------------------------------- # Header Section --------------------------------------------------------------*/
 
-@media screen and (min-width: 1200px) {
-	.js-nav-bar--solid {
-		box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
-	}
+.js-nav-bar--solid {
+	box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
+}
 
+@media screen and (min-width: 1200px) {
 	.js-nav-bar--solid,
 	.js-nav-bar--solid * {
 		background-color: var(--main-bg-color) !important;
@@ -814,13 +971,11 @@ footer .section-container {
 	justify-content: space-between;
 }
 
-
 /*-------------------------------------------------------------- # Maps --------------------------------------------------------------*/
 
 .leaf-map {
 	min-height: min(40vh, 15rem);
 }
-
 
 /*-------------------------------------------------------------- # Animations --------------------------------------------------------------*/
 
@@ -859,6 +1014,40 @@ footer .section-container {
 	animation: slideDown 5s forwards;
 }
 
+.slide-down-6 {
+	position: relative;
+	top: -100px;
+	-webkit-animation: slideDown 6s forwards;
+	animation: slideDown 6s forwards;
+}
+
+.slide-down-7 {
+	position: relative;
+	top: -100px;
+	-webkit-animation: slideDown 7s forwards;
+	animation: slideDown 7s forwards;
+}
+
+.slide-down-8 {
+	position: relative;
+	top: -100px;
+	-webkit-animation: slideDown 8s forwards;
+	animation: slideDown 8s forwards;
+}
+
+.slide-down-9 {
+	position: relative;
+	top: -100px;
+	-webkit-animation: slideDown 9s forwards;
+	animation: slideDown 9s forwards;
+}
+
+.slide-down-10 {
+	position: relative;
+	top: -100px;
+	-webkit-animation: slideDown 10s forwards;
+	animation: slideDown 10s forwards;
+}
 
 @-webkit-keyframes slideDown {
 	0% {
@@ -1138,47 +1327,13 @@ footer .section-container {
 	background: transparent;
 }
 
-
 @media (max-width: 1200px) {
-
 	.event-date,
 	.event-cal-bot,
 	.event-cal-top {
 		width: 100%;
 		border-radius: 0;
 	}
-
-}
-
-#partners #partners-grid,
-#about-team {
-	flex-wrap: wrap;
-}
-
-#partners #partners-grid>*,
-#about-team>* {
-	flex: 0 0 21%;
-}
-
-@media (max-width: 1200px) {
-
-	#partners #partners-grid>*,
-	#about-team>* {
-		flex: 0 0 26%;
-	}
-}
-
-@media (max-width: 768px) {
-
-	#partners #partners-grid>*,
-	#about-team>* {
-		flex: 0 0 34%;
-	}
-}
-
-
-#about .team-member {
-	padding: min(6vh, 2rem) min(3vw, 1rem);
 }
 
 .swiper-pagination {
@@ -1201,4 +1356,9 @@ footer .section-container {
 	margin: auto;
 	cursor: pointer;
 	transition: opacity 0.1s, transform 0.4s;
+}
+
+.checkline-item {
+	display: flex;
+	flex-direction: row;
 }
