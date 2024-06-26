@@ -324,14 +324,12 @@ main a:hover {
 }
 
 @media (max-width: 1200px) {
-	.section-tuck {
+	.section-tuck,
+	.section-tuck--tight,
+	.section-tuck--desk-wider,
+	.section-tuck--desk-wide {
 		padding-left: 5vw;
 		padding-right: 5vw;
-	}
-
-	.section-tuck--tight {
-		padding-left: 10vw;
-		padding-right: 10vw;
 	}
 }
 
@@ -843,6 +841,7 @@ main a:hover {
 .show-menu {
 	opacity: 1;
 	pointer-events: initial;
+	background-color: var(--main-bg-color);
 }
 
 /* Show icon */
