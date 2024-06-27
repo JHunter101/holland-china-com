@@ -13,6 +13,7 @@
 		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
 		<script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
 		<script src="dist/src/ts/this.js"></script>
+		<script src="dist/src/ts/contact.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 
@@ -20,7 +21,9 @@
 		<header id="js-nav-bar" class="header js-nav-bar--solid">
 			<nav class="nav">
 				<div class="flex-container nav__data">
-					<a href="index.html" class="nav__logo"> Holland China </a>
+					<a href="index.html" class="nav__logo">
+						<img src="res/static/web-logo-simple.webp" />
+					</a>
 					<div class="nav__toggle" id="nav-toggle" onclick="showMenu('nav-toggle', 'nav-menu')">
 						<i class="carbon--language nav__burger"></i>
 						<i class="ri-close-line nav__close"></i>
@@ -226,44 +229,17 @@
 						</lan>
 					</div>
 					<div class="flex-item w100">
-						<lan class="gb">
-
-							<form class="options-container" action="#" method="POST">
-								<input placeholder="Name" type="text" id="name" name="name" required />
-								<input placeholder="Email" type="email" id="email" name="email" required />
-								<input placeholder="Subject" type="subject" id="subject" name="subject" required />
-								<textarea placeholder="Message" id="message" name="message" rows="4"
-									required></textarea>
-								<button type="submit" class="btn-medium btn-main">
-									Send
-								</button>
-							</form>
-						</lan>
-						<lan class="nl">
-
-							<form class="options-container" action="#" method="POST">
-								<input placeholder="Naam" type="text" id="name" name="name" required />
-								<input placeholder="E-mail" type="email" id="email" name="email" required />
-								<input placeholder="Onderwerp" type="text" id="subject" name="subject" required />
-								<textarea placeholder="Bericht" id="message" name="message" rows="4"
-									required></textarea>
-								<button type="submit" class="btn-medium btn-main">
-									Verzenden
-								</button>
-							</form>
-						</lan>
-						<lan class="cn">
-
-							<form class="options-container" action="#" method="POST">
-								<input placeholder="姓名" type="text" id="name" name="name" required />
-								<input placeholder="电子邮件" type="email" id="email" name="email" required />
-								<input placeholder="主题" type="text" id="subject" name="subject" required />
-								<textarea placeholder="信息" id="message" name="message" rows="4" required></textarea>
-								<button type="submit" class="btn-medium btn-main">
-									发送
-								</button>
-							</form>
-						</lan>
+						<form class="options-container" action="#" method="POST">
+							<input placeholder="Name" type="text" id="name" name="name" required />
+							<input placeholder="Email" type="email" id="email" name="email" required />
+							<input placeholder="Subject" type="subject" id="subject" name="subject" required />
+							<textarea placeholder="Message" id="message" name="message" rows="4" required></textarea>
+							<button type="submit" class="btn-medium btn-main">
+								<lan class="gb">Send</lan>
+								<lan class="nl">Verstuur</lan>
+								<lan class="cn">发送</lan>
+							</button>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -349,7 +325,7 @@
 						</div>
 					</div>
 					<div id="signature" class="flex-container flex-container-responsive flex-center flex-gap--small">
-						<h1 id="copyright" class="text--tiny flex-item text--left no-margin">
+						<h1 id="copyright" class="text--smaller flex-item text--left">
 							<lan class="gb">Copyright © HollandChina Consulting - All rights
 								reserved.</lan>
 							<lan class="nl">Copyright © HollandChina Consulting - Alle rechten
@@ -357,7 +333,8 @@
 							<lan class="cn">版权所有 © HollandChina Consulting -
 								保留所有权利。</lan>
 						</h1>
-						<div id="language-select" class="flex-container flex-container-row flex-gap--large">
+						<div id="language-select"
+							class="text--smaller flex-container flex-container-row flex-gap--large">
 							<a class="flex-item" href="javascript:window.location.reload();"><i
 									class="flag-icon flag-icon-nl" onclick="loadNL()"></i></a>
 							<a class="flex-item" href="javascript:window.location.reload();" onclick="loadEN()"><i
@@ -366,7 +343,7 @@
 									class="flag-icon flag-icon-cn"></i></a>
 						</div>
 
-						<h1 id="jack-chen" class="text--tiny flex-item text--right no-margin">
+						<h1 id="jack-chen" class="text--smaller flex-item text--right">
 							<lan class="gb">Designed & Developed by Jack Chen</lan>
 							<lan class="nl">Ontworpen & Ontwikkeld door Jack Chen</lan>
 							<lan class="cn">设计与开发：Jack Chen</lan>

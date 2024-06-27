@@ -25,6 +25,7 @@
 		<script src="dist/dep/fractal-api-v1.0.1/ts/basic.js"></script>
 		<script src="dist/dep/fractal-api-v1.0.1/ts/nav-mobile.js"></script>
 		<script src="dist/src/ts/myData.js"></script>
+		<script src="dist/src/ts/post-common.js"></script>
 		<script src="dist/src/ts/post.js"></script>
 		<script src="dist/src/ts/this.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,7 +35,9 @@
 		<header id="js-nav-bar" class="header js-nav-bar--solid">
 			<nav class="nav">
 				<div class="flex-container nav__data">
-					<a href="index.html" class="nav__logo"> Holland China </a>
+					<a href="index.html" class="nav__logo">
+						<img src="res/static/web-logo-simple.webp" />
+					</a>
 					<div
 						class="nav__toggle"
 						id="nav-toggle"
@@ -272,10 +275,12 @@
 					</div>
 
 					<div id="post-related" class="hidden">
-						<p class="text--right text--italic no-margin">
-							<lan class="gb">Related:</lan>
-							<lan class="nl">Gerelateerd:</lan>
-							<lan class="cn">相关:</lan>
+						<p
+							class="text--italic no-margin flex-container flex-container-row flex-end"
+						>
+							<lan class="gb">Related:&nbsp;</lan>
+							<lan class="nl">Gerelateerd:&nbsp;</lan>
+							<lan class="cn">相关:&nbsp;</lan>
 							<a id="post-related-link" target="_blank"></a>
 						</p>
 					</div>

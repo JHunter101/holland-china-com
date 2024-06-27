@@ -436,6 +436,10 @@ main a:hover {
 	justify-content: center !important;
 }
 
+.flex-end {
+	justify-content: flex-end;
+}
+
 .flex-item,
 .flex-item-1 {
 	flex: 1;
@@ -804,6 +808,13 @@ main a:hover {
 
 	.nav__logo {
 		height: min(12vh, 3rem);
+	}
+
+	.nav__logo img {
+		-o-object-fit: contain;
+
+		object-fit: contain;
+		max-width: 50%;
 	}
 
 	.nav li a {
