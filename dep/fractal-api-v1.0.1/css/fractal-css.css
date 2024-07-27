@@ -45,7 +45,6 @@ html body * {
 }
 
 img {
-	height: 100% !important;
 	-o-object-fit: cover;
 	object-fit: cover;
 }
