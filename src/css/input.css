@@ -85,6 +85,12 @@ main ul li:before {
 	flex: 1 1 auto;
 }
 
+@media screen and (max-width: 1200px) {
+	.post-image img {
+		aspect-ratio: 16/9;
+	}
+}
+
 .post-data {
 	justify-content: flex-start;
 }
