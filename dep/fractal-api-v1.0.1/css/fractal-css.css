@@ -304,8 +304,8 @@ main a:hover {
 /* Section Manipulation */
 
 .section-tuck--tight {
-	padding-left: 35vw;
-	padding-right: 35vw;
+	padding-left: 30vw;
+	padding-right: 30vw;
 }
 
 .section-tuck {
@@ -589,6 +589,11 @@ main a:hover {
 }
 
 /*-------------------------------------------------------------- # IMG Section Start--------------------------------------------------------------*/
+
+.img--contain {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
 
 .banner {
 	aspect-ratio: 5/1;
