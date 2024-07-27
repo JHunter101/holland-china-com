@@ -587,24 +587,19 @@ main ul li:before {
   text-align: justify;
 }
 
+.post-image {
+  display: flex;
+}
+
 .post-image img {
-  aspect-ratio: 21 / 9;
   -o-object-fit: cover;
   object-fit: cover;
+  aspect-ratio: 21 / 9;
+  flex: 1 1 auto;
 }
 
 .post-data {
   justify-content: flex-start;
-}
-
-@media screen and (min-width: 1200px) {
-  .post-image img {
-    aspect-ratio: 21 / 9;
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
 }
 
 #logo-dump {
