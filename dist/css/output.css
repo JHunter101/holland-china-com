@@ -594,7 +594,6 @@ main ul li:before {
 .post-image img {
   -o-object-fit: cover;
   object-fit: cover;
-  aspect-ratio: 21 / 9;
   flex: 1 1 auto;
 }
 
