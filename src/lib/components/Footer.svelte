@@ -4,7 +4,7 @@
 
 <footer class="screen-tuck section-alt">
 	<section class="section flex-gap-small w100">
-		<div class="flex-responsive flex-natural flex-gap-small w100">
+		<div class="flex-responsive flex-natural flex-gap w100">
 			<!-- Left column: Company Info -->
 			<div class="flex-item flex-start flex-gap-small flex-row">
 				<div class="flex-item flex-start flex-col">

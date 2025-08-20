@@ -76,13 +76,13 @@
 </script>
 
 <Hero />
-<section class="screen-tuck flex-gap section flex-col">
+<section class="screen-tuck flex-col">
 	{#if highlightEvent}
 		<h2 class="subtitle text-large text-alt">Featured Event</h2>
 		<PostEvent post={highlightEvent} />
 	{/if}
 </section>
-<section class="screen-tuck flex-gap section flex-col">
+<section class="screen-tuck flex-col">
 	{#if highlightNews.length}
 		<h2 class="subtitle text-large text-alt">Latest News</h2>
 		{#each highlightNews as post (post.id)}

@@ -11,7 +11,7 @@ main ul li:before {
 .post-events,
 .post-news {
   align-items: stretch;
-  padding: min(8vh, 2rem) 0;
+  padding: min(4vh, 1rem) 0;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   gap: min(4vh, 1rem);

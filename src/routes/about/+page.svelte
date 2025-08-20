@@ -26,14 +26,14 @@
 	};
 </script>
 
-<section class="screen-tuck flex-natural flex-gap section text--justify flex-col">
+<section class="screen-tuck flex-natural text--justify flex-col">
 	<h1 class="subtitle text-large">{$langData['about-main-title'] || 'About Us'}</h1>
 	<p>
 		{$langData['about-main-text'] || 'Main text describing the company goes here.'}
 	</p>
 </section>
 
-<section class="screen-tuck flex-natural flex-gap section flex-col">
+<section class="screen-tuck flex-natural flex-col">
 	{#each $principles as principle}
 		<div class="flex-gap-small flex-col">
 			<h3 class="subtitle text-standard">{principle.title}:</h3>
@@ -46,11 +46,11 @@
 	{/each}
 </section>
 
-<section class="screen-tuck flex-natural flex-gap section flex-col">
+<section class="screen-tuck flex-natural flex-col">
 	<h1 class="subtitle text-large">{$langData['about-team-title'] || 'Our Team'}</h1>
 	<div id="about-team-grid" class="grid-nest flex-gap-small">
 		{#each $teamMembers as member, index}
-			<div class="border-light" on:click={() => toggleMember(index)}>
+			<div class="card" on:click={() => toggleMember(index)}>
 				{#if openMember !== index}
 					<div class="about-image">
 						<img src={member.img} alt={member.name} class="card-img" />
@@ -69,17 +69,14 @@
 </section>
 
 <style>
-	#about .team-member {
-		min-height: min(36vh, 9rem);
-	}
-
 	#about-team-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
 	#about-team-grid > * {
-		grid-template-rows: unset;
 		cursor: pointer;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#about-team-grid > *:hover {
@@ -93,11 +90,6 @@
 	#about-team-grid > * > *:first-child {
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	#about-team-grid > * > *:first-child,
-	#about-team-grid > * > *:last-child {
-		height: min(48vh, 12rem);
 	}
 
 	#about-team-grid img {

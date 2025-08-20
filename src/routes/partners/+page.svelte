@@ -9,12 +9,12 @@
 		Array.from({ length: 6 }, (_, i) => ({
 			name: $langData[`partners-${i}-name`] || `Partner ${i + 1}`,
 			bio: $langData[`partners-${i}-bio`] || 'Short description goes here.',
-			img: $langData[`partners-${i}-img`] || 'https://placehold.co/400x400'
+			img: $langData[`partners-${i}-img`] || 'https://placehold.co/400x200'
 		}))
 	);
 </script>
 
-<section class="screen-tuck flex-natural flex-gap section text--justify flex-col">
+<section class="screen-tuck flex-natural text--justify flex-col">
 	<h1 class="subtitle text-large">{$langData['partners-main-title'] || 'Our Partners'}</h1>
 	<p>
 		{$langData['partners-main-text'] ||
@@ -23,18 +23,15 @@
 </section>
 
 <!-- Partners Grid Section -->
-<section class="screen-tuck flex-natural flex-gap section flex-col">
-	<h2 class="subtitle text-large text-center">
-		{$langData['partners-grid-title'] || 'Meet Our Partners'}
-	</h2>
-	<div id="partners-grid" class="grid-nest flex-gap--small">
+<section class="screen-tuck flex-natural">
+	<div id="partners-grid" class="grid-nest flex-gap-small">
 		{#each $partners as partner}
-			<div class="border--light card">
+			<div class="card flex-col">
 				<div class="about-image">
 					<img src={partner.img} alt={partner.name} class="card-img" />
 				</div>
-				<div class="card-content text-center">
-					<h3 class="header text-medium">{partner.name}</h3>
+				<div class="text-center">
+					<h3 class="subheader text-medium">{partner.name}</h3>
 					<p class="text-small">{partner.bio}</p>
 				</div>
 			</div>
@@ -43,26 +40,14 @@
 </section>
 
 <style>
-	.grid-nest {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1rem;
+	#partners-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0;
 	}
-	.card-img {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		border-radius: 0.5rem;
-	}
-	.card {
-		background: var(--card-bg, #fff);
-		padding: 1rem;
-		border-radius: 0.5rem;
-		box-shadow: var(--card-shadow, 0 2px 5px rgba(0, 0, 0, 0.1));
-		cursor: default;
-		transition: transform 0.2s ease;
-	}
-	.card:hover {
-		transform: translateY(-3px);
+
+	@media (max-width: 1200px) {
+		#partners-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
 	}
 </style>

@@ -7,6 +7,7 @@
 }
 
 @media (min-width: 768px) {
+
   .screen-tuck,
   .screen-tuck-tight,
   .screen-tuck-minimal {
@@ -14,20 +15,25 @@
     padding-right: 10vw;
   }
 }
+
 @media (min-width: 1200px) {
   .screen-tuck {
     padding-left: 20vw;
     padding-right: 20vw;
   }
+
   .screen-tuck-tight {
     padding-left: 30vw;
     padding-right: 30vw;
   }
+
   .screen-tuck-minimal {
     padding-left: 10vw;
     padding-right: 10vw;
   }
 }
+
+section,
 .section {
   display: flex;
   flex-direction: column;
@@ -58,34 +64,43 @@
 .flex {
   display: flex;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
+
 .flex-col {
   display: flex;
   flex-direction: column;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
 }
+
 .flex-responsive {
   display: flex;
   flex-direction: column;
 }
+
 .flex-responsive-rev {
   display: flex;
   flex-direction: column-reverse;
 }
+
 @media (min-width: 1200px) {
-  .flex-responsive, .flex-responsive-rev {
+
+  .flex-responsive,
+  .flex-responsive-rev {
     flex-direction: row;
   }
 }
 
-.flex-item, .flex-item-1 {
+.flex-item,
+.flex-item-1 {
   flex: 1;
 }
 
@@ -113,7 +128,7 @@
   gap: min(4vh, 1rem);
 }
 
-.flex-gap-large {
+.flex-gap {
   gap: min(8vh, 2rem);
 }
 
@@ -130,34 +145,35 @@
 }
 
 .grid-nest {
-	display: grid;
-	justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
-.grid-nest > * {
-	display: grid;
-	grid-template-rows: subgrid;
-	padding: 0 min(3vw, 1rem);
-	width: 100%;
+.grid-nest>* {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5rem;
+  padding: min(3vw, 1rem);
+  width: 100%;
 }
 
-.grid-nest > * > *:first-child {
-	padding-top: min(8vh, 2rem);
+.card {
+  box-shadow: 0 0 4px #ddd;
+  border: 1px solid #ddd;
+  padding: min(3vw, 1rem);
+  cursor: default;
+  transition: transform 0.2s ease;
 }
 
-.grid-nest > * > *:last-child {
-	padding-bottom: min(8vh, 2rem);
+.card:hover {
+  transform: translateY(-3px);
 }
 
-.about-image {
-  margin: 0 min(6vw, 2rem);
-  height: 100%;
-}
-
-.about-image img {
-  height: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 aside {

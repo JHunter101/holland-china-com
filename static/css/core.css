@@ -33,6 +33,8 @@ footer * {
 
 .fit-height {
   height: 100dvh;
+  padding: 0;
+  margin: 0;
 }
 
 .half-height {
