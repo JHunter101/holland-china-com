@@ -2,7 +2,7 @@
 	import { langData, currentLang, loadEN, loadNL, loadCN } from '../stores';
 	import { browser } from '$app/environment';
 
-	const navItems = ['about', 'news', 'events', 'services', 'partners', 'contact'];
+	const navItems = ['home', 'about', 'news', 'events', 'services', 'partners', 'contact'];
 	$: currentFlag = $currentLang === 'NL' ? 'nl' : $currentLang === 'CN' ? 'cn' : 'gb';
 
 	let menuOpen = false;
@@ -32,13 +32,25 @@
 			window.addEventListener('scroll', updateHeaderTransparency);
 		}
 	}
+
+	// Map nav item to JSON key
+	const navKeyMap = {
+		home: '00_shared-header-nav-home',
+		about: '00_shared-header-nav-about',
+		news: '00_shared-header-nav-news',
+		events: '00_shared-header-nav-events',
+		services: '00_shared-header-nav-services',
+		partners: '00_shared-header-nav-partners',
+		contact: '00_shared-header-nav-contact'
+	};
 </script>
 
 <header id="header" class="nav-solid">
 	<nav class="nav">
 		<div class="nav-icons flex">
 			<a href="/" class="nav-logo">
-				<i class="carbon-language"></i> PLACEHOLDER
+				<i class="carbon-language"></i>
+				{$langData[navKeyMap['home']]}
 			</a>
 
 			<i class="nav-burger ri-menu-line" on:click={toggleMenu} class:show={!menuOpen}></i>
@@ -50,8 +62,8 @@
 				{#each navItems as item}
 					<li>
 						<a href={`/${item}`}>
-							{#if $langData[`common-nav-${item}`]}
-								{$langData[`common-nav-${item}`]}
+							{#if $langData[navKeyMap[item]]}
+								{$langData[navKeyMap[item]]}
 							{/if}
 						</a>
 					</li>

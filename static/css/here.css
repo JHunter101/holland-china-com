@@ -81,11 +81,6 @@ main ul li:before {
   object-fit: contain;
 }
 
-#services .section-container {
-  gap: min(4vh, 1rem);
-  padding-bottom: min(8vh, 2rem);
-}
-
 @media screen and (min-width: 1200px) {
   #services .service-block .service-block-head {
     display: flex;
@@ -98,29 +93,8 @@ main ul li:before {
   }
 }
 
-#services .service-block {
-  padding: min(8vh, 2rem) min(6vw, 2rem);
-  box-shadow: 0 0 4px #ddd;
-}
-
-#services .service-block h2 {
-  border-bottom: min(0.5vh, 0.125rem) solid var(--alt-accent-color);
-  padding-bottom: min(1vw, 0.33rem);
-}
-
-#services .service-block li {
-  display: flex;
-  flex-direction: row;
-}
-
 .ri-check-line {
   margin-right: min(2vw, 0.5rem);
-}
-
-.hero-box {
-  background-color: rgba(190, 19, 45, 0.85);
-  border-radius: min(2vh, 0.5rem);
-  padding: min(12vh, 3rem) min(12vw, 4rem);
 }
 
 #_news .swiper-slide img {
