@@ -1,0 +1,53 @@
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+form select,
+form input,
+form button,
+form textarea {
+  padding: 1rem 1rem;
+  border: 2px solid rgb(var(-color-accent-main));
+  font-size: 1.2rem;
+  width: 100%;
+}
+form input:focus,
+form textarea:focus {
+  border: 2px solid rgb(var(-color-blue));
+}
+form button:disabled,
+form input:disabled,
+form input:read-only {
+  background-color: rgb(var(-color-grey-light));
+}
+form [type=radio],
+form [type=checkbox] {
+  width: fit-content;
+}
+form [type=radio] + label,
+form [type=checkbox] + label {
+  margin-left: 10px;
+}
+
+select,
+input,
+textarea {
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgb(var(-color-accent-main));
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgb(var(-color-bg-main));
+  text-align: left;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid rgb(var(-color-blue));
+}
+
+textarea {
+  height: 10em;
+  min-height: 10em;
+}

@@ -1,0 +1,103 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid rgb(var(-color-accent-main));
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgb(var(-color-bg-main));
+  color: rgb(var(-color-accent-main));
+  text-decoration: none;
+}
+button:hover {
+  background-color: rgb(var(-color-accent-main));
+  color: rgb(var(-color-bg-main));
+  border: 2px solid rgb(var(-color-bg-main));
+}
+button:focus {
+  outline: 3px solid rgb(var(-color-bg-main));
+}
+
+.btn, .btn-main {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid rgb(var(-color-accent-main));
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgb(var(-color-bg-main));
+  color: rgb(var(-color-accent-main));
+  text-decoration: none;
+}
+.btn:hover, .btn-main:hover {
+  background-color: rgb(var(-color-accent-main));
+  color: rgb(var(-color-bg-main));
+  border: 2px solid rgb(var(-color-bg-main));
+}
+.btn:focus, .btn-main:focus {
+  outline: 3px solid rgb(var(-color-bg-main));
+}
+.btn-accent {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid rgb(var(-color-bg-main));
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgb(var(-color-accent-main));
+  color: rgb(var(-color-bg-main));
+  text-decoration: none;
+}
+.btn-accent:hover {
+  background-color: rgb(var(-color-bg-main));
+  color: rgb(var(-color-accent-main));
+  border: 2px solid rgb(var(-color-accent-main));
+}
+.btn-accent:focus {
+  outline: 3px solid rgb(var(-color-accent-main));
+}
+.btn-small {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+}
+.btn-large {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+input[type=submit] {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid rgb(var(-color-accent-main));
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgb(var(-color-bg-main));
+  color: rgb(var(-color-accent-main));
+  text-decoration: none;
+}
+input[type=submit]:hover {
+  background-color: rgb(var(-color-accent-main));
+  color: rgb(var(-color-bg-main));
+  border: 2px solid rgb(var(-color-bg-main));
+}
+input[type=submit]:focus {
+  outline: 3px solid rgb(var(-color-bg-main));
+}
