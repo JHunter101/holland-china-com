@@ -119,6 +119,11 @@ section,
   justify-content: flex-start !important;
 }
 
+.flex-end {
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+}
+
 .flex-natural {
   align-items: unset !important;
   justify-content: unset !important;

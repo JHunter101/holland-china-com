@@ -22,13 +22,13 @@
 
 {#if post.isPinned}
 	<div class="pinned-banner">
-		<i class="ri-pushpin-line"></i>
-		<span>{$pinnedLabel}</span>
+		<i class="ri-pushpin-line text-small"></i>
+		<span class="text-small">{$pinnedLabel}</span>
 	</div>
 {/if}
 <div class="post-news flex-responsive flex-gap-large w100">
 	<div class="post-text flex-item-2">
-		<a class="header text-medium" href={`post.html?pid=${post.id}`}>
+		<a class="header text-medium" href={`/news/${post.id}`}>
 			{$displayTitle}
 		</a>
 		<div class="subheader text-small post-data flex-row">
@@ -42,7 +42,7 @@
 		<div class="post-ps">
 			<p>{$displayContent}</p>
 		</div>
-		<a class="read-more" href={`post.html?pid=${post.id}`}>Read more</a>
+		<a class="read-more" href={`/news/${post.id}`}>Read more</a>
 	</div>
 
 	<div class="flex-item-2 post-image">
@@ -54,6 +54,10 @@
 </div>
 
 <style>
+	.ri-pushpin-line {
+		margin: 0;
+	}
+
 	.pinned-banner,
 	.pinned-banner * {
 		color: rgb(var(--color-accent-alt));

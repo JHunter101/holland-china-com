@@ -2,7 +2,7 @@
 	import { langData, currentLang, loadEN, loadNL, loadCN } from '../stores';
 	import { browser } from '$app/environment';
 
-	const navItems = ['home', 'about', 'news', 'events', 'services', 'partners', 'contact'];
+	const navItems = ['about', 'news', 'events', 'services', 'partners', 'contact'];
 	$: currentFlag = $currentLang === 'NL' ? 'nl' : $currentLang === 'CN' ? 'cn' : 'gb';
 
 	let menuOpen = false;
@@ -48,7 +48,7 @@
 <header id="header" class="nav-solid">
 	<nav class="nav">
 		<div class="nav-icons flex">
-			<a href="/" class="nav-logo">
+			<a href="/" class="nav-logo" rel="external">
 				<i class="carbon-language"></i>
 				{$langData[navKeyMap['home']]}
 			</a>
@@ -61,7 +61,7 @@
 			<ul>
 				{#each navItems as item}
 					<li>
-						<a href={`/${item}`}>
+						<a href={`/${item}`} rel="external">
 							{#if $langData[navKeyMap[item]]}
 								{$langData[navKeyMap[item]]}
 							{/if}
@@ -76,9 +76,15 @@
 					</a>
 
 					<div class="dropdown-content">
-						<i class="nav-link flag-icon flag-icon-nl" on:click={loadNL}></i>
-						<i class="nav-link flag-icon flag-icon-gb" on:click={loadEN}></i>
-						<i class="nav-link flag-icon flag-icon-cn" on:click={loadCN}></i>
+						<a on:click={loadNL}>
+							<i class="nav-link flag-icon flag-icon-nl"></i>
+						</a>
+						<a on:click={loadEN}>
+							<i class="nav-link flag-icon flag-icon-gb"></i>
+						</a>
+						<a on:click={loadCN}>
+							<i class="nav-link flag-icon flag-icon-cn"></i>
+						</a>
 					</div>
 				</li>
 			</ul>

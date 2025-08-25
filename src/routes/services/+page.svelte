@@ -30,17 +30,19 @@
 </script>
 
 <section class="screen-tuck flex-natural text--justify flex-col">
-	<h1 class="subtitle text-large">{$langData['HCC_04_services-main-desc-1'] || 'Our Services'}</h1>
+	<h1 class="subtitle text-large">
+		{$langData['00_shared-header-nav-services'] || 'Our Services'}
+	</h1>
+	<p>{$langData['HCC_04_services-main-desc-1']}</p>
 	<p>
-		{$langData['HCC_04_services-main-desc-2'] ||
-			'We provide a wide range of services designed to support our clients with expertise, reliability, and innovation.'}
+		{$langData['HCC_04_services-main-desc-2']}
 	</p>
 
 	<div id="services-grid" class="grid-nest flex-gap-small">
 		{#each $services as service, index}
 			<div class="card" on:click={() => toggleService(index)}>
 				<div class="">
-					<h3 class="subheader text-medium">{service.title}</h3>
+					<h2 class="subheader text-medium">{service.title}</h2>
 					<ul>
 						{#each service.points as point}
 							<li><p class="text-small">{point}</p></li>
@@ -60,6 +62,12 @@
 	@media (max-width: 1200px) {
 		#services-grid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 768px) {
+		#services-grid {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
 		}
 	}
 </style>

@@ -1,4 +1,4 @@
-main > :first-child:not(.fullscreen-image) {
+main> :first-child:not(.fullscreen-image) {
   padding-top: min(20vh, 5rem);
 }
 
@@ -23,9 +23,11 @@ header nav ul {
   display: flex;
   justify-content: space-between;
 }
+
 header nav li {
   list-style-type: none;
 }
+
 header nav a {
   font-family: var(--main-font);
   text-decoration: none;
@@ -33,23 +35,28 @@ header nav a {
   font-size: 1.2rem;
   padding: 0 min(3vw, 1rem);
 }
+
 header .nav-shadow {
   box-shadow: 0 2px 8px hsla(0, 0%, 35%, 0.15);
   transition: box-shadow 0.2s;
 }
+
 header .nav-no-shadow {
   box-shadow: none;
   transition: box-shadow 0.2s;
 }
+
 header.nav-solid {
   background-color: rgba(var(--color-bg-main), 0.85);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
+
 header.nav-solid,
 header.nav-solid * {
   color: rgb(var(--color-accent-main));
 }
+
 header.nav-transparent,
 header.nav-transparent * {
   background-color: transparent;
@@ -62,63 +69,59 @@ header .language-select {
 }
 
 .dropdown {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .dropdown-content {
-	display: none;
-	width: inherit;
-	z-index: 1;
-	flex-direction: column;
-	transition: display 5.5s ease;
+  display: none;
+  width: inherit;
+  z-index: 1;
+  flex-direction: column;
+  transition: display 5.5s ease;
 }
 
 .dropdown:hover .dropdown-content {
-	display: flex;
+  display: flex;
   gap: min(1vh, 0.25rem);
 }
 
-.dropdown .dropdown-content a {
-	border-top: 1px solid rgb(var(--color-accent-alt));
-}
-
 .nav-solid #nav-lan i {
-	color: rgb(var(--color-accent-alt)) !important;
+  color: rgb(var(--color-accent-alt)) !important;
 }
 
 .nav-transparent #nav-lan .dropdown-content i {
-	color: rgb(var(--color-accent-alt)) !important;
-	text-shadow: none !important;
+  color: rgb(var(--color-accent-alt)) !important;
+  text-shadow: none !important;
 }
 
 @media (min-width: 1200px) {
-	.dropdown-content {
-		padding-top: min(4vh, 1rem);
-		position: absolute;
-	}
+  .dropdown-content {
+    padding-top: min(4vh, 1rem);
+    position: absolute;
+  }
 
-	.dropdown .dropdown-content i {
-		padding: min(4vw, 1rem) min(4.5vw, 1.5rem);
-		box-sizing: unset !important;
-	}
+  .dropdown .dropdown-content i {
+    padding: min(4vw, 1rem) min(4.5vw, 1.5rem);
+    box-sizing: unset !important;
+  }
 
-	.nav-transparent #nav-lan {
-		border-left: 2px solid #ddd;
-	}
+  .nav-transparent #nav-lan {
+    border-left: 2px solid #ddd;
+  }
 
-	.nav-solid #nav-lan {
-		border-left: 2px solid rgb(var(--color-accent-alt));
-	}
+  .nav-solid #nav-lan {
+    border-left: 2px solid rgb(var(--color-accent-alt));
+  }
 }
 
 /* Burger & close */
 .nav-burger,
 .nav-close {
-	font-size: 1.25rem;
-	cursor: pointer;
-	transition: opacity 0.3s, transform 0.3s;
-	display: none;
-	pointer-events: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  display: none;
+  pointer-events: none;
 }
 
 /* Mobile menu */
@@ -127,6 +130,7 @@ header .language-select {
     display: inline;
     pointer-events: auto;
   }
+
   .nav-burger.show {
     display: inline;
     pointer-events: auto;
@@ -141,35 +145,42 @@ header .language-select {
     padding: min(4vh, 1rem) 5vw;
   }
 
-	.nav-menu {
-		position: absolute;
-		top: min(8vh, 4rem);
-		left: 0;
-		width: 100%;
-		height: calc(100vh - min(8vh, 4rem));
-		background: rgb(var(--color-bg-main));
-		overflow-y: auto;
-		transform: translateY(-100%);
-		opacity: 0;
-		pointer-events: none; /* prevent clicks when hidden */
-		transition: transform 0.3s ease, opacity 0.3s ease;
-		padding: 2rem 5vw;
-	}
+  #nav-menu {
+    position: absolute;
+    top: min(8vh, 4rem);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - min(8vh, 4rem));
+    background: rgb(var(--color-bg-main));
+    overflow-y: auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    padding: 2rem 5vw;
+  }
 
-	.nav-menu.show-menu {
-		transform: translateY(0);
-		opacity: 1;
-		pointer-events: auto; /* allow clicks when visible */
-	}
+  #nav-menu.show-menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 
-	.nav-menu ul {
-		flex-direction: column;
-		gap: 1rem;
-	}
+  #nav-menu ul {
+    flex-direction: column;
+  }
 
-	.nav-menu li {
-		margin: 0.5rem 0;
-	}
+  #nav-menu li {
+    margin: 0.5rem 0;
+  }
+
+  #nav-menu a {
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 0 4px #ddd;
+    border: 1px solid #ddd;
+    padding: min(1vh, 0.5rem) min(3vw, 1rem);
+  }
 
   .nav-icons {
     justify-content: space-between;
@@ -185,7 +196,8 @@ footer {
   justify-content: center;
   padding: 1vh 0;
 }
-footer > * {
+
+footer>* {
   text-decoration: none;
   font-family: var(--main-font);
 }

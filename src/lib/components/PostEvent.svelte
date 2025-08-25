@@ -17,7 +17,7 @@
 
 <div class="post-event flex-responsive-rev flex-gap-large w100">
 	<div class="post-text flex-item-2">
-		<a class="header text-medium" href={`post.html?pid=${post.id}`}>
+		<a class="header text-medium" href={`/events/${post.id}`}>
 			{$displayTitle}
 		</a>
 		<div class="subheader text-small post-data flex-col">
@@ -31,7 +31,7 @@
 		<div class="post-ps">
 			<p>{$displayContent}</p>
 		</div>
-		<a class="read-more" href={`post.html?pid=${post.id}`}>Read more</a>
+		<a class="read-more" href={`/events/${post.id}`}>Read more</a>
 	</div>
 
 	<div class="flex-item-2 post-image">

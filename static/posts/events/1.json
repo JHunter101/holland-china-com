@@ -1,0 +1,32 @@
+{
+    "id": "1",
+    "sources": [
+        "https://www.europe-asia-network.org/events/mid-autumn-2024"
+    ],
+    "dateLaunch": "2024-09-25T00:00:00.000Z",
+    "titles": {
+        "EN": "Mid-Autumn Festival Concert 2024",
+        "CN": "2024年中秋音乐会",
+        "NL": "Maanfestival Concert 2024"
+    },
+    "contents": {
+        "EN": "This past Tuesday September 24th, Stichting Europe-Asia Network hosted a remarkable Mid-Autumn Festival celebration at Castle Kasteel de Wittenburg. The evening began with inspiring speeches from Mr. Cai Renjun, Minister Counselor of the Chinese Embassy in the Netherlands, and Ms. Xiaojia Xu, Chairwoman of the Foundation. Erasmus Trio performed a mesmerizing fusion of Eastern and Western classical music. Guests enjoyed a networking reception in the elegant castle surroundings. Special thanks to Huawei Netherlands, Bank of China (Luxembourg) S.A. Rotterdam Branch, and Mr. Lase Hu for their support in promoting cultural exchange.",
+        "CN": "2024年9月24日，欧亚网络基金会在美丽的de Wittenburg城堡举办了中秋音乐会。中国驻荷兰大使馆公使参赞蔡仁俊先生与基金会主席徐晓佳女士致开幕词。伊拉斯谟三重奏呈现东西方文化融合的古典音乐会，吸引所有来宾。随后宾客在城堡举行庆祝酒会。感谢华为荷兰公司、中国银行（卢森堡）S.A.鹿特丹分行及胡立先生的支持，让此次文化交流活动圆满成功。",
+        "NL": "Op dinsdag 24 september organiseerde Stichting Europe-Asia Network een bijzondere viering van het Maanfestival in Kasteel de Wittenburg. De avond begon met inspirerende toespraken van de Chinese ambassadeur in Nederland, de heer Cai Renjun, en voorzitter van de stichting, mevrouw Xiaojia Xu. Het Erasmus Trio verzorgde een betoverend concert met een fusie van Oosterse en Westerse klassieke muziek. Gasten genoten van een netwerkreceptie in de elegante kasteelsfeer. Speciale dank aan Huawei Netherlands, Bank of China (Luxembourg) S.A. Rotterdam Branch en de heer Lase Hu voor hun steun aan culturele uitwisseling."
+    },
+    "links": [],
+    "images": [
+        "placeholder.jpg"
+    ],
+    "location": {
+        "name": "Kasteel de Wittenburg",
+        "streetName": "Wittenburglaan",
+        "streetNumber": "1",
+        "postalCode": "2241 BM",
+        "city": "Wassenaar",
+        "country": "Netherlands"
+    },
+    "eventStart": "2024-09-24T18:00:00.000Z",
+    "eventEnd": "2024-09-24T21:30:00.000Z",
+    "linkSignUp": ""
+}

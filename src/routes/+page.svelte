@@ -1,9 +1,27 @@
 <script lang="ts">
-	import Hero from '$lib/components/Hero.svelte';
 	import PostNews from '$lib/components/PostNews.svelte';
 	import PostEvent from '$lib/components/PostEvent.svelte';
 	import { EventPost, EventLocation } from '$lib/models/event';
 	import { NewsPost } from '$lib/models/news';
+	import { langData } from '$lib/stores';
+	import { derived } from 'svelte/store';
+
+	const heroPrefix = 'HCC_00_home';
+
+	const heroTitle = derived(
+		langData,
+		($langData) => $langData[`${heroPrefix}-hero-header-1`] || ''
+	);
+
+	const bannerPoints = derived(langData, ($langData) => {
+		const points = [];
+		let i = 1;
+		while ($langData[`HCC_00_home-hero-li-${i}`]) {
+			points.push($langData[`HCC_00_home-hero-li-${i}`]);
+			i++;
+		}
+		return points;
+	});
 
 	// Temporary sample event
 	const sampleLocation: EventLocation = new EventLocation(
@@ -75,7 +93,24 @@
 	];
 </script>
 
-<Hero />
+<section class="section-accent fit-height overlay fullscreen-image">
+	<img src="https://placehold.co/600x400" alt="Event Sample" />
+
+	<div class="w100 screen-tuck-tight">
+		<div class="hero-box flex-col">
+			<h1 class="header text-large slide-down-1 text-center">
+				{$heroTitle}
+			</h1>
+
+			<ul>
+				{#each $bannerPoints as point, i}
+					<li class={`text-small slide-down-${i + 2}`}>{point}</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
+</section>
+
 <section class="screen-tuck flex-col">
 	{#if highlightEvent}
 		<h2 class="subtitle text-large text-alt">Featured Event</h2>
@@ -90,3 +125,118 @@
 		{/each}
 	{/if}
 </section>
+
+<style>
+	.hero-box {
+		background-color: rgba(190, 19, 45, 0.85);
+		border-radius: min(2vh, 0.5rem);
+		padding: min(12vh, 3rem) min(12vw, 4rem);
+	}
+
+	.slide-down-1 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 1s forwards;
+		animation: slideDown 1s forwards;
+	}
+
+	.slide-down-2 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 2s forwards;
+		animation: slideDown 2s forwards;
+	}
+
+	.slide-down-3 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 3s forwards;
+		animation: slideDown 3s forwards;
+	}
+
+	.slide-down-4 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 4s forwards;
+		animation: slideDown 4s forwards;
+	}
+
+	.slide-down-5 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 5s forwards;
+		animation: slideDown 5s forwards;
+	}
+
+	.slide-down-6 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 6s forwards;
+		animation: slideDown 6s forwards;
+	}
+
+	.slide-down-7 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 7s forwards;
+		animation: slideDown 7s forwards;
+	}
+
+	.slide-down-8 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 8s forwards;
+		animation: slideDown 8s forwards;
+	}
+
+	.slide-down-9 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 9s forwards;
+		animation: slideDown 9s forwards;
+	}
+
+	.slide-down-10 {
+		position: relative;
+		top: -100px;
+		-webkit-animation: slideDown 10s forwards;
+		animation: slideDown 10s forwards;
+	}
+
+	@-webkit-keyframes slideDown {
+		0% {
+			opacity: 0;
+		}
+
+		75% {
+			opacity: 0;
+		}
+
+		100% {
+			top: 0;
+		}
+	}
+
+	@keyframes slideDown {
+		0% {
+			opacity: 0;
+		}
+
+		75% {
+			opacity: 0;
+		}
+
+		100% {
+			top: 0;
+		}
+	}
+
+	:global(.post-ps) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		margin-bottom: min(4vh, 1rem);
+	}
+</style>

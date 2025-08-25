@@ -3,11 +3,18 @@ id,component,section,item,no,cn,en,nl
 00_shared_contact-form-placeholder-email,00_shared_contact,form,placeholder,email,电子邮件,Email,E-mail
 00_shared_contact-form-placeholder-message,00_shared_contact,form,placeholder,message,留言,Message,Bericht
 00_shared_contact-form-placeholder-name,00_shared_contact,form,placeholder,name,姓名,Name,Naam
-00_shared_contact-main-desc-1,00_shared_contact,main,desc,1,欢迎您与欧亚网络基金会（SEAN）联系，了解我们的各类项目与服务,"Contact the Stichting Europe-Asia Network (SEAN) for project, business, and cultural collaboration support.","Neem contact op met Stichting Europe-Asia Network (SEAN) voor ondersteuning bij projecten, zakelijke en culturele samenwerking."
-00_shared-common-learn_more-,00_shared,common,learn_more-,,了解更多,Learn more,Leer meer
-00_shared-common-read_more-,00_shared,common,read_more-,,阅读更多,Read more,Lees meer
-00_shared-footer-header-copyright,00_shared,footer,header,copyright,版权所有,Copyright,Auteursrecht
-00_shared-footer-header-designed_and_developed,00_shared,footer,header,designed_and_developed,设计与开发,Designed & Developed by,Onderdelen en ontwikkeling door
+00_shared_contact-main-header-1,00_shared_contact,main,header,1,欢迎来到中荷咨询。联系我们以了解更多高端跨境咨询服务！,Welcome to China-Netherlands Consulting. Contact us to learn more about our high-end cross-border consulting services!,Welkom bij China-Netherlands Consulting. Neem contact met ons op om meer te weten te komen over onze hoogwaardige grensoverschrijdende adviesdiensten!
+00_shared_contact-main-desc-1,00_shared_contact,main,desc,1,无论您是希望加深中国与欧盟国家的商业联系，制定精准的投资策略，还是组织有影响力的商业活动，我们都能为您提供全面支持。,"Whether you aim to deepen business connections between China and EU countries, formulate precise investment strategies, or organize impactful business events, we provide comprehensive support for you.","Of u nu zakelijke verbindingen tussen China en EU-landen wilt verdiepen, nauwkeurige investeringsstrategieën wilt opstellen of impactvolle zakelijke evenementen wilt organiseren, wij bieden u volledige ondersteuning."
+00_shared_contact-main-desc-2,00_shared_contact,main,desc,2,联系我们以获得：,Reach out to us for:,Neem contact met ons op voor:
+00_shared_contact-main-li-1,00_shared_contact,main,li,1,量身定制的中欧商业解决方案,Tailor-made China-EU business solutions,Op maat gemaakte China-EU zakelijke oplossingen
+00_shared_contact-main-li-2,00_shared_contact,main,li,2,战略投资建议和合作机会,Strategic investment advice and partnership opportunities,Strategisch investeringsadvies en samenwerkingsmogelijkheden
+00_shared_contact-main-li-3,00_shared_contact,main,li,3,专业的跨文化企业培训,Professional cross-cultural corporate training,Professionele interculturele bedrijfstraining
+00_shared_contact-main-li-4,00_shared_contact,main,li,4,专业论坛、研讨会和商业活动的组织与策划,"Organization and planning of professional forums, seminars, and business events","Organisatie en planning van professionele forums, seminars en zakelijke evenementen"
+00_shared_contact-main-desc-3,00_shared_contact,main,desc,3,让我们携手提升您的国际业务。,Let us work together to enhance your international business.,Laten we samenwerken om uw internationale zaken te verbeteren.
+00_shared-common-span-learn_more,00_shared,common,span,learn_more,了解更多,Learn more,Leer meer
+00_shared-common-span-read_more,00_shared,common,span,read_more,阅读更多,Read more,Lees meer
+00_shared-footer-header-copyright,00_shared,footer,header,copyright,版权所有 © HollandChina Consulting - 保留所有权利。,Copyright © HollandChina Consulting - All rights reserved.,Copyright © HollandChina Consulting - Alle rechten voorbehouden.
+00_shared-footer-header-designed_and_developed,00_shared,footer,header,designed_and_developed,由 Jack Chen 设计与开发,Designed & Developed by Jack Chen,Deisgned en ontwikkeled door Jack Chen
 00_shared-footer-header-our_network,00_shared,footer,header,our_network,我们的网络,Our Network,Ons netwerk
 00_shared-footer-header-our_partners,00_shared,footer,header,our_partners,我们的合作伙伴,Our Partners,Onze partners
 00_shared-header-nav-about,00_shared,header,nav,about,关于我们,About,Over
@@ -17,8 +24,10 @@ id,component,section,item,no,cn,en,nl
 00_shared-header-nav-news,00_shared,header,nav,news,新闻,News,Nieuws
 00_shared-header-nav-partners,00_shared,header,nav,partners,合作伙伴,Partners,Partners
 00_shared-header-nav-services,00_shared,header,nav,services,服务,Services,Diensten
-HCC_00_home-hero-header-,HCC_00_home,hero,header-,,连接欧亚，共创未来。,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
-HCC_00_home-hero-li-1,HCC_00_home,hero,li,1,为中荷及欧盟企业的跨国业务提供高端优质的顾问服务,High-quality consulting services for cross-border China–Netherlands/EU business,Hoogwaardige adviesdiensten voor grensoverschrijdende China–Nederland/EU zaken
+00_shared-about-header-about_us,00_shared,about,header,about_us,关于我们,About Us,Über uns
+00_shared-about-header-our_team,00_shared,about,header,our_team,我们的团队,Our Team,Unser Team
+HCC_00_home-hero-header-1,HCC_00_home,hero,header,1,连接欧亚，共创未来。,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
+HCC_00_home-hero-li-1,HCC_00_home,hero,li,1,为中荷及欧盟企业的跨国业务提供高端优质的顾问服务,High-quality consulting services for cross-border China–Netherlands/EU business,Hoogwaardige adviesdiensten voor grens-overschrijdende China–Nederland/EU zaken
 HCC_00_home-hero-li-2,HCC_00_home,hero,li,2,提供中欧两地的商业机遇与合作伙伴甄选,Business opportunities and partner selection in China and Europe,Zakelijke kansen en partnerselectie in China en Europa
 HCC_00_home-hero-li-3,HCC_00_home,hero,li,3,市场洞察与策略咨询,Market insights and strategic consulting,Marktinzichten en strategisch advies
 HCC_00_home-hero-li-4,HCC_00_home,hero,li,4,跨文化、跨语言的企业培训服务,Cross-cultural and cross-linguistic corporate training,Cross-culturele en taalkundige bedrijfstraining
@@ -27,149 +36,211 @@ HCC_00_home-hero-li-6,HCC_00_home,hero,li,6,物业管理及外派人员的相关
 HCC_00_home-hero-li-7,HCC_00_home,hero,li,7,支持采购与产品研发,Support for procurement and product development,Ondersteuning bij inkoop en productontwikkeling
 HCC_01_about-main-desc-1,HCC_01_about,main,desc,1,HollandChina Consulting（荷中咨询）协助中国与欧洲的企业和机构建立联系、发掘商机、设定战略投资目标、并筛选合作伙伴，积极促进中欧双边投资与贸易的发展。我们提供业务设立与拓展的专业咨询、量身定制的跨文化和跨语言企业培训，以及在中欧两地举办各类大型论坛、研讨会、展会及商业活动，为跨国企业提供全方位的高端优质跨境顾问服务。,"HollandChina Consulting (HCC) assists Chinese and European companies and institutions in establishing connections, discovering business opportunities, setting strategic investment goals, and selecting partners. We actively promote bilateral investment and trade development. We provide professional consulting for business setup and expansion, tailored cross-cultural and cross-linguistic corporate training, and organize various large-scale forums, seminars, exhibitions, and business events in China and Europe, offering comprehensive high-end cross-border consulting services.","HollandChina Consulting (HCC) helpt Chinese en Europese bedrijven en instellingen bij het leggen van contacten, het ontdekken van zakelijke kansen, het bepalen van strategische investeringsdoelen en het selecteren van partners. Wij bevorderen actief bilaterale investeringen en handel. Wij bieden professionele consultancy voor bedrijfsopzet en uitbreiding, op maat gemaakte cross-culturele en taalkundige bedrijfstrainingen en organiseren diverse grootschalige forums, seminars, tentoonstellingen en zakelijke evenementen in China en Europa, en bieden een volledige hoogwaardige grensoverschrijdende adviesservice."
 HCC_01_about-main-desc-2,HCC_01_about,main,desc,2,成功的背后是风险与机遇的并存。许多中国企业和机构在欧洲的商业计划因水土不服而失败；很多欧洲和荷兰的企业与机构因准备不足而失意中国市场。只有借助精准高效的专业帮助，才能做出明智的选择，成为企业价值创造的来源。,Success involves both risk and opportunity. Many Chinese companies fail in Europe due to cultural mismatch; many European and Dutch companies fail in China due to lack of preparation. Only with precise professional assistance can wise choices be made and create value.,Succes omvat zowel risico als kans. Veel Chinese bedrijven falen in Europa door culturele mismatch; veel Europese en Nederlandse bedrijven falen in China door gebrek aan voorbereiding. Alleen met nauwkeurige professionele ondersteuning kunnen verstandige keuzes worden gemaakt en waarde gecreëerd.
-HCC_01_about-principle-header-1,HCC_01_about,principle,header,1,精准（accurate）,Accurate / Precision,Accuraat / Precisie
-HCC_01_about-principle-header-2,HCC_01_about,principle,header,2,直接（direct）,Direct,Direct
-HCC_01_about-principle-header-3,HCC_01_about,principle,header,3,忠诚（fidelity）,Fidelity,Fidelity
-HCC_01_about-principle-header-4,HCC_01_about,principle,header,4,理念（concepts）,Concepts,Concepts
-HCC_01_about-principle-header-5,HCC_01_about,principle,header,5,专业（expertise）,Expertise,Expertise
+HCC_01_about-principle-header-1,HCC_01_about,principle,header,1,精准,Accurate,Accuraat
+HCC_01_about-principle-header-2,HCC_01_about,principle,header,2,直接,Direct,Direct
+HCC_01_about-principle-header-3,HCC_01_about,principle,header,3,忠诚,Fidelity,Fidelity
+HCC_01_about-principle-header-4,HCC_01_about,principle,header,4,理念,Concepts,Concepts
+HCC_01_about-principle-header-5,HCC_01_about,principle,header,5,专业,Expertise,Expertise
 HCC_01_about-principle-li-1_1,HCC_01_about,principle,li,1_1,充分了解企业需求和市场趋势，结合企业自身资源与实力，优化商业流程，提高效率，抢占市场先机。,"Understand business needs and market trends, optimize processes, improve efficiency, seize market opportunities.","Begrijp bedrijfsbehoeften en markttrends, optimaliseer processen, verbeter efficiëntie, grijp marktkansen."
 HCC_01_about-principle-li-1_2,HCC_01_about,principle,li,1_2,帮助企业更好的应对风险、抓住机遇，开拓新局面。,Help companies respond to risks and seize opportunities,"Help bedrijven om te reageren op risico's, kansen te grijpen en nieuwe mogelijkheden te openen."
 HCC_01_about-principle-li-1_3,HCC_01_about,principle,li,1_3,提供有针对性并有价值的潜在商业伙伴，节省时间，直接与值得打交道的人合作。,Provide targeted and valuable potential business partners to save time.,Bied gerichte en waardevolle potentiële zakenpartners om tijd te besparen.
-HCC_01_about-principle-li-2_1,HCC_01_about,principle,li,2_1,无论客户身处何地，我们都能帮助他们与中国或欧洲的合作伙伴直接联络。,"Regardless of client location, we connect them directly with partners",无论客户身处何地，直接联络合作伙伴
-HCC_01_about-principle-li-2_2,HCC_01_about,principle,li,2_2,协助客户筛选甄别，直接与值得打交道的人沟通，快速识别客户的需求与意向，并提供相应的解决方案。,Assist clients in partner screening and provide solutions,协助客户筛选甄别并提供解决方案
-HCC_01_about-principle-li-3_1,HCC_01_about,principle,li,3_1,HollandChina Consulting 荷中咨询只从客户一方获取佣金，规避其他途径的获益，只对客户负责，实现客户权益的全面保障。,"HCC only charges clients, avoids other revenue streams, ensures full client protection",HCC仅向客户收取费用，保障客户权益
-HCC_01_about-principle-li-4_1,HCC_01_about,principle,li,4_1,少说，多做。,"Say less, do more",少说，多做
-HCC_01_about-principle-li-5_1,HCC_01_about,principle,li,5_1,在欧盟这个巨大的市场中，我们深知聚焦自身擅长的领域不仅是实现长期成功的起点，也是客户选择我们的基础。,Focus on strengths in the EU market for long-term success,专注于擅长领域，实现长期成功
-HCC_01_about-principle-li-5_2,HCC_01_about,principle,li,5_2,坚持对自身能力的清晰认知，不超越能力所及去冒险，在最擅长的领域保持冷静与专注，为客户提供最明确的答复以及量身定制的服务。,"Maintain focus and provide clear, tailored solutions",保持专注，提供清晰定制服务
-HCC_02_news-section-li-1,HCC_02_news,section,li,1,发布公司的最新新闻和公告,Publish the latest company news,发布公司最新新闻
-HCC_02_news-section-li-2,HCC_02_news,section,li,2,展示公司在其他媒体上的报道和采访,Show media coverage of the company,展示媒体报道
-HCC_02_news-section-title-latest_news,HCC_02_news,section,title,latest_news,新闻发布 (Press Releases),Press Releases,新闻发布
-HCC_04_services-main-desc-1,HCC_04_services,main,desc,1,我们的服务：HollandChina Consulting 荷中咨询致力于促进中国与荷兰及欧盟国家之间的项目合作，通过提供全面的专业服务，确保您的跨国业务取得成功。,Our services: HCC promotes China-EU cooperation with full professional support,我们的服务：HCC推动中欧合作，提供专业支持
-HCC_04_services-main-desc-2,HCC_04_services,main,desc,2,我们的服务内容包括：,Service offerings include:,服务内容包括
-HCC_04_services-service-header-1,HCC_04_services,service,header,1,优质的跨境顾问服务,High-end cross-border consulting,优质跨境顾问服务
-HCC_04_services-service-header-2,HCC_04_services,service,header,2,商业机遇与合作伙伴甄选,Business opportunities and partner selection,商业机遇与合作伙伴甄选
-HCC_04_services-service-header-3,HCC_04_services,service,header,3,市场洞察与策略咨询,Market insights and strategy consulting,市场洞察与策略咨询
-HCC_04_services-service-header-4,HCC_04_services,service,header,4,跨文化、跨语言的企业培训服务,Cross-cultural and language corporate training,跨文化、跨语言企业培训服务
-HCC_04_services-service-header-5,HCC_04_services,service,header,5,提供中欧两地的公关活动组织服务,PR events organization in China and Europe,提供中欧两地的公关活动组织服务
-HCC_04_services-service-header-6,HCC_04_services,service,header,6,物业管理及外派人员的相关服务,Property management and expatriate support,物业管理及外派人员的相关服务
-HCC_04_services-service-li-1_1,HCC_04_services,service,li,1_1,业务流程分析与优化,Process analysis and optimization,业务流程分析与优化
-HCC_04_services-service-li-1_2,HCC_04_services,service,li,1_2,项目管理与质量监督,Project management and quality supervision,项目管理与质量监督
-HCC_04_services-service-li-1_3,HCC_04_services,service,li,1_3,法律与合规咨询,Legal and compliance consulting,法律与合规咨询
-HCC_04_services-service-li-1_4,HCC_04_services,service,li,1_4,跨境税务筹划,Cross-border tax planning,跨境税务筹划
-HCC_04_services-service-li-1_5,HCC_04_services,service,li,1_5,知识产权保护,Intellectual property protection,知识产权保护
-HCC_04_services-service-li-2_1,HCC_04_services,service,li,2_1,潜在合作伙伴识别与评估,Potential partner identification and evaluation,潜在合作伙伴识别与评估
-HCC_04_services-service-li-2_2,HCC_04_services,service,li,2_2,商务谈判与协议签订支持,Support for business negotiations and agreements,商务谈判与协议签订支持
-HCC_04_services-service-li-2_3,HCC_04_services,service,li,2_3,合资企业与战略联盟咨询,Joint ventures and strategic alliance consulting,合资企业与战略联盟咨询
-HCC_04_services-service-li-3_1,HCC_04_services,service,li,3_1,市场调研与分析,Market research and analysis,市场调研与分析
-HCC_04_services-service-li-3_2,HCC_04_services,service,li,3_2,企业背景调查,Company background checks,企业背景调查
-HCC_04_services-service-li-3_3,HCC_04_services,service,li,3_3,竞争对手研究,Competitor research,竞争对手研究
-HCC_04_services-service-li-3_4,HCC_04_services,service,li,3_4,消费者行为分析,Consumer behavior analysis,消费者行为分析
-HCC_04_services-service-li-3_5,HCC_04_services,service,li,3_5,市场进入策略制定,Market entry strategy formulation,市场进入策略制定
-HCC_04_services-service-li-4_1,HCC_04_services,service,li,4_1,跨文化管理与沟通技巧,Cross-cultural management and communication skills,跨文化管理与沟通技巧
-HCC_04_services-service-li-4_2,HCC_04_services,service,li,4_2,商务荷中文专业用语培训,Business Dutch-Chinese professional language training,商务荷中文专业用语培训
-HCC_04_services-service-li-4_3,HCC_04_services,service,li,4_3,中欧市场及商业环境介绍,Introduction to China-EU market and business environment,中欧市场及商业环境介绍
-HCC_05_partners-partner--1,HCC_05_partners,partner,,1,DAF Trucks,DAF Trucks,DAF Trucks
-HCC_05_partners-partner--2,HCC_05_partners,partner,,2,Giesecke & Devrient Currency Automation Systems,Giesecke & Devrient Currency Automation Systems,Giesecke & Devrient Currency Automation Systems
-HCC_05_partners-partner--3,HCC_05_partners,partner,,3,Fugro,Fugro,Fugro
-HCC_05_partners-partner--4,HCC_05_partners,partner,,4,Henkel,Henkel,Henkel
-HCC_05_partners-partner--5,HCC_05_partners,partner,,5,Dutch Ministry of Foreign Affairs,Nederlands Ministerie van Buitenlandse Zaken,荷兰外交部
-HCC_05_partners-partner--6,HCC_05_partners,partner,,6,Dutch Ministry of Economic Affairs,Nederlands Ministerie van Economische Zaken,荷兰经济事务部
-HCC_05_partners-partner--7,HCC_05_partners,partner,,7,Chinese Ministry of Agriculture,Chinese Ministerie van Landbouw,中国农业部
-HCC_05_partners-partner--8,HCC_05_partners,partner,,8,World Bank,Wereldbank,世界银行
-HCC_05_partners-partner--9,HCC_05_partners,partner,,9,World Wildlife Fund (WWF),World Wildlife Fund (WWF),世界自然基金会
-HCC_05_partners-partner--10,HCC_05_partners,partner,,10,NOS,NOS,荷兰国家媒体集团
-HCC_05_partners-partner--11,HCC_05_partners,partner,,11,China National Media Group,China National Media Group,中国国家媒体集团
-HCC_05_partners-partner--12,HCC_05_partners,partner,,12,Royal IGC,Royal IGC,Royal IGC
-HCC_05_partners-partner--13,HCC_05_partners,partner,,13,Huawei,Huawei,Huawei
-HCC_05_partners-partner--14,HCC_05_partners,partner,,14,Tencent,Tencent,Tencent
-HCC_05_partners-partner--15,HCC_05_partners,partner,,15,MG Motor Europe,MG Motor Europe,MG Motor Europe
-HCC_05_partners-partner--16,HCC_05_partners,partner,,16,ICBC,ICBC,中国工商银行
-HCC_05_partners-partner--17,HCC_05_partners,partner,,17,Bank of China,Bank of China,中国银行
-HCC_05_partners-partner--18,HCC_05_partners,partner,,18,CCIC (China Certification & Inspection Group),CCIC (China Certification & Inspection Group),CCIC(中检集团)
-HCC_05_partners-partner--19,HCC_05_partners,partner,,19,China Mobile,China Mobile,中国移动
-HCC_05_partners-partner--20,HCC_05_partners,partner,,20,North Sea Jazz,North Sea Jazz,North Sea Jazz
-HCC_05_partners-partner--21,HCC_05_partners,partner,,21,Rituals,Rituals,Rituals
-HCC_05_partners-partner--22,HCC_05_partners,partner,,22,Wageningen University,Wageningen University,Wageningen University
-HCC_05_partners-partner--23,HCC_05_partners,partner,,23,LOI,LOI,LOI
-HCC_05_partners-partner--24,HCC_05_partners,partner,,24,Zhongyan,Zhongyan,中演
-HCC_05_partners-partner--25,HCC_05_partners,partner,,25,Shanghai International Arts Festival,Shanghai International Arts Festival,上海国际艺术节
-HCC_05_partners-partner--26,HCC_05_partners,partner,,26,Släpstiks,Släpstiks,Släpstiks
-HCC_05_partners-partner--27,HCC_05_partners,partner,,27,Kasteel de Wittenburg,Kasteel de Wittenburg,Kasteel de Wittenburg
-HCC_05_partners-partner--28,HCC_05_partners,partner,,28,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ
-SEAN_00_home-hero-header-,SEAN_00_home,hero,header,,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren",连接欧亚，共创未来。
-SEAN_00_home-hero-li-1,SEAN_00_home,hero,li,1,SEAN搭建欧洲与亚洲之间的桥梁，促进商业、文化和教育领域的合作,"SEAN builds bridges between Europe and Asia, promoting collaboration across business, culture, and education",SEAN搭建欧洲与亚洲之间的桥梁，促进商业、文化和教育领域的合作
-SEAN_00_home-hero-li-2,SEAN_00_home,hero,li,2,我们组织国际活动、论坛和文化活动以增强双边关系,"We organize international events, forums, and cultural activities to strengthen bilateral relationships",我们组织国际活动、论坛和文化活动以增强双边关系
-SEAN_01_about-main-desc-1,SEAN_01_about,main,desc,1,欧亚网络基金会（SEAN）是一家总部设于荷兰的非营利机构。它搭建欧洲与亚洲之间的沟通与合作桥梁，促进跨文化理解，并推动在商业、文化、教育及公共外交领域的重要项目,"The Stichting Europe-Asia Network (SEAN) is a non-profit organization based in the Netherlands. It builds communication and collaboration bridges between Europe and Asia, promoting cross-cultural understanding and facilitating meaningful projects in business, culture, education, and public diplomacy.",欧亚网络基金会（SEAN）是一家总部设于荷兰的非营利机构。它搭建欧洲与亚洲之间的沟通与合作桥梁，促进跨文化理解，并推动在商业、文化、教育及公共外交领域的重要项目
-SEAN_01_about-main-desc-2,SEAN_01_about,main,desc,2,SEAN组织具有国际影响力的活动，包括商业论坛、文化演出、展览和教育交流，作为欧亚合作的桥梁和催化器,"SEAN organizes high-impact international events including business forums, cultural performances, exhibitions, and educational exchanges, acting as a bridge and catalyst for collaboration between Europe and Asia.",SEAN组织具有国际影响力的活动，包括商业论坛、文化演出、展览和教育交流，作为欧亚合作的桥梁和催化器
-SEAN_01_about-main-desc-3,SEAN_01_about,main,desc,3,我们的核心价值观为诚信、专业、创新与协作，SEAN确保国际合作建立在尊重、理解、开放对话及长期信任的基础上,"Our core values are integrity, professionalism, innovation, and collaboration. SEAN ensures international cooperation is built on respect, understanding, open dialogue, and long-term trust accumulation.",我们的核心价值观为诚信、专业、创新与协作，SEAN确保国际合作建立在尊重、理解、开放对话及长期信任的基础上
-SEAN_01_about-team-member_name-1,SEAN_01_about,team,member_name,1,Xiaojia Xu,Xiaojia Xu,Xu Xiaojia
+HCC_01_about-principle-li-2_1,HCC_01_about,principle,li,2_1,无论客户身处何地，我们都能帮助他们与中国或欧洲的合作伙伴直接联络。,"Regardless of client location, we connect them directly with partners","Ongeacht waar onze klanten zich bevinden, wij helpen hen rechtstreeks in contact te komen met hun partners in China of Europa。"
+HCC_01_about-principle-li-2_2,HCC_01_about,principle,li,2_2,协助客户筛选甄别，直接与值得打交道的人沟通，快速识别客户的需求与意向，并提供相应的解决方案。,Assist clients in partner screening and provide solutions,"Wij ondersteunen klanten bij het selecteren van de juiste contacten, zodat zij direct kunnen communiceren met betrouwbare partijen. We identificeren snel de behoeften en intenties van de klant en bieden passende oplossingen."
+HCC_01_about-principle-li-3_1,HCC_01_about,principle,li,3_1,HollandChina Consulting 荷中咨询只从客户一方获取佣金，规避其他途径的获益，只对客户负责，实现客户权益的全面保障。,"HCC only charges clients, avoids other revenue streams, ensures full client protection","HollandChina Consulting 荷中咨询 ontvangt uitsluitend commissie van de klantzijde. We vermijden inkomsten uit andere bronnen en zijn alleen verantwoordelijk tegenover de klant, zodat de belangen van de klant volledig worden beschermd."
+HCC_01_about-principle-li-4_1,HCC_01_about,principle,li,4_1,少说，多做。,"Say less, do more","Minder praten, meer doen."
+HCC_01_about-principle-li-5_1,HCC_01_about,principle,li,5_1,在欧盟这个巨大的市场中，我们深知聚焦自身擅长的领域不仅是实现长期成功的起点，也是客户选择我们的基础。,Focus on strengths in the EU market for long-term success,"Binnen de enorme EU-markt weten wij dat focussen op onze sterke punten niet alleen de basis is voor duurzaam succes, maar ook de reden waarom klanten voor ons kiezen."
+HCC_01_about-principle-li-5_2,HCC_01_about,principle,li,5_2,坚持对自身能力的清晰认知，不超越能力所及去冒险，在最擅长的领域保持冷静与专注，为客户提供最明确的答复以及量身定制的服务。,"Maintain focus and provide clear, tailored solutions","Wij houden vast aan een helder inzicht in onze eigen capaciteiten, vermijden roekeloze avonturen buiten ons bereik, en blijven kalm en gefocust binnen de domeinen waarin wij het beste zijn. Zo bieden wij klanten de duidelijkste antwoorden en maatwerkdiensten."
+HCC_02_news-section-li-1,HCC_02_news,section,li,1,发布公司的最新新闻和公告,Publish the latest company news,Publicatie van het laatste bedrijfsnieuws en aankondigingen
+HCC_02_news-section-li-2,HCC_02_news,section,li,2,展示公司在其他媒体上的报道和采访,Show media coverage of the company,Weergave van bedrijfsinterviews en -rapportages in andere media
+HCC_02_news-section-title-latest_news,HCC_02_news,section,title,latest_news,新闻发布,Press Releases,Persberichten
+HCC_04_services-main-desc-1,HCC_04_services,main,desc,1,HollandChina Consulting 荷中咨询致力于促进中国与荷兰及欧盟国家之间的项目合作，通过提供全面的专业服务，确保您的跨国业务取得成功。,"HollandChina Consulting is dedicated to promoting project collaboration between China and the Netherlands, as well as other EU countries. By providing comprehensive professional services, we ensure the success of your international business.",HollandChina Consulting zet zich in om de samenwerking tussen China en Nederland/EU-landen te bevorderen. Door het leveren van uitgebreide professionele diensten zorgen wij ervoor dat uw grensoverschrijdende activiteiten succesvol verlopen.
+HCC_04_services-main-desc-2,HCC_04_services,main,desc,2,我们的服务内容包括：,Service offerings include:,Onze dienstverlening omvat onder andere：
+HCC_04_services-service-header-1,HCC_04_services,service,header,1,优质的跨境顾问服务,High-end cross-border consulting,Hoogwaardige grens-overschrijdende adviesdiensten
+HCC_04_services-service-header-2,HCC_04_services,service,header,2,商业机遇与合作伙伴甄选,Business opportunities and partner selection,Selectie van zakelijke kansen en partners
+HCC_04_services-service-header-3,HCC_04_services,service,header,3,市场洞察与策略咨询,Market insights and strategy consulting,Marktinzichten en strategisch advies
+HCC_04_services-service-header-4,HCC_04_services,service,header,4,跨文化、跨语言的企业培训服务,Cross-cultural and language corporate training,Interculturele en meertalige bedrijfstraining
+HCC_04_services-service-header-5,HCC_04_services,service,header,5,提供中欧两地的公关活动组织服务,PR events organization in China and Europe,Organisatie van PR-evenementen in zowel China als Europa
+HCC_04_services-service-header-6,HCC_04_services,service,header,6,物业管理及外派人员的相关服务,Property management and expatriate support,Vastgoedbeheer en ondersteuning voor uitgezonden medewerkers
+HCC_04_services-service-li-1_1,HCC_04_services,service,li,1_1,业务流程分析与优化,Process analysis and optimization,Analyse en optimalisatie van bedrijfsprocessen
+HCC_04_services-service-li-1_2,HCC_04_services,service,li,1_2,项目管理与质量监督,Project management and quality supervision,Projectmanagement en kwaliteitsbewaking
+HCC_04_services-service-li-1_3,HCC_04_services,service,li,1_3,法律与合规咨询,Legal and compliance consulting,Juridisch en compliance-advies
+HCC_04_services-service-li-1_4,HCC_04_services,service,li,1_4,跨境税务筹划,Cross-border tax planning,Grensoverschrijdende fiscale planning
+HCC_04_services-service-li-1_5,HCC_04_services,service,li,1_5,知识产权保护,Intellectual property protection,Bescherming van intellectueel eigendom
+HCC_04_services-service-li-2_1,HCC_04_services,service,li,2_1,潜在合作伙伴识别与评估,Potential partner identification and evaluation,Identificatie en evaluatie van potentiële partners
+HCC_04_services-service-li-2_2,HCC_04_services,service,li,2_2,商务谈判与协议签订支持,Support for business negotiations and agreements,Ondersteuning bij zakelijke onderhandelingen en contractondertekening
+HCC_04_services-service-li-2_3,HCC_04_services,service,li,2_3,合资企业与战略联盟咨询,Joint ventures and strategic alliance consulting,Advies over joint ventures en strategische allianties
+HCC_04_services-service-li-3_1,HCC_04_services,service,li,3_1,市场调研与分析,Market research and analysis,Marktanalyse en -onderzoek
+HCC_04_services-service-li-3_2,HCC_04_services,service,li,3_2,企业背景调查,Company background checks,Bedrijfsonderzoeken (due diligence)
+HCC_04_services-service-li-3_3,HCC_04_services,service,li,3_3,竞争对手研究,Competitor research,Concurrentieanalyse
+HCC_04_services-service-li-3_4,HCC_04_services,service,li,3_4,消费者行为分析,Consumer behavior analysis,Analyse van consumentengedrag
+HCC_04_services-service-li-3_5,HCC_04_services,service,li,3_5,市场进入策略制定,Market entry strategy formulation,Ontwikkeling van markttoetredingsstrategieën
+HCC_04_services-service-li-4_1,HCC_04_services,service,li,4_1,跨文化管理与沟通技巧,Cross-cultural management and communication skills,Intercultureel management en communicatietraining
+HCC_04_services-service-li-4_2,HCC_04_services,service,li,4_2,商务荷中文专业用语培训,Business Dutch-Chinese professional language training,Zakelijk Chinees-Nederlands terminologie-onderwijs
+HCC_04_services-service-li-4_3,HCC_04_services,service,li,4_3,中欧市场及商业环境介绍,Introduction to China-EU market and business environment,Introductie van de Chinese en Europese markt en zakelijke omgeving
+HCC_04_services-service-li-5_1,HCC_04_services,service,li,5_1,产品发布会和推广活动,Product launches and promotional events,Productlanceringen en promotieactiviteiten
+HCC_04_services-service-li-5_2,HCC_04_services,service,li,5_2,商务及文化交流和合作洽谈会,Business and cultural exchange & cooperation meetings,Zakelijke en culturele uitwisselings- en samenwerkingsbijeenkomsten
+HCC_04_services-service-li-5_3,HCC_04_services,service,li,5_3,高端社交和商务宴会,High-end social and business banquets,Exclusieve netwerk- en zakenlunches/diners
+HCC_04_services-service-li-5_4,HCC_04_services,service,li,5_4,主题论坛暨大型文化活动,Thematic forums and large-scale cultural events,Themafora en grootschalige culturele evenementen
+HCC_04_services-service-li-6_1,HCC_04_services,service,li,6_1,办公地点选址与租赁管理,Office location selection and lease management,Selectie van kantoorlocaties en beheer van huurcontracten
+HCC_04_services-service-li-6_2,HCC_04_services,service,li,6_2,物业维护和后勤支持,Property maintenance and logistical support,Vastgoedonderhoud en logistieke ondersteuning
+HCC_04_services-service-li-6_3,HCC_04_services,service,li,6_3,外派员工安置及生活服务,Expat employee relocation and living services,Ondersteuning bij vestiging en levensondersteuning voor expats
+HCC_05_partners-partner-title-1,HCC_05_partners,partner,title,1,达夫卡车,DAF Trucks,DAF Trucks
+HCC_05_partners-partner-title-10,HCC_05_partners,partner,title,10,荷兰国家媒体集团,NOS,NOS
+HCC_05_partners-partner-title-11,HCC_05_partners,partner,title,11,中国国家媒体集团,China National Media Group,China National Media Group
+HCC_05_partners-partner-title-12,HCC_05_partners,partner,title,12,皇家工业俱乐部,Royal IGC,Koninklijke Industrieele Groote Club
+HCC_05_partners-partner-title-13,HCC_05_partners,partner,title,13,华为,Huawei,Huawei
+HCC_05_partners-partner-title-14,HCC_05_partners,partner,title,14,腾讯,Tencent,Tencent
+HCC_05_partners-partner-title-15,HCC_05_partners,partner,title,15,名爵汽车欧洲,MG Motor Europe,MG Motor Europe
+HCC_05_partners-partner-title-16,HCC_05_partners,partner,title,16,中国工商银行,ICBC,ICBC
+HCC_05_partners-partner-title-17,HCC_05_partners,partner,title,17,中国银行,Bank of China,Bank of China
+HCC_05_partners-partner-title-18,HCC_05_partners,partner,title,18,中检集团,CCIC (China Certification & Inspection Group),CCIC (China Certification & Inspection Group)
+HCC_05_partners-partner-title-19,HCC_05_partners,partner,title,19,中国移动,China Mobile,China Mobile
+HCC_05_partners-partner-title-2,HCC_05_partners,partner,title,2,吉赛克-德弗里恩特货币自动化系统,Giesecke & Devrient,Giesecke & Devrient
+HCC_05_partners-partner-title-20,HCC_05_partners,partner,title,20,北海爵士音乐节,North Sea Jazz,North Sea Jazz
+HCC_05_partners-partner-title-21,HCC_05_partners,partner,title,21,Rituals,Rituals,Rituals
+HCC_05_partners-partner-title-22,HCC_05_partners,partner,title,22,瓦赫宁根大学,Wageningen University,Wageningen University
+HCC_05_partners-partner-title-23,HCC_05_partners,partner,title,23,荷兰LOI远程教育大学,LOI,LOI
+HCC_05_partners-partner-title-24,HCC_05_partners,partner,title,24,中演,Zhongyan,Zhongyan
+HCC_05_partners-partner-title-25,HCC_05_partners,partner,title,25,上海国际艺术节,Shanghai International Arts Festival,Shanghai International Arts Festival
+HCC_05_partners-partner-title-26,HCC_05_partners,partner,title,26,滑稽剧团 ,Släpstiks,Släpstiks
+HCC_05_partners-partner-title-27,HCC_05_partners,partner,title,27,德维特堡,Kasteel de Wittenburg,Kasteel de Wittenburg
+HCC_05_partners-partner-title-28,HCC_05_partners,partner,title,28,艾音乐厅,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ
+HCC_05_partners-partner-title-3,HCC_05_partners,partner,title,3,富格罗,Fugro,Fugro
+HCC_05_partners-partner-title-4,HCC_05_partners,partner,title,4,汉高,Henkel,Henkel
+HCC_05_partners-partner-title-5,HCC_05_partners,partner,title,5,荷兰外交部,Dutch Ministry of Foreign Affairs,Nederlands Ministerie van Buitenlandse Zaken
+HCC_05_partners-partner-title-6,HCC_05_partners,partner,title,6,荷兰经济事务部,Dutch Ministry of Economic Affairs,Nederlands Ministerie van Economische Zaken
+HCC_05_partners-partner-title-7,HCC_05_partners,partner,title,7,中国农业部,Chinese Ministry of Agriculture,Chinese Ministerie van Landbouw
+HCC_05_partners-partner-title-8,HCC_05_partners,partner,title,8,世界银行,World Bank,Wereldbank
+HCC_05_partners-partner-title-9,HCC_05_partners,partner,title,9,世界自然基金会,World Wildlife Fund (WWF),World Wildlife Fund (WWF)
+HCC_05_partners-partner-img-1,HCC_05_partners,partner,img,1,daf_trucks,daf_trucks,daf_trucks
+HCC_05_partners-partner-img-10,HCC_05_partners,partner,img,10,nos,nos,nos
+HCC_05_partners-partner-img-11,HCC_05_partners,partner,img,11,china_national_media_group,china_national_media_group,china_national_media_group
+HCC_05_partners-partner-img-12,HCC_05_partners,partner,img,12,royal_igc,royal_igc,royal_igc
+HCC_05_partners-partner-img-13,HCC_05_partners,partner,img,13,huawei,huawei,huawei
+HCC_05_partners-partner-img-14,HCC_05_partners,partner,img,14,tencent,tencent,tencent
+HCC_05_partners-partner-img-15,HCC_05_partners,partner,img,15,mg_motor_europe,mg_motor_europe,mg_motor_europe
+HCC_05_partners-partner-img-16,HCC_05_partners,partner,img,16,icbc,icbc,icbc
+HCC_05_partners-partner-img-17,HCC_05_partners,partner,img,17,bank_of_china,bank_of_china,bank_of_china
+HCC_05_partners-partner-img-18,HCC_05_partners,partner,img,18,ccic_china_certification_inspection_group,ccic_china_certification_inspection_group,ccic_china_certification_inspection_group
+HCC_05_partners-partner-img-19,HCC_05_partners,partner,img,19,china_mobile,china_mobile,china_mobile
+HCC_05_partners-partner-img-2,HCC_05_partners,partner,img,2,giesecke_devrient,giesecke_devrient,giesecke_devrient
+HCC_05_partners-partner-img-20,HCC_05_partners,partner,img,20,north_sea_jazz,north_sea_jazz,north_sea_jazz
+HCC_05_partners-partner-img-21,HCC_05_partners,partner,img,21,rituals,rituals,rituals
+HCC_05_partners-partner-img-22,HCC_05_partners,partner,img,22,wageningen_university,wageningen_university,wageningen_university
+HCC_05_partners-partner-img-23,HCC_05_partners,partner,img,23,loi,loi,loi
+HCC_05_partners-partner-img-24,HCC_05_partners,partner,img,24,zhongyan,zhongyan,zhongyan
+HCC_05_partners-partner-img-25,HCC_05_partners,partner,img,25,shanghai_international_arts_festival,shanghai_international_arts_festival,shanghai_international_arts_festival
+HCC_05_partners-partner-img-26,HCC_05_partners,partner,img,26,slapstiks,slapstiks,slapstiks
+HCC_05_partners-partner-img-27,HCC_05_partners,partner,img,27,kasteel_de_wittenburg,kasteel_de_wittenburg,kasteel_de_wittenburg
+HCC_05_partners-partner-img-28,HCC_05_partners,partner,img,28,muziekgebouw_ij,muziekgebouw_ij,muziekgebouw_ij
+HCC_05_partners-partner-img-3,HCC_05_partners,partner,img,3,fugro,fugro,fugro
+HCC_05_partners-partner-img-4,HCC_05_partners,partner,img,4,henkel,henkel,henkel
+HCC_05_partners-partner-img-5,HCC_05_partners,partner,img,5,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs
+HCC_05_partners-partner-img-6,HCC_05_partners,partner,img,6,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs
+HCC_05_partners-partner-img-7,HCC_05_partners,partner,img,7,chinese_ministry_of_agriculture,chinese_ministry_of_agriculture,chinese_ministry_of_agriculture
+HCC_05_partners-partner-img-8,HCC_05_partners,partner,img,8,world_bank,world_bank,world_bank
+HCC_05_partners-partner-img-9,HCC_05_partners,partner,img,9,world_wildlife_fund_wwf,world_wildlife_fund_wwf,world_wildlife_fund_wwf
+SEAN_00_home-hero-header-,SEAN_00_home,hero,header,,连接欧亚，共创未来,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
+SEAN_00_home-hero-li-1,SEAN_00_home,hero,li,1,SEAN搭建欧洲与亚洲之间的桥梁，促进商业、文化和教育领域的合作,"SEAN builds bridges between Europe and Asia, promoting collaboration across business, culture, and education","SEAN bouwt bruggen tussen Europa en Azië en bevordert samenwerking op het gebied van handel, cultuur en onderwijs。"
+SEAN_00_home-hero-li-2,SEAN_00_home,hero,li,2,我们组织国际活动、论坛和文化活动以增强双边关系,"We organize international events, forums, and cultural activities to strengthen bilateral relationships","Wij organiseren internationale evenementen, forums en culturele activiteiten om de bilaterale relaties te versterken。"
+SEAN_01_about-main-desc-1,SEAN_01_about,main,desc,1,欧亚网络基金会（SEAN）是一家总部设于荷兰的非营利机构。它搭建欧洲与亚洲之间的沟通与合作桥梁，促进跨文化理解，并推动在商业、文化、教育及公共外交领域的重要项目,"The Stichting Europe-Asia Network (SEAN) is a non-profit organization based in the Netherlands. It builds communication and collaboration bridges between Europe and Asia, promoting cross-cultural understanding and facilitating meaningful projects in business, culture, education, and public diplomacy.","De Stichting Eurasian Network (SEAN) is een in Nederland gevestigde non-profitorganisatie. Zij slaat een brug voor communicatie en samenwerking tussen Europa en Azië, bevordert intercultureel begrip en stimuleert belangrijke projecten op het gebied van handel, cultuur, onderwijs en publieke diplomatie。"
+SEAN_01_about-main-desc-2,SEAN_01_about,main,desc,2,SEAN组织具有国际影响力的活动，包括商业论坛、文化演出、展览和教育交流，作为欧亚合作的桥梁和催化器,"SEAN organizes high-impact international events including business forums, cultural performances, exhibitions, and educational exchanges, acting as a bridge and catalyst for collaboration between Europe and Asia.","SEAN organiseert internationaal invloedrijke evenementen, waaronder zakelijke forums, culturele voorstellingen, tentoonstellingen en educatieve uitwisselingen. Het fungeert als brug en katalysator voor samenwerking tussen Europa en Azië。"
+SEAN_01_about-main-desc-3,SEAN_01_about,main,desc,3,我们的核心价值观为诚信、专业、创新与协作，SEAN确保国际合作建立在尊重、理解、开放对话及长期信任的基础上,"Our core values are integrity, professionalism, innovation, and collaboration. SEAN ensures international cooperation is built on respect, understanding, open dialogue, and long-term trust accumulation.","Onze kernwaarden zijn integriteit, professionaliteit, innovatie en samenwerking. SEAN zorgt ervoor dat internationale samenwerking gebaseerd is op respect, begrip, open dialoog en langdurig vertrouwen。"
+SEAN_01_about-team-member_desc-1,SEAN_01_about,team,member_desc,1,跨行业商业、公共关系及文化艺术领袖；荷兰皇家工业俱乐部首位亚洲成员及亚洲委员会主席；国际知名古典音乐家。,"Cross-industry leader in business, PR, and cultural arts; first Asian member and Chair of the Asia Committee at the Royal Dutch Industrial Club; internationally renowned classical musician.","Leidende figuur op het gebied van sectoroverschrijdende handel, public relations en kunst & cultuur; eerste Aziatische lid en voorzitter van de Azië-commissie van de Koninklijke Industrieele Groote Club; internationaal gerenommeerd klassiek musicus。"
+SEAN_01_about-team-member_desc-2,SEAN_01_about,team,member_desc,2,国际项目实施经验丰富，专长于经济、金融及信息技术。,"Experienced leader in international project implementation, specialized in economics, finance, and IT.","Ruime ervaring in de uitvoering van internationale projecten, gespecialiseerd in economie, financiën en informatietechnologie。"
+SEAN_01_about-team-member_desc-3,SEAN_01_about,team,member_desc,3,Evaert律师事务所合伙人；前荷兰首相首席译员；古典吉他演奏家。,Partner at Evaert Advocaten; former chief translator for Dutch Prime Minister; classical guitarist.,Partner bij advocatenkantoor Evaert; voormalig hoofdvertaler van de minister-president van Nederland; klassiek gitarist。
+SEAN_01_about-team-member_desc-4,SEAN_01_about,team,member_desc,4,博士，阿姆斯特丹自由大学；MAX HRM创始人兼CEO；推动中荷商业合作。,"PhD, Vrije Universiteit Amsterdam; founder and CEO of MAX HRM; promotes China-Netherlands business cooperation.",Promovendus aan de Vrije Universiteit Amsterdam; oprichter en CEO van MAX HRM; bevordert de samenwerking tussen China en Nederland。
+SEAN_01_about-team-member_desc-5,SEAN_01_about,team,member_desc,5,在法律、国际贸易、高科技及文化产业方面经验丰富；负责跨境业务发展与项目。,"Experienced in law, international trade, high-tech, and cultural industries; leads cross-border business development and projects.","Ruime ervaring in recht, internationale handel, hightech en de culturele sector; verantwoordelijk voor grensoverschrijdende zakelijke ontwikkeling en projecten。"
+SEAN_01_about-team-member_name-1,SEAN_01_about,team,member_name,1,Xiaojia Xu,Xiaojia Xu,Xiaojia Xu
 SEAN_01_about-team-member_name-2,SEAN_01_about,team,member_name,2,Cees Caro,Cees Caro,Cees Caro
 SEAN_01_about-team-member_name-3,SEAN_01_about,team,member_name,3,Adam Diels,Adam Diels,Adam Diels
 SEAN_01_about-team-member_name-4,SEAN_01_about,team,member_name,4,Jasmine Chang-Howe,Jasmine Chang-Howe,Jasmine Chang-Howe
 SEAN_01_about-team-member_name-5,SEAN_01_about,team,member_name,5,Ryo Hoshikawa,Ryo Hoshikawa,Ryo Hoshikawa
-,,,,,,,
-SEAN_01_about-team-member_role-1,SEAN_01_about,team,member_role,1,"Chair, Founder","Chair, Founder",主席、创始人
-SEAN_01_about-team-member_role-2,SEAN_01_about,team,member_role,2,Vice-Chair,Vice-Chair,副主席
-SEAN_01_about-team-member_role-3,SEAN_01_about,team,member_role,3,Board Member,Board Member,董事
-SEAN_01_about-team-member_role-4,SEAN_01_about,team,member_role,4,Board Member,Board Member,董事
-SEAN_01_about-team-member_role-5,SEAN_01_about,team,member_role,5,Asia Board Member,Asia Board Member,亚洲区董事
-,,,,,,,
-SEAN_01_about-team-member_desc-1,SEAN_01_about,team,member_desc,1,跨行业商业、公共关系及文化艺术领袖；荷兰皇家工业俱乐部首位亚洲成员及亚洲委员会主席；国际知名古典音乐家。,"Cross-industry leader in business, PR, and cultural arts; first Asian member and Chair of the Asia Committee at the Royal Dutch Industrial Club; internationally renowned classical musician.",跨行业商业、公共关系及文化艺术领袖；荷兰皇家工业俱乐部首位亚洲成员及亚洲委员会主席；国际知名古典音乐家。
-SEAN_01_about-team-member_desc-2,SEAN_01_about,team,member_desc,2,国际项目实施经验丰富，专长于经济、金融及信息技术。,"Experienced leader in international project implementation, specialized in economics, finance, and IT.",国际项目实施经验丰富，专长于经济、金融及信息技术。
-SEAN_01_about-team-member_desc-3,SEAN_01_about,team,member_desc,3,Evaert律师事务所合伙人；前荷兰首相首席译员；古典吉他演奏家。,Partner at Evaert Advocaten; former chief translator for Dutch Prime Minister; classical guitarist.,Evaert律师事务所合伙人；前荷兰首相首席译员；古典吉他演奏家。
-SEAN_01_about-team-member_desc-4,SEAN_01_about,team,member_desc,4,博士，阿姆斯特丹自由大学；MAX HRM创始人兼CEO；推动中荷商业合作。,"PhD, Vrije Universiteit Amsterdam; founder and CEO of MAX HRM; promotes China-Netherlands business cooperation.",博士，阿姆斯特丹自由大学；MAX HRM创始人兼CEO；推动中荷商业合作。
-SEAN_01_about-team-member_desc-5,SEAN_01_about,team,member_desc,5,在法律、国际贸易、高科技及文化产业方面经验丰富；负责跨境业务发展与项目。,"Experienced in law, international trade, high-tech, and cultural industries; leads cross-border business development and projects.",在法律、国际贸易、高科技及文化产业方面经验丰富；负责跨境业务发展与项目。
-,,,,,,,
-SEAN_03_events-section-li-1,SEAN_03_events,section,li,1,展示即将举办的活动和项目,"Show upcoming events, projects, forums, exhibitions, and visits",展示即将举办的活动和项目
-SEAN_03_events-section-li-2,SEAN_03_events,section,li,2,展示已举办项目及成果,Show past projects and cooperation results,展示已举办项目及成果
-SEAN_03_events-section-title-past_events,SEAN_03_events,section,title,past_events,往期活动,Past events,往期活动
-SEAN_03_events-section-title-upcoming_events,SEAN_03_events,section,title,upcoming_events,活动预告,Upcoming events,活动预告
-,,,,,,,
-SEAN_04_services-list-item-1,SEAN_04_services,list,item,1,在欧洲和亚洲组织商业网络与合作活动,Business networking and collaboration events in Europe and Asia,在欧洲和亚洲组织商业网络与合作活动
-SEAN_04_services-list-item-2,SEAN_04_services,list,item,2,组织代表团商务考察，提供市场洞察与战略支持,Delegation business visits to provide market insights and strategic support,组织代表团商务考察，提供市场洞察与战略支持
-SEAN_04_services-list-item-3,SEAN_04_services,list,item,3,寻找和匹配商业合作伙伴，推动战略联盟,Partner matching and strategic alliance facilitation,寻找和匹配商业合作伙伴，推动战略联盟
-SEAN_04_services-list-item-4,SEAN_04_services,list,item,4,文化和教育交流活动，包括艺术、音乐和教育项目,"Cultural and educational exchange activities, including arts, music, and education programs",文化和教育交流活动，包括艺术、音乐和教育项目
-,,,,,,,
-SEAN_05_services-main-desc-1,SEAN_05_services,main,desc,1,商务企业活动,Business corporate activities,商务企业活动
-SEAN_05_services-main-desc-2,SEAN_05_services,main,desc,2,SEAN致力于推动企业在欧亚市场合作与交流,The SEAN foundation promotes corporate cooperation and exchange in the Eurasian market through targeted activities,SEAN致力于推动企业在欧亚市场合作与交流
-SEAN_05_services-service-header-1,SEAN_05_services,service,header,1,创建商业网络,Create business networks,创建商业网络
-SEAN_05_services-service-header-2,SEAN_05_services,service,header,2,组织商务活动,Organize business activities,组织商务活动
-SEAN_05_services-service-header-3,SEAN_05_services,service,header,3,组织代表团商务考察,Organize business delegation visits,组织代表团商务考察
-SEAN_05_services-service-header-4,SEAN_05_services,service,header,4,商务合作伙伴匹配,Match business partners,商务合作伙伴匹配
-SEAN_05_services-service-header-5,SEAN_05_services,service,header,5,文化教育交流活动,Cultural and educational exchange activities,文化教育交流活动
-SEAN_05_services-service-li-1_1,SEAN_05_services,service,li,1_1,搭建跨欧亚的商业网络，促进企业间的合作与交流，推动商业机会的发掘与共享,Build cross-Eurasian business networks to promote cooperation and share opportunities,搭建跨欧亚的商业网络，促进企业间合作与机会共享
-SEAN_05_services-service-li-2_1,SEAN_05_services,service,li,2_1,策划并执行各类商务活动，包括研讨会、论坛和展览等，促进企业之间的互动与合作,"Plan and execute seminars, forums, and exhibitions to promote corporate interaction",策划并执行各类商务活动，促进企业之间互动与合作
-SEAN_05_services-service-li-3_1,SEAN_05_services,service,li,3_1,安排企业代表团前往欧洲和亚洲进行实地考察，直观了解目标市场的环境动态和商业潜力,Arrange company delegations to visit Europe and Asia for on-site market insights,安排企业代表团前往欧洲和亚洲实地考察，了解市场动态及商业潜力
-SEAN_05_services-service-li-4_1,SEAN_05_services,service,li,4_1,为企业寻找和匹配最合适的商业合作伙伴，推动双方合作共赢，降低商业风险，提高合作效率,Find and match the most suitable business partners to ensure win-win cooperation and reduce risks,为企业匹配最合适的商业合作伙伴，推动合作共赢，降低商业风险
-SEAN_05_services-service-li-5_1,SEAN_05_services,service,li,5_1,组织和支持各类文艺活动，包括艺术展览、音乐会和戏剧表演等，促进欧亚文化的交流与融合,"Organize and support art exhibitions, concerts, and theater performances to promote Eurasian cultural exchange",组织和支持各类艺术展览、音乐会及戏剧表演，促进欧亚文化交流
-SEAN_05_services-service-li-5_2,SEAN_05_services,service,li,5_2,策划并举办跨文化活动，增进不同文化背景的个人和机构之间的理解与合作,Plan and hold cross-cultural events to improve understanding and cooperation between individuals and organizations,策划并举办跨文化活动，增进不同文化背景人员与机构之间的理解与合作
-SEAN_05_services-service-li-5_3,SEAN_05_services,service,li,5_3,推动与教育相关的活动，如学术会议、研讨会和教育项目，促进欧亚之间的教育合作与交流,Promote education-related activities such as conferences and workshops to enhance Eurasian educational cooperation,推动教育相关活动，如学术会议、研讨会及教育项目，促进欧亚教育合作与交流
-,,,,,,,
-SEAN_06_partners-partner--1,SEAN_06_partners,partner,,1,荷兰外交部,Dutch Ministry of Foreign Affairs,荷兰外交部
-SEAN_06_partners-partner--2,SEAN_06_partners,partner,,2,荷兰经济事务部,Dutch Ministry of Economic Affairs,荷兰经济事务部
-SEAN_06_partners-partner--3,SEAN_06_partners,partner,,3,中国驻荷兰大使馆,Chinese Embassy in the Netherlands,中国驻荷兰大使馆
-SEAN_06_partners-partner--4,SEAN_06_partners,partner,,4,NOS：荷兰国家媒体集团,NOS: Dutch National Media Group,NOS：荷兰国家媒体集团
-SEAN_06_partners-partner--5,SEAN_06_partners,partner,,5,Royal IGC,Royal IGC,Royal IGC
-SEAN_06_partners-partner--6,SEAN_06_partners,partner,,6,皇家音乐厅管弦乐团,Royal Concertgebouw Orchestra,皇家音乐厅管弦乐团
-SEAN_06_partners-partner--7,SEAN_06_partners,partner,,7,Wageningen University,Wageningen University,Wageningen University
-SEAN_06_partners-partner--8,SEAN_06_partners,partner,,8,North Sea Jazz,North Sea Jazz,North Sea Jazz
-SEAN_06_partners-partner--9,SEAN_06_partners,partner,,9,Princess Christina Concours,Princess Christina Concours,Princess Christina Concours
-SEAN_06_partners-partner--10,SEAN_06_partners,partner,,10,Stichting Grote Zangers,Stichting Grote Zangers,Stichting Grote Zangers
-SEAN_06_partners-partner--11,SEAN_06_partners,partner,,11,Släpstiks,Släpstiks,Släpstiks
-SEAN_06_partners-partner--12,SEAN_06_partners,partner,,12,Erasmus Trio,Erasmus Trio,Erasmus Trio
-SEAN_06_partners-partner--13,SEAN_06_partners,partner,,13,Studio Vaan,Studio Vaan,Studio Vaan
-SEAN_06_partners-partner--14,SEAN_06_partners,partner,,14,"Needs Co.,Ltd (JAPAN)","Needs Co.,Ltd (JAPAN)","Needs Co.,Ltd (JAPAN)"
-SEAN_06_partners-partner--15,SEAN_06_partners,partner,,15,"Nexai Co.,Ltd (Japan)","Nexai Co.,Ltd (Japan)","Nexai Co.,Ltd (Japan)"
-SEAN_06_partners-partner--16,SEAN_06_partners,partner,,16,"OWSJP Co.,Ltd (Japan)","OWSJP Co.,Ltd (Japan)","OWSJP Co.,Ltd (Japan)"
-SEAN_06_partners-partner--17,SEAN_06_partners,partner,,17,Huawei,Huawei,Huawei
-SEAN_06_partners-partner--18,SEAN_06_partners,partner,,18,Tencent,Tencent,Tencent
-SEAN_06_partners-partner--19,SEAN_06_partners,partner,,19,MG Motor Europe,MG Motor Europe,MG Motor Europe
-SEAN_06_partners-partner--20,SEAN_06_partners,partner,,20,中国工商银行,ICBC,中国工商银行
-SEAN_06_partners-partner--21,SEAN_06_partners,partner,,21,中国银行,Bank of China,中国银行
-SEAN_06_partners-partner--22,SEAN_06_partners,partner,,22,中国移动,China Mobile,中国移动
-SEAN_06_partners-partner--23,SEAN_06_partners,partner,,23,MAX HRM,MAX HRM,MAX HRM
-SEAN_06_partners-partner--24,SEAN_06_partners,partner,,24,Rituals,Rituals,Rituals
-SEAN_06_partners-partner--25,SEAN_06_partners,partner,,25,中演,Zhongyan,中演
-SEAN_06_partners-partner--26,SEAN_06_partners,partner,,26,上海国际艺术节,Shanghai International Arts Festival,上海国际艺术节
-SEAN_06_partners-partner--27,SEAN_06_partners,partner,,27,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ
-SEAN_06_partners-partner--28,SEAN_06_partners,partner,,28,Kasteel de Wittenburg,Kasteel de Wittenburg,Kasteel de Wittenburg
+SEAN_01_about-team-member_img-1,SEAN_01_about,team,member_img,1,xiaojia_xu,xiaojia_xu,xiaojia_xu
+SEAN_01_about-team-member_img-2,SEAN_01_about,team,member_img,2,cees_caro,cees_caro,cees_caro
+SEAN_01_about-team-member_img-3,SEAN_01_about,team,member_img,3,adam_diels,adam_diels,adam_diels
+SEAN_01_about-team-member_img-4,SEAN_01_about,team,member_img,4,jasmine_chang-howe,jasmine_chang-howe,jasmine_chang-howe
+SEAN_01_about-team-member_img-5,SEAN_01_about,team,member_img,5,ryo_hoshikawa,ryo_hoshikawa,ryo_hoshikawa
+SEAN_01_about-team-member_role-1,SEAN_01_about,team,member_role,1,主席、创始人,"Chair, Founder","Voorzitter, oprichter"
+SEAN_01_about-team-member_role-2,SEAN_01_about,team,member_role,2,副主席,Vice-Chair,Vicevoorzitter
+SEAN_01_about-team-member_role-3,SEAN_01_about,team,member_role,3,董事,Board Member,Bestuurslid
+SEAN_01_about-team-member_role-4,SEAN_01_about,team,member_role,4,董事,Board Member,Bestuurslid
+SEAN_01_about-team-member_role-5,SEAN_01_about,team,member_role,5,亚洲区董事,Asia Board Member,Bestuurslid Azië
+SEAN_03_events-section-li-1,SEAN_03_events,section,li,1,展示即将举办的活动和项目,"Show upcoming events, projects, forums, exhibitions, and visits",Weergave van aankomende evenementen en projecten
+SEAN_03_events-section-li-2,SEAN_03_events,section,li,2,展示已举办项目及成果,Show past projects and cooperation results,Weergave van reeds georganiseerde projecten en resultaten
+SEAN_03_events-section-title-past_events,SEAN_03_events,section,title,past_events,往期活动,Past events,Vorige activiteiten
+SEAN_03_events-section-title-upcoming_events,SEAN_03_events,section,title,upcoming_events,活动预告,Upcoming events,Aankomende activiteiten
+SEAN_04_services-list-item-1,SEAN_04_services,list,item,1,在欧洲和亚洲组织商业网络与合作活动,Business networking and collaboration events in Europe and Asia,Zakelijke netwerken en samenwerkingsactiviteiten in Europa en Azië
+SEAN_04_services-list-item-2,SEAN_04_services,list,item,2,组织代表团商务考察，提供市场洞察与战略支持,Delegation business visits to provide market insights and strategic support,Organiseren van zakelijke netwerken en samenwerkingsactiviteiten
+SEAN_04_services-list-item-3,SEAN_04_services,list,item,3,寻找和匹配商业合作伙伴，推动战略联盟,Partner matching and strategic alliance facilitation,"Opsporen en koppelen van zakelijke partners, het stimuleren van strategische allianties"
+SEAN_04_services-list-item-4,SEAN_04_services,list,item,4,文化和教育交流活动，包括艺术、音乐和教育项目,"Cultural and educational exchange activities, including arts, music, and education programs","Culturele en educatieve uitwisselingsactiviteiten, waaronder kunst-, muziek- en onderwijsprojecten"
+SEAN_05_services-main-desc-1,SEAN_05_services,main,desc,1,商务企业活动,Business corporate activities,Zakelijke activiteiten
+SEAN_05_services-main-desc-2,SEAN_05_services,main,desc,2,SEAN致力于推动企业在欧亚市场合作与交流,The SEAN foundation promotes corporate cooperation and exchange in the Eurasian market through targeted activities,SEAN zet zich in om samenwerking en uitwisseling tussen bedrijven in de Euraziatische markt te stimuleren。
+SEAN_05_services-service-header-1,SEAN_05_services,service,header,1,创建商业网络,Create business networks,Opbouwen van zakelijke netwerken
+SEAN_05_services-service-header-2,SEAN_05_services,service,header,2,组织商务活动,Organize business activities,Organiseren van zakelijke evenementen
+SEAN_05_services-service-header-3,SEAN_05_services,service,header,3,组织代表团商务考察,Organize business delegation visits,Organiseren van zakelijke delegatiereizen
+SEAN_05_services-service-header-4,SEAN_05_services,service,header,4,商务合作伙伴匹配,Match business partners,Zakelijke partnermatching
+SEAN_05_services-service-header-5,SEAN_05_services,service,header,5,文化教育交流活动,Cultural and educational exchange activities,Culturele en educatieve uitwisselingsactiviteiten
+SEAN_05_services-service-li-1_1,SEAN_05_services,service,li,1_1,搭建跨欧亚的商业网络，促进企业间的合作与交流，推动商业机会的发掘与共享,Build cross-Eurasian business networks to promote cooperation and share opportunities,SEAN bouwt een grensoverschrijdend Euraziatisch zakelijk netwerk op om samenwerking tussen bedrijven te bevorderen en kansen te delen。
+SEAN_05_services-service-li-2_1,SEAN_05_services,service,li,2_1,策划并执行各类商务活动，包括研讨会、论坛和展览等，促进企业之间的互动与合作,"Plan and execute seminars, forums, and exhibitions to promote corporate interaction",Wij ontwikkelen en voeren uiteenlopende zakelijke activiteiten uit om interactie en samenwerking tussen ondernemingen te stimuleren。
+SEAN_05_services-service-li-3_1,SEAN_05_services,service,li,3_1,安排企业代表团前往欧洲和亚洲进行实地考察，直观了解目标市场的环境动态和商业潜力,Arrange company delegations to visit Europe and Asia for on-site market insights,Wij organiseren bedrijfsdelegaties naar Europa en Azië voor marktverkenning en het ontdekken van zakelijke mogelijkheden。
+SEAN_05_services-service-li-4_1,SEAN_05_services,service,li,4_1,为企业寻找和匹配最合适的商业合作伙伴，推动双方合作共赢，降低商业风险，提高合作效率,Find and match the most suitable business partners to ensure win-win cooperation and reduce risks,"Wij koppelen bedrijven aan de meest geschikte partners, bevorderen win-win samenwerking en verkleinen zakelijke risico’s。"
+SEAN_05_services-service-li-5_1,SEAN_05_services,service,li,5_1,组织和支持各类文艺活动，包括艺术展览、音乐会和戏剧表演等，促进欧亚文化的交流与融合,"Organize and support art exhibitions, concerts, and theater performances to promote Eurasian cultural exchange","Wij organiseren en ondersteunen tentoonstellingen, concerten en theatervoorstellingen om culturele uitwisseling tussen Europa en Azië te bevorderen。"
+SEAN_05_services-service-li-5_2,SEAN_05_services,service,li,5_2,策划并举办跨文化活动，增进不同文化背景的个人和机构之间的理解与合作,Plan and hold cross-cultural events to improve understanding and cooperation between individuals and organizations,Wij ontwikkelen en organiseren interculturele activiteiten die wederzijds begrip en samenwerking tussen mensen en instellingen van verschillende culturele achtergronden versterken。
+SEAN_05_services-service-li-5_3,SEAN_05_services,service,li,5_3,推动与教育相关的活动，如学术会议、研讨会和教育项目，促进欧亚之间的教育合作与交流,Promote education-related activities such as conferences and workshops to enhance Eurasian educational cooperation,"Wij bevorderen onderwijsgerelateerde activiteiten zoals academische conferenties, seminars en onderwijsprojecten, om samenwerking en uitwisseling in het onderwijs tussen Europa en Azië te stimuleren。"
+SEAN_06_partners-partner-title-1,SEAN_06_partners,partner,title,1,荷兰外交部,Dutch Ministry of Foreign Affairs,Ministerie van Buitenlandse Zaken van Nederland
+SEAN_06_partners-partner-title-10,SEAN_06_partners,partner,title,10,大歌唱家基金会,Stichting Grote Zangers,Stichting Grote Zangers
+SEAN_06_partners-partner-title-11,SEAN_06_partners,partner,title,11,滑稽剧团 Släpstiks,Släpstiks,Släpstiks
+SEAN_06_partners-partner-title-12,SEAN_06_partners,partner,title,12,伊拉斯谟三重奏,Erasmus Trio,Erasmus Trio
+SEAN_06_partners-partner-title-13,SEAN_06_partners,partner,title,13,Studio Vaan,Studio Vaan,Studio Vaan
+SEAN_06_partners-partner-title-14,SEAN_06_partners,partner,title,14,Needs 株式会社,"Needs Co.,Ltd (JAPAN)","Needs Co., Ltd (Japan)"
+SEAN_06_partners-partner-title-15,SEAN_06_partners,partner,title,15,Nexai 株式会社,"Nexai Co.,Ltd (Japan)","Nexai Co., Ltd (Japan)"
+SEAN_06_partners-partner-title-16,SEAN_06_partners,partner,title,16,OWSJP 株式会社,"OWSJP Co.,Ltd (Japan)","OWSJP Co., Ltd (Japan)"
+SEAN_06_partners-partner-title-17,SEAN_06_partners,partner,title,17,华为,Huawei,Huawei
+SEAN_06_partners-partner-title-18,SEAN_06_partners,partner,title,18,腾讯,Tencent,Tencent
+SEAN_06_partners-partner-title-19,SEAN_06_partners,partner,title,19,名爵汽车欧洲,MG Motor Europe,MG Motor Europe
+SEAN_06_partners-partner-title-2,SEAN_06_partners,partner,title,2,荷兰经济事务部,Dutch Ministry of Economic Affairs,Ministerie van Economische Zaken van Nederland
+SEAN_06_partners-partner-title-20,SEAN_06_partners,partner,title,20,中国工商银行,ICBC,Industrial and Commercial Bank of China (ICBC)
+SEAN_06_partners-partner-title-21,SEAN_06_partners,partner,title,21,中国银行,Bank of China,Bank of China
+SEAN_06_partners-partner-title-22,SEAN_06_partners,partner,title,22,中国移动,China Mobile,China Mobile
+SEAN_06_partners-partner-title-23,SEAN_06_partners,partner,title,23,MAX HRM,MAX HRM,MAX HRM
+SEAN_06_partners-partner-title-24,SEAN_06_partners,partner,title,24,Rituals,Rituals,Rituals
+SEAN_06_partners-partner-title-25,SEAN_06_partners,partner,title,25,中国对外演出公司,Zhongyan,China National Performing Arts Group (中演)
+SEAN_06_partners-partner-title-26,SEAN_06_partners,partner,title,26,上海国际艺术节,Shanghai International Arts Festival,Shanghai International Arts Festival
+SEAN_06_partners-partner-title-27,SEAN_06_partners,partner,title,27,艾音乐厅,Muziekgebouw ‘IJ,Muziekgebouw aan ’t IJ
+SEAN_06_partners-partner-title-28,SEAN_06_partners,partner,title,28,德维特堡,Kasteel de Wittenburg,Kasteel de Wittenburg
+SEAN_06_partners-partner-title-3,SEAN_06_partners,partner,title,3,中国驻荷兰大使馆,Chinese Embassy in the Netherlands,Ambassade van China in Nederland
+SEAN_06_partners-partner-title-4,SEAN_06_partners,partner,title,4,荷兰国家媒体集团,NOS: Dutch National Media Group,NOS (Nederlandse Omroep Stichting)
+SEAN_06_partners-partner-title-5,SEAN_06_partners,partner,title,5,皇家工业俱乐部,Royal IGC,Royal IGC
+SEAN_06_partners-partner-title-6,SEAN_06_partners,partner,title,6,皇家音乐厅管弦乐团,Royal Concertgebouw Orchestra,Koninklijk Concertgebouworkest
+SEAN_06_partners-partner-title-7,SEAN_06_partners,partner,title,7,瓦赫宁根大学,Wageningen University,Wageningen University
+SEAN_06_partners-partner-title-8,SEAN_06_partners,partner,title,8,北海爵士音乐节,North Sea Jazz,North Sea Jazz
+SEAN_06_partners-partner-title-9,SEAN_06_partners,partner,title,9,公主克里斯蒂娜音乐比赛,Princess Christina Concours,Prinses Christina Concours
+SEAN_06_partners-partner-img-1,SEAN_06_partners,partner,img,1,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs
+SEAN_06_partners-partner-img-10,SEAN_06_partners,partner,img,10,stichting_grote_zangers,stichting_grote_zangers,stichting_grote_zangers
+SEAN_06_partners-partner-img-11,SEAN_06_partners,partner,img,11,slapstiks,slapstiks,slapstiks
+SEAN_06_partners-partner-img-12,SEAN_06_partners,partner,img,12,erasmus_trio,erasmus_trio,erasmus_trio
+SEAN_06_partners-partner-img-13,SEAN_06_partners,partner,img,13,studio_vaan,studio_vaan,studio_vaan
+SEAN_06_partners-partner-img-14,SEAN_06_partners,partner,img,14,needs_coltd_japan,needs_coltd_japan,needs_coltd_japan
+SEAN_06_partners-partner-img-15,SEAN_06_partners,partner,img,15,nexai_coltd_japan,nexai_coltd_japan,nexai_coltd_japan
+SEAN_06_partners-partner-img-16,SEAN_06_partners,partner,img,16,owsjp_coltd_japan,owsjp_coltd_japan,owsjp_coltd_japan
+SEAN_06_partners-partner-img-17,SEAN_06_partners,partner,img,17,huawei,huawei,huawei
+SEAN_06_partners-partner-img-18,SEAN_06_partners,partner,img,18,tencent,tencent,tencent
+SEAN_06_partners-partner-img-19,SEAN_06_partners,partner,img,19,mg_motor_europe,mg_motor_europe,mg_motor_europe
+SEAN_06_partners-partner-img-2,SEAN_06_partners,partner,img,2,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs
+SEAN_06_partners-partner-img-20,SEAN_06_partners,partner,img,20,icbc,icbc,icbc
+SEAN_06_partners-partner-img-21,SEAN_06_partners,partner,img,21,bank_of_china,bank_of_china,bank_of_china
+SEAN_06_partners-partner-img-22,SEAN_06_partners,partner,img,22,china_mobile,china_mobile,china_mobile
+SEAN_06_partners-partner-img-23,SEAN_06_partners,partner,img,23,max_hrm,max_hrm,max_hrm
+SEAN_06_partners-partner-img-24,SEAN_06_partners,partner,img,24,rituals,rituals,rituals
+SEAN_06_partners-partner-img-25,SEAN_06_partners,partner,img,25,zhongyan,zhongyan,zhongyan
+SEAN_06_partners-partner-img-26,SEAN_06_partners,partner,img,26,shanghai_international_arts_festival,shanghai_international_arts_festival,shanghai_international_arts_festival
+SEAN_06_partners-partner-img-27,SEAN_06_partners,partner,img,27,muziekgebouw_ij,muziekgebouw_ij,muziekgebouw_ij
+SEAN_06_partners-partner-img-28,SEAN_06_partners,partner,img,28,kasteel_de_wittenburg,kasteel_de_wittenburg,kasteel_de_wittenburg
+SEAN_06_partners-partner-img-3,SEAN_06_partners,partner,img,3,chinese_embassy_in_the_netherlands,chinese_embassy_in_the_netherlands,chinese_embassy_in_the_netherlands
+SEAN_06_partners-partner-img-4,SEAN_06_partners,partner,img,4,nos_dutch_national_media_group,nos_dutch_national_media_group,nos_dutch_national_media_group
+SEAN_06_partners-partner-img-5,SEAN_06_partners,partner,img,5,royal_igc,royal_igc,royal_igc
+SEAN_06_partners-partner-img-6,SEAN_06_partners,partner,img,6,royal_concertgebouw_orchestra,royal_concertgebouw_orchestra,royal_concertgebouw_orchestra
+SEAN_06_partners-partner-img-7,SEAN_06_partners,partner,img,7,wageningen_university,wageningen_university,wageningen_university
+SEAN_06_partners-partner-img-8,SEAN_06_partners,partner,img,8,north_sea_jazz,north_sea_jazz,north_sea_jazz
+SEAN_06_partners-partner-img-9,SEAN_06_partners,partner,img,9,princess_christina_concours,princess_christina_concours,princess_christina_concours
