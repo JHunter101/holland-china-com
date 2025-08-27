@@ -1,128 +1,69 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import PostEvent from '$lib/components/PostEvent.svelte';
-	import type { EventPost } from '$lib/models/event';
+	import { page as pageStore } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import { langData } from '$lib/stores';
-
-	type EventMeta = { id: string; eventStart: string; dateLaunch: string };
-
-	let upcomingIndex: EventMeta[] = [];
-	let pastIndex: EventMeta[] = [];
-
-	let upcomingEvents: EventPost[] = [];
-	let pastEvents: EventPost[] = [];
+	import type { EventPost } from '$lib/models/event';
+	import { loadIndex, loadEventPosts } from '$lib/services/loadPosts';
 
 	const pageSize = 5;
-
-	let upcomingPage = 1;
-	let pastPage = 1;
-
-	let upcomingTotalPages = 1;
-	let pastTotalPages = 1;
-
+	let page = 1;
+	let totalPages = 1;
+	let upcomingEvents: EventPost[] = [];
+	let pastEvents: EventPost[] = [];
 	let loadingUpcoming = true;
 	let loadingPast = true;
 
-	async function loadIndex() {
-		const res = await fetch('/posts/events/index.json');
-		if (!res.ok) throw new Error('Failed to load events index');
-		const data: EventMeta[] = await res.json();
-
-		const now = new Date();
-
-		upcomingIndex = data.filter((e) => new Date(e.eventStart) >= now);
-		pastIndex = data.filter((e) => new Date(e.eventStart) < now);
-
-		upcomingTotalPages = Math.ceil(upcomingIndex.length / pageSize);
-		pastTotalPages = Math.ceil(pastIndex.length / pageSize);
+	function updateSearchParams() {
+		const params = new URLSearchParams($pageStore.url.searchParams);
+		params.set('page', String(page));
+		goto(`${$pageStore.url.pathname}?${params.toString()}`, { replaceState: true, noScroll: true });
 	}
 
-	async function loadPage(indexSlice: EventMeta[]) {
-		const promises = indexSlice.map(async (meta) => {
-			const res = await fetch(`/posts/events/${meta.id}.json`);
-			const data = await res.json();
-
-			data.eventStart = new Date(data.eventStart);
-			data.eventEnd = new Date(data.eventEnd);
-			data.dateLaunch = new Date(data.dateLaunch);
-
-			return data as EventPost;
-		});
-		return Promise.all(promises);
-	}
-
-	async function loadUpcomingPage(pageNum: number) {
+	async function loadPage() {
+		totalPages = Math.ceil((await loadIndex('events')).length / pageSize) || 1;
 		loadingUpcoming = true;
-		const start = (pageNum - 1) * pageSize;
-		const end = start + pageSize;
-		upcomingEvents = await loadPage(upcomingIndex.slice(start, end));
-		loadingUpcoming = false;
-	}
-
-	async function loadPastPage(pageNum: number) {
 		loadingPast = true;
-		const start = (pageNum - 1) * pageSize;
-		const end = start + pageSize;
-		pastEvents = await loadPage(pastIndex.slice(start, end));
+		const events = await loadEventPosts(page, pageSize);
+		const now = new Date();
+		upcomingEvents = events.filter((e) => e.eventEnd >= now);
+		loadingUpcoming = false;
+		pastEvents = events.filter((e) => e.eventEnd < now);
 		loadingPast = false;
 	}
 
-	function nextUpcoming() {
-		if (upcomingPage < upcomingTotalPages) {
-			upcomingPage++;
-			loadUpcomingPage(upcomingPage);
-		}
-	}
-
-	function prevUpcoming() {
-		if (upcomingPage > 1) {
-			upcomingPage--;
-			loadUpcomingPage(upcomingPage);
-		}
-	}
-
-	function nextPast() {
-		if (pastPage < pastTotalPages) {
-			pastPage++;
-			loadPastPage(pastPage);
-		}
-	}
-
-	function prevPast() {
-		if (pastPage > 1) {
-			pastPage--;
-			loadPastPage(pastPage);
-		}
+	function changePage(newPage: number) {
+		if (newPage < 1) return;
+		page = newPage;
+		updateSearchParams();
+		loadPage();
 	}
 
 	onMount(async () => {
-		await loadIndex();
-		await loadUpcomingPage(upcomingPage);
-		await loadPastPage(pastPage);
+		page = Number($pageStore.url.searchParams.get('page')) || 1;
+		await loadPage();
 	});
 </script>
 
-<section class="screen-tuck flex-col">
-	<h2 class="subtitle text-large text-alt">
-		{$langData['00_shared_events-section-title-upcoming_events']}
-	</h2>
-	{#if loadingUpcoming}
-		<p>Loading upcoming events...</p>
-	{:else if upcomingEvents.length}
-		{#each upcomingEvents as post (post.id)}
-			<PostEvent {post} />
-		{/each}
-		<div class="pagination">
-			<button on:click={prevUpcoming} disabled={upcomingPage === 1}>Previous</button>
-			<span>Page {upcomingPage} of {upcomingTotalPages}</span>
-			<button on:click={nextUpcoming} disabled={upcomingPage === upcomingTotalPages}>Next</button>
-		</div>
-	{:else}
-		<p>No upcoming events.</p>
-	{/if}
-</section>
+{#if !(upcomingEvents.length === 0 && page > 1)}
+	<section id="events-past" class="screen-tuck flex-gap-small flex-col">
+		<h2 class="subtitle text-large text-alt">
+			{$langData['00_shared_events-section-title-upcoming_events']}
+		</h2>
+		{#if loadingUpcoming}
+			<p>Loading upcoming events...</p>
+		{:else if upcomingEvents.length}
+			{#each upcomingEvents as post (post.id)}
+				<PostEvent {post} />
+			{/each}
+		{:else}
+			<p>No upcoming events.</p>
+		{/if}
+	</section>
+{/if}
 
-<section class="screen-tuck flex-col">
+<section id="events-future" class="screen-tuck flex-gap-small flex-col">
 	<h2 class="subtitle text-large text-alt">
 		{$langData['00_shared_events-section-title-past_events']}
 	</h2>
@@ -132,18 +73,20 @@
 		{#each pastEvents as post (post.id)}
 			<PostEvent {post} />
 		{/each}
-		<div class="pagination">
-			<button on:click={prevPast} disabled={pastPage === 1}>Previous</button>
-			<span>Page {pastPage} of {pastTotalPages}</span>
-			<button on:click={nextPast} disabled={pastPage === pastTotalPages}>Next</button>
-		</div>
 	{:else}
 		<p>No past events.</p>
 	{/if}
+
+	<div class="pagination">
+		<button on:click={() => changePage(page - 1)} disabled={page === 1}>Previous</button>
+		<span>Page {page} of {totalPages}</span>
+		<button on:click={() => changePage(page + 1)} disabled={page === totalPages}>Next</button>
+	</div>
 </section>
 
 <style>
-	:global(.post-ps) {
+	:global(#events-past .post-ps),
+	:global(#events-future .post-ps) {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
@@ -151,17 +94,11 @@
 		-webkit-box-orient: vertical;
 		margin-bottom: min(4vh, 1rem);
 	}
-
 	.pagination {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
 		margin-top: 2rem;
-	}
-
-	button[disabled] {
-		opacity: 0.5;
-		cursor: not-allowed;
 	}
 </style>

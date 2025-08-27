@@ -5,18 +5,9 @@
 	import { langData, loadNL } from '$lib/stores';
 	import { derived } from 'svelte/store';
 
-	// Load NL on mount
 	onMount(() => {
 		loadNL();
 	});
-
-	// Dynamically collect principles from JSON keys
-	const principles = derived(langData, ($langData) =>
-		['Precision', 'Direct', 'Loyalty', 'Philosophy', 'Professionalism'].map((key) => ({
-			title: $langData[`about-principles-${key}-title`] || key,
-			points: Object.values($langData[`about-principles-${key}-points`] || {})
-		}))
-	);
 </script>
 
 <svelte:head>

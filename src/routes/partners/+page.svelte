@@ -22,10 +22,6 @@
 	<h1 class="subtitle text-large">
 		{$langData['00_shared-header-nav-partners'] || 'Our Partners'}
 	</h1>
-	<p>
-		{$langData['partners-main-text'] ||
-			'We work closely with these esteemed partners to deliver the best services.'}
-	</p>
 	<div id="partners-grid" class="grid-nest flex-gap-small">
 		{#each $partners as partner}
 			<div class="card flex-col">

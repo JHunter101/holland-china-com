@@ -7,30 +7,7 @@ a:hover {
   text-decoration: underline;
 }
 
-button {
-  padding: 0.5rem 1.2rem;
-  border: 2px solid rgb(var(--color-accent-main));
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  width: auto;
-  outline: none;
-  font-size: 1rem;
-  background-color: rgb(var(--color-bg-main));
-  color: rgb(var(--color-accent-main));
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: rgb(var(--color-accent-main));
-  color: rgb(var(--color-bg-main));
-  border: 2px solid rgb(var(--color-bg-main));
-}
-
-button:focus {
-  outline: 3px solid rgb(var(--color-bg-main));
-}
-
+button,
 .btn,
 .btn-main {
   padding: 0.5rem 1.2rem;
@@ -46,6 +23,7 @@ button:focus {
   text-decoration: none;
 }
 
+button:hover,
 .btn:hover,
 .btn-main:hover {
   background-color: rgb(var(--color-accent-main));
@@ -53,9 +31,16 @@ button:focus {
   border: 2px solid rgb(var(--color-bg-main));
 }
 
+
+button:focus,
 .btn:focus,
 .btn-main:focus {
   outline: 3px solid rgb(var(--color-bg-main));
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .btn-accent {

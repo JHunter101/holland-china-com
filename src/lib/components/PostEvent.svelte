@@ -13,6 +13,10 @@
 		currentLang,
 		($currentLang) => post.contents[$currentLang as keyof typeof post.contents] || post.contents.EN
 	);
+
+	$: street = [post.location.streetName, post.location.streetNumber].filter(Boolean).join(' ');
+	$: cityLine = [post.location.postalCode, post.location.city].filter(Boolean).join(' ');
+	$: addressLine = [street, cityLine, post.location.country].filter(Boolean).join(', ');
 </script>
 
 <div class="post-event flex-responsive-rev flex-gap-large w100">
@@ -20,26 +24,32 @@
 		<a class="header text-medium" href={`/events/${post.id}`}>
 			{$displayTitle}
 		</a>
+
 		<div class="subheader text-small post-data flex-col">
-			<h3>{post.location.name}</h3>
-			<h3>
-				{post.location.streetName}
-				{post.location.streetNumber}, {post.location.postalCode}
-				{post.location.city}, {post.location.country}
-			</h3>
+			{#if post.location.name}
+				<h3>{post.location.name}</h3>
+			{/if}
+			{#if addressLine}
+				<h3>{addressLine}</h3>
+			{/if}
 		</div>
+
 		<div class="post-ps">
 			<p>{$displayContent}</p>
 		</div>
 		<a class="read-more" href={`/events/${post.id}`}>Read more</a>
 	</div>
 
-	<div class="flex-item-2 post-image">
-		<img
-			src={post.images[0].startsWith('https') ? post.images[0] : `res/${post.id}/${post.images[0]}`}
-			alt={$displayTitle}
-		/>
-	</div>
+	{#if post.images && post.images.length > 0}
+		<div class="flex-item-2 post-image">
+			<img
+				src={post.images[0].startsWith('https')
+					? post.images[0]
+					: `res/${post.id}/${post.images[0]}`}
+				alt={$displayTitle}
+			/>
+		</div>
+	{/if}
 
 	<div class="flex-item-1 flex-center flex-col">
 		<EventCalendar {post} />

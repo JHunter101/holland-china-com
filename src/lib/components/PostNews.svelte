@@ -45,12 +45,16 @@
 		<a class="read-more" href={`/news/${post.id}`}>Read more</a>
 	</div>
 
-	<div class="flex-item-2 post-image">
-		<img
-			src={post.images[0].startsWith('https') ? post.images[0] : `res/${post.id}/${post.images[0]}`}
-			alt={$displayTitle}
-		/>
-	</div>
+	{#if post.images && post.images.length > 0}
+		<div class="flex-item-2 post-image">
+			<img
+				src={post.images[0].startsWith('https')
+					? post.images[0]
+					: `res/${post.id}/${post.images[0]}`}
+				alt={$displayTitle}
+			/>
+		</div>
+	{/if}
 </div>
 
 <style>

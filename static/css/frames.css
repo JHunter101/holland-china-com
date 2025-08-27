@@ -168,11 +168,6 @@ section,
   border: 1px solid #ddd;
   padding: min(3vw, 1rem);
   cursor: default;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
 }
 
 .card img {

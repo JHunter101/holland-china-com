@@ -33,7 +33,7 @@
 	});
 </script>
 
-<section class="screen-tuck flex-natural flex-gap-small">
+<section id="event-this" class="screen-tuck flex-natural flex-gap-small">
 	{#if post}
 		<PostEvent {post} />
 	{:else}
@@ -42,16 +42,16 @@
 </section>
 
 <style>
-	:global(.post-event) {
+	:global(#event-this .post-event) {
 		flex-direction: column;
 		gap: min(4vh, 1rem);
 	}
 
-	:global(.read-more) {
+	:global(#event-this .read-more) {
 		display: none;
 	}
 
-	:global(.event-date) {
+	:global(#event-this .event-date) {
 		display: none;
 	}
 </style>

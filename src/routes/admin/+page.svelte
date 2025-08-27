@@ -1,28 +1,50 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { EventPost, EventLocation } from '$lib/models/event.ts';
-	import type { NewsPost } from '$lib/models/news.ts';
+	import type { Locale, PostMeta } from '$lib/models/commonTypes';
+	import { NewsPost } from '$lib/models/news';
+	import { EventPost, EventLocation } from '$lib/models/event';
+	import { loadIndex, loadNewsPost, loadEventPost } from '$lib/services/loadPosts';
 
-	// ---- hardcoded admin hash (sha256("password")) ----
 	const ADMIN_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
 
-	let unlocked = false;
+	type State = 'locked' | 'main-menu' | 'editor' | 'posts';
+	let state: State = 'locked';
 	let unlockPassword = '';
 
+	function goBack() {
+		switch (state) {
+			case 'editor':
+				state = id ? (postType === 'news' ? 'posts' : 'posts') : 'main-menu';
+				break;
+			case 'posts':
+				state = 'main-menu';
+				break;
+			case 'main-menu':
+				lock();
+				break;
+			default:
+				state = 'main-menu';
+		}
+	}
+
+	function setState(newState: State, reset = false) {
+		if (sessionStorage.getItem('adminUnlocked') !== '1') return lock();
+		state = newState;
+		loadPostsForState();
+	}
+
 	async function sha256Hex(text: string): Promise<string> {
-		const enc = new TextEncoder();
-		const data = enc.encode(text);
-		const digest = await crypto.subtle.digest('SHA-256', data);
-		return Array.from(new Uint8Array(digest))
+		const data = new TextEncoder().encode(text);
+		const hash = await crypto.subtle.digest('SHA-256', data);
+		return Array.from(new Uint8Array(hash))
 			.map((b) => b.toString(16).padStart(2, '0'))
 			.join('');
 	}
 
 	async function handleUnlock() {
-		const hash = await sha256Hex(unlockPassword);
-		if (hash === ADMIN_HASH) {
-			unlocked = true;
+		if ((await sha256Hex(unlockPassword)) === ADMIN_HASH) {
 			sessionStorage.setItem('adminUnlocked', '1');
+			setState('main-menu');
 			unlockPassword = '';
 		} else {
 			alert('Incorrect password.');
@@ -30,31 +52,22 @@
 	}
 
 	function lock() {
-		unlocked = false;
+		state = 'locked';
 		sessionStorage.removeItem('adminUnlocked');
 	}
 
-	// ---- Post creation form state ----
 	type PostType = 'news' | 'event';
-	type Lang = 'en' | 'nl' | 'cn';
-
 	let postType: PostType = 'news';
 
-	// common (multilingual)
+	// Form fields
+	let id = '';
 	let dateLaunchStr = '';
-	let titles: Record<Lang, string> = { en: '', nl: '', cn: '' };
-	let contents: Record<Lang, string> = { en: '', nl: '', cn: '' };
-
-	// Links as dynamic list
+	let titles: Record<Locale, string> = { EN: '', NL: '', CN: '' };
+	let contents: Record<Locale, string> = { EN: '', NL: '', CN: '' };
 	let links: string[] = [];
-
-	// Images uploaded from device (persisted as data URLs)
 	let images: string[] = [];
-
-	// news
+	let activeLang: Locale = 'EN';
 	let isPinned = false;
-
-	// event
 	let locationName = '';
 	let streetName = '';
 	let streetNumber = '';
@@ -64,95 +77,19 @@
 	let eventStartStr = '';
 	let eventEndStr = '';
 	let linkSignUp = '';
-
-	let posts: (NewsPost | EventPost)[] = [];
-
-	// which language column is active (gets extra size)
-	let activeLang: Lang = 'en';
+	let posts: PostMeta[] = [];
 
 	function resetForm() {
+		id = '';
 		dateLaunchStr = '';
-		titles = { en: '', nl: '', cn: '' };
-		contents = { en: '', nl: '', cn: '' };
+		titles = { EN: '', NL: '', CN: '' };
+		contents = { EN: '', NL: '', CN: '' };
 		links = [];
 		images = [];
 		isPinned = false;
 		locationName = streetName = streetNumber = postalCode = city = country = '';
 		eventStartStr = eventEndStr = '';
 		linkSignUp = '';
-	}
-
-	function reviveDates(obj: any): any {
-		if (Array.isArray(obj)) return obj.map(reviveDates);
-		if (obj && typeof obj === 'object') {
-			const out: any = {};
-			for (const [k, v] of Object.entries(obj)) {
-				if (typeof v === 'string' && /\d{4}-\d{2}-\d{2}T/.test(v)) {
-					const d = new Date(v);
-					out[k] = isNaN(d.getTime()) ? v : d;
-				} else {
-					out[k] = reviveDates(v);
-				}
-			}
-			return out;
-		}
-		return obj;
-	}
-
-	function savePosts() {
-		const replacer = (_k: string, v: any) => (v instanceof Date ? v.toISOString() : v);
-		localStorage.setItem('adminPosts', JSON.stringify(posts, replacer, 2));
-	}
-
-	function loadPosts() {
-		const raw = localStorage.getItem('adminPosts');
-		if (!raw) return;
-		const arr = reviveDates(JSON.parse(raw));
-		posts = arr.map((p: any) => {
-			if ('eventStart' in p) {
-				const loc = new EventLocation(
-					p.location.name,
-					p.location.streetName,
-					p.location.streetNumber,
-					p.location.postalCode,
-					p.location.city,
-					p.location.country
-				);
-				const ep = new EventPost(
-					p.sources ?? [], // sources removed from UI; keep compatibility with models
-					new Date(p.dateLaunch),
-					p.titles,
-					p.contents,
-					p.links ?? [],
-					p.images ?? [],
-					loc,
-					new Date(p.eventStart),
-					new Date(p.eventEnd),
-					p.linkSignUp
-				);
-				(ep as any).id = p.id;
-				return ep;
-			} else {
-				const np = new NewsPost(
-					p.sources ?? [],
-					new Date(p.dateLaunch),
-					p.titles,
-					p.contents,
-					p.links ?? [],
-					p.images ?? [],
-					p.isPinned ?? false
-				);
-				(np as any).id = p.id;
-				return np;
-			}
-		});
-		const maxId = posts.reduce((m, p: any) => Math.max(m, parseInt(p.id, 10) || 0), 0);
-		(Post as any)._setNextId(maxId + 1);
-	}
-
-	function removePost(id: string) {
-		posts = posts.filter((p) => (p as any).id !== id);
-		savePosts();
 	}
 
 	function addLink() {
@@ -164,291 +101,308 @@
 	function removeLink(i: number) {
 		links = links.filter((_, idx) => idx !== i);
 	}
-
 	function removeImage(i: number) {
 		images = images.filter((_, idx) => idx !== i);
 	}
 
-	function readFilesAsDataURLs(files: FileList): Promise<string[]> {
-		return Promise.all(
+	async function handleImageUpload(e: Event) {
+		const files = (e.target as HTMLInputElement).files;
+		if (!files) return;
+		const dataUrls = await Promise.all(
 			Array.from(files).map(
-				(file) =>
+				(f) =>
 					new Promise<string>((resolve, reject) => {
 						const reader = new FileReader();
-						reader.onload = () => resolve(String(reader.result));
+						reader.onload = () => resolve(reader.result as string);
 						reader.onerror = reject;
-						reader.readAsDataURL(file);
+						reader.readAsDataURL(f);
 					})
 			)
 		);
-	}
-
-	async function handleImageUpload(e: Event) {
-		const files = (e.target as HTMLInputElement).files;
-		if (!files || files.length === 0) return;
-		const dataUrls = await readFilesAsDataURLs(files);
 		images = [...images, ...dataUrls];
 		(e.target as HTMLInputElement).value = '';
 	}
 
-	function upsertPost(e: Event) {
-		e.preventDefault();
+	async function savePost() {
+		try {
+			const postPayload =
+				postType === 'news'
+					? new NewsPost([], new Date(dateLaunchStr), titles, contents, links, images, isPinned)
+					: new EventPost(
+							[],
+							new Date(dateLaunchStr),
+							titles,
+							contents,
+							links,
+							images,
+							new EventLocation(locationName, streetName, streetNumber, postalCode, city, country),
+							new Date(eventStartStr),
+							new Date(eventEndStr),
+							linkSignUp
+						);
 
-		const dateLaunch = dateLaunchStr ? new Date(dateLaunchStr) : new Date();
+			if (id) (postPayload as any).id = id;
 
-		if (postType === 'news') {
-			const post = new NewsPost(
-				[], // sources removed
-				dateLaunch,
-				titles,
-				contents,
-				links,
-				images,
-				isPinned
-			);
-			posts = [post, ...posts];
-		} else {
-			if (!eventStartStr || !eventEndStr) {
-				alert('Event start and end are required.');
-				return;
-			}
-			const loc = new EventLocation(
-				locationName,
-				streetName,
-				streetNumber,
-				postalCode,
-				city,
-				country
-			);
-			const post = new EventPost(
-				[], // sources removed
-				dateLaunch,
-				titles,
-				contents,
-				links,
-				images,
-				loc,
-				new Date(eventStartStr),
-				new Date(eventEndStr),
-				linkSignUp
-			);
-			posts = [post, ...posts];
+			const saveId = id || crypto.randomUUID();
+			await fetch(`/posts/${postType}s/${saveId}.json`, {
+				method: 'PUT',
+				body: JSON.stringify(postPayload),
+				headers: { 'Content-Type': 'application/json' }
+			});
+
+			alert('Post saved!');
+			resetForm();
+			setState('posts');
+		} catch (err) {
+			console.error(err);
+			alert('Failed to save post.');
+		}
+	}
+
+	async function loadPostsForState() {
+		if (postType === 'news') posts = await loadIndex('news');
+		else if (postType === 'event') posts = await loadIndex('events');
+	}
+
+	async function editPost(meta: PostMeta) {
+		const loaded = postType === 'news' ? await loadNewsPost(meta) : await loadEventPost(meta);
+		if (!loaded) return alert('Failed to load post.');
+		id = meta.id;
+		dateLaunchStr = new Date(loaded.dateLaunch).toISOString().slice(0, 16);
+		titles = loaded.titles;
+		contents = loaded.contents;
+		links = loaded.links;
+		images = loaded.images;
+
+		if (postType === 'news') isPinned = (loaded as NewsPost).isPinned;
+		else {
+			const ev = loaded as EventPost;
+			locationName = ev.location.name;
+			streetName = ev.location.streetName;
+			streetNumber = ev.location.streetNumber;
+			postalCode = ev.location.postalCode;
+			city = ev.location.city;
+			country = ev.location.country;
+			eventStartStr = new Date(ev.eventStart).toISOString().slice(0, 16);
+			eventEndStr = new Date(ev.eventEnd).toISOString().slice(0, 16);
+			linkSignUp = ev.linkSignUp;
 		}
 
-		savePosts();
-		resetForm();
+		setState('editor');
+	}
+
+	async function deletePost(meta: PostMeta) {
+		if (!confirm('Are you sure you want to delete this post?')) return;
+		await fetch(`/posts/${postType}s/${meta.id}.json`, { method: 'DELETE' });
+		alert('Post deleted');
+		loadPostsForState();
 	}
 
 	onMount(() => {
-		unlocked = sessionStorage.getItem('adminUnlocked') === '1';
-		loadPosts();
+		if (sessionStorage.getItem('adminUnlocked') !== '1') state = 'locked';
 	});
 </script>
 
-<section class="screen-tuck flex-natural text--justify flex-col">
-	<form>
-		<h1>Admin — Create Posts</h1>
+<section class="screen-tuck flex-natural flex-gap-small flex-col text-justify">
+	<h1>Admin — Create Posts</h1>
 
-		{#if !unlocked}
-			<div class="card" style="margin-top: 1rem;">
-				<h3>Unlock</h3>
+	{#if state === 'locked'}
+		<div class="card">
+			<input type="password" bind:value={unlockPassword} placeholder="Enter password to unlock" />
+			<div style="margin-top: .75rem;">
+				<button on:click|preventDefault={handleUnlock}>Unlock</button>
+			</div>
+		</div>
+	{:else}
+		<div style="display:flex; gap:.5rem; margin-bottom:.5rem;">
+			<button class="secondary" on:click={goBack}>Back</button>
+			<button class="secondary" on:click={lock}>Log Out</button>
+		</div>
+	{/if}
+
+	{#if state === 'main-menu'}
+		<div class="card flex-gap-small flex-col">
+			<button on:click={() => setState('editor', true)}>Create new post</button>
+			<button
+				on:click={() => {
+					postType = 'news';
+					setState('posts');
+				}}>Edit news</button
+			>
+			<button
+				on:click={() => {
+					postType = 'event';
+					setState('posts');
+				}}>Edit event</button
+			>
+		</div>
+	{:else if state === 'posts'}
+		<div class="card">
+			<h3>{postType === 'news' ? 'News Posts' : 'Event Posts'}</h3>
+			<table class="post-table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Title</th>
+						<th>Launch Date</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#each posts as post}
+						<tr>
+							<td>{post.id}</td>
+							<td>{post.title}</td>
+							<td>{post.launchDate}</td>
+							<td>
+								<button on:click={() => editPost(post)}>Edit</button>
+							</td>
+							<td>
+								<button on:click={() => deletePost(post)}>Delete</button>
+							</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		</div>
+	{:else if state === 'editor'}
+		<div class="card">
+			<div class="row" style="justify-content:space-between; align-items:center;">
+				<h3>{id ? 'Edit Post' : 'Create a new post'}</h3>
+			</div>
+			<form
+				on:submit|preventDefault={savePost}
+				style="margin-top: .75rem; display:grid; gap:.75rem;"
+			>
+				<label>ID:</label> <input bind:value={id} disabled />
+				<!-- Post type & launch date -->
 				<div class="row">
 					<div>
-						<label>Password</label>
-						<input type="password" bind:value={unlockPassword} placeholder="Enter to unlock" />
+						<label>Post type</label>
+						<select bind:value={postType}>
+							<option value="news">NewsPost</option> <option value="event">EventPost</option>
+						</select>
+					</div>
+					<div>
+						<label>Date launch</label> <input type="datetime-local" bind:value={dateLaunchStr} />
 					</div>
 				</div>
-				<div style="margin-top: .75rem; display:flex; gap:.5rem;">
-					<button on:click|preventDefault={handleUnlock}>Unlock</button>
-				</div>
-			</div>
-		{:else}
-			<div class="card" style="margin-top: 1rem;">
-				<div style="display:flex; justify-content: space-between; align-items:center; gap: .75rem;">
-					<h3>Create a new post</h3>
-					<div style="display:flex; gap:.5rem; align-items:center;">
-						<button class="secondary" on:click={lock}>Log Out</button>
-					</div>
-				</div>
-
-				<form on:submit={upsertPost} style="margin-top: .75rem; display:grid; gap:.75rem;">
-					<div class="row">
-						<div>
-							<label>Post type</label>
-							<select bind:value={postType}>
-								<option value="news">NewsPost</option>
-								<option value="event">EventPost</option>
-							</select>
-						</div>
-						<div>
-							<label>Date launch</label>
-							<input type="datetime-local" bind:value={dateLaunchStr} />
-						</div>
-					</div>
-
-					<div>
-						<label>Titles & Content</label>
-						<div class="langs">
-							{#each ['cn', 'en', 'nl'] as Lang[] as lang}
-								<div
-									class="lang-col {activeLang === lang ? 'activeBox' : ''}"
-									on:focusin={() => (activeLang = lang)}
-								>
-									<div class="lang-field">
-										<label class="sub">Title ({lang})</label>
-										<input bind:value={titles[lang]} placeholder="Title" />
-									</div>
-									<div class="lang-field">
-										<label class="sub">Content ({lang})</label>
-										<textarea
-											style="resize: none;"
-											bind:value={contents[lang]}
-											placeholder="Content"
-										></textarea>
-									</div>
+				<!-- Titles & Content -->
+				<div>
+					<label>Titles & Content</label>
+					<div class="langs">
+						{#each ['CN', 'EN', 'NL'] as locale: Locale}
+							<div
+								class="locale-col {activeLang === locale ? 'activeBox' : ''}"
+								on:focusin={() => (activeLang = locale)}
+							>
+								<div class="locale-field">
+									<label class="sub">Title ({locale})</label>
+									<input bind:value={titles[locale]} placeholder="Title" />
 								</div>
-							{/each}
-						</div>
-					</div>
-
-					{#if postType === 'news'}
-						<div>
-							<label><input type="checkbox" bind:checked={isPinned} /> Pinned</label>
-						</div>
-					{/if}
-
-					{#if postType === 'event'}
-						<fieldset style="border:none; padding:0; margin-top:.25rem;">
-							<legend><strong>Event details</strong></legend>
-							<div class="row">
-								<div>
-									<label>Event start</label>
-									<input type="datetime-local" bind:value={eventStartStr} />
-								</div>
-								<div>
-									<label>Event end</label>
-									<input type="datetime-local" bind:value={eventEndStr} />
-								</div>
-							</div>
-							<div>
-								<label>Signup link</label>
-								<input placeholder="https://…" bind:value={linkSignUp} />
-							</div>
-							<div class="row-3">
-								<div>
-									<label>Location name</label>
-									<input bind:value={locationName} />
-								</div>
-								<div>
-									<label>Street</label>
-									<input bind:value={streetName} />
-								</div>
-								<div>
-									<label>No.</label>
-									<input bind:value={streetNumber} />
-								</div>
-							</div>
-							<div class="row-3">
-								<div>
-									<label>Postal code</label>
-									<input bind:value={postalCode} />
-								</div>
-								<div>
-									<label>City</label>
-									<input bind:value={city} />
-								</div>
-								<div>
-									<label>Country</label>
-									<input bind:value={country} />
-								</div>
-							</div>
-						</fieldset>
-					{/if}
-					<!-- Links: dynamic list -->
-					<div>
-						<label>Links</label>
-						<div style="display:flex; flex-direction:column; gap:.5rem;">
-							{#each links as link, i}
-								<div class="row" style="gap:.5rem; align-items:center;">
-									<div style="flex:1;">
-										<input
-											placeholder="https://example.com"
-											bind:value={links[i]}
-											on:input={(e) => updateLink(i, (e.target as HTMLInputElement).value)}
-										/>
-									</div>
-									<button type="button" class="secondary" on:click={() => removeLink(i)}
-										>Remove</button
-									>
-								</div>
-							{/each}
-							<button type="button" on:click={addLink}>+ Add Link</button>
-						</div>
-					</div>
-
-					<!-- Images: upload from device -->
-					<div>
-						<label>Images</label>
-						<input type="file" multiple accept="image/*" on:change={handleImageUpload} />
-						{#if images.length}
-							<div class="thumbs">
-								{#each images as img, i}
-									<div class="thumb">
-										<img src={img} alt="preview" />
-										<button type="button" class="secondary small" on:click={() => removeImage(i)}
-											>Remove</button
-										>
-									</div>
-								{/each}
-							</div>
-						{/if}
-					</div>
-
-					<div style="display:flex; gap:.5rem;">
-						<button type="button" class="secondary" on:click={resetForm}>Reset</button>
-						<button type="submit">Create post</button>
-					</div>
-				</form>
-			</div>
-
-			<div class="list">
-				<h3>Posts ({posts.length})</h3>
-				{#if posts.length === 0}
-					<p class="muted">No posts yet.</p>
-				{:else}
-					<div style="display:grid; gap:.5rem;">
-						{#each posts as p}
-							<div class="list-item">
-								<div>
-									<div>
-										<strong>#{(p as any).id}</strong> — {p instanceof NewsPost
-											? 'NewsPost'
-											: 'EventPost'}
-										{#if p instanceof NewsPost && p.isPinned}<span class="pill">pinned</span>{/if}
-										{#if p instanceof EventPost && p.isPassed}<span class="pill">passed</span>{/if}
-									</div>
-									<div class="muted">Launch: {p.dateLaunch.toISOString()}</div>
-									<div>
-										{p.titles.en || '(no title en)'}
-										<span class="muted">/ {p.titles.nl || '(no title nl)'}</span>
-										<span class="muted">/ {p.titles.cn || '(no title cn)'}</span>
-									</div>
-								</div>
-								<div style="display:flex; gap:.5rem;">
-									<button class="secondary" on:click={() => removePost((p as any).id)}
-										>Delete</button
-									>
+								<div class="locale-field">
+									<label class="sub">Content ({locale})</label>
+									<textarea bind:value={contents[locale]} placeholder="Content" style="resize:none;"
+									></textarea>
 								</div>
 							</div>
 						{/each}
 					</div>
+				</div>
+				<!-- News / Event Specific -->
+				{#if postType === 'news'}
+					<div><label><input type="checkbox" bind:checked={isPinned} /> Pinned</label></div>
 				{/if}
-			</div>
-		{/if}
-	</form>
+				{#if postType === 'event'}
+					<fieldset style="border:none; padding:0; margin-top:.25rem;">
+						<legend><strong>Event details</strong></legend>
+						<div class="row">
+							<div>
+								<label>Event start</label><input type="datetime-local" bind:value={eventStartStr} />
+							</div>
+							<div>
+								<label>Event end</label><input type="datetime-local" bind:value={eventEndStr} />
+							</div>
+						</div>
+						<div>
+							<label>Signup link</label><input placeholder="https://…" bind:value={linkSignUp} />
+						</div>
+						<div class="row-3">
+							<div><label>Location name</label><input bind:value={locationName} /></div>
+							<div><label>Street</label><input bind:value={streetName} /></div>
+							<div><label>No.</label><input bind:value={streetNumber} /></div>
+						</div>
+						<div class="row-3">
+							<div><label>Postal code</label><input bind:value={postalCode} /></div>
+							<div><label>City</label><input bind:value={city} /></div>
+							<div><label>Country</label><input bind:value={country} /></div>
+						</div>
+					</fieldset>
+				{/if}
+				<!-- Links -->
+				<div>
+					<label>Links</label>
+					<div style="display:flex; flex-direction:column; gap:.5rem;">
+						{#each links as link, i}
+							<div class="row" style="gap:.5rem; align-items:center;">
+								<input
+									placeholder="https://example.com"
+									bind:value={links[i]}
+									on:input={(e) => updateLink(i, (e.target as HTMLInputElement).value)}
+								/>
+								<button type="button" class="secondary" on:click={() => removeLink(i)}
+									>Remove</button
+								>
+							</div>
+						{/each} <button type="button" on:click={addLink}>+ Add Link</button>
+					</div>
+				</div>
+				<!-- Images -->
+				<div>
+					<label>Images</label>
+					<input type="file" multiple accept="image/*" on:change={handleImageUpload} />
+					{#if images.length}
+						<div class="thumbs">
+							{#each images as img, i}
+								<div class="thumb">
+									<img src={img} alt="preview" />
+									<button type="button" class="secondary small" on:click={() => removeImage(i)}
+										>Remove</button
+									>
+								</div>
+							{/each}
+						</div>
+					{/if}
+				</div>
+				<div style="display:flex; gap:.5rem;">
+					<button type="button" class="secondary" on:click={resetForm}>Reset</button>
+					<button type="submit">{id ? 'Update Post' : 'Create Post'}</button>
+				</div>
+			</form>
+		</div>
+	{/if}
 </section>
 
 <style>
+	.post-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 1rem;
+	}
+	.post-table th,
+	.post-table td {
+		border: 1px solid var(--border, #e6e6e6);
+		padding: 0.5rem;
+		text-align: left;
+	}
+	.post-table th {
+		background: var(--surface-2, #fafafa);
+	}
+	tr:nth-child(even) {
+		background: #f9f9f9;
+	}
+
 	.thumbs {
 		display: flex;
 		gap: 0.5rem;
@@ -479,7 +433,7 @@
 		gap: 0.75rem;
 		align-items: stretch;
 	}
-	.lang-col {
+	.locale-col {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
@@ -487,24 +441,15 @@
 		min-width: 0;
 		transition: flex 0.15s ease;
 	}
-	.lang-col.activeBox {
+	.locale-col.activeBox {
 		flex: 2;
 	}
-	.lang-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background: var(--surface-2, #fafafa);
-		border: 1px solid var(--border, #e6e6e6);
-		padding: 0.4rem 0.6rem;
-		border-radius: 0.5rem;
-	}
-	.lang-field .sub {
+	.locale-field .sub {
 		font-size: 0.85rem;
 		color: var(--muted, #6b7280);
 	}
-	.lang-field input,
-	.lang-field textarea {
+	.locale-field input,
+	.locale-field textarea {
 		width: 100%;
 	}
 
@@ -517,17 +462,5 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 0.75rem;
-	}
-	.pill {
-		display: inline-block;
-		margin-left: 0.5rem;
-		padding: 0.1rem 0.4rem;
-		border-radius: 999px;
-		background: #eef2ff;
-		color: #3730a3;
-		font-size: 0.75rem;
-	}
-	.muted {
-		color: var(--muted, #6b7280);
 	}
 </style>
