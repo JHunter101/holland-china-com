@@ -46,7 +46,7 @@
 
 <!-- About Main Text -->
 <section class="screen-tuck flex-natural text--justify flex-col">
-	<h1 class="subtitle text-large">{$langData['00_shared_about_header_about_us'] || 'About Us'}</h1>
+	<h1 class="subtitle text-large">{$langData['00_shared-about-header-about_us']}</h1>
 	<p>{$langData['HCC_01_about-main-desc-1']}</p>
 	<p>{$langData['HCC_01_about-main-desc-2']}</p>
 	<div class="flex-gap-small flex-col">
@@ -65,7 +65,7 @@
 
 <!-- Team Members -->
 <section class="screen-tuck flex-natural flex-col">
-	<h1 class="subtitle text-large">{$langData['00_shared_about_header_our_team'] || 'Our Team'}</h1>
+	<h1 class="subtitle text-large">{$langData['00_shared-about-header-our_team']}</h1>
 	<div id="about-team-grid" class="grid-nest flex-gap-small">
 		{#each $teamMembers as member, index}
 			<div class="card" on:click={() => toggleMember(index)}>

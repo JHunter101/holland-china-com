@@ -31,7 +31,7 @@
 
 <section class="screen-tuck flex-natural text--justify flex-col">
 	<h1 class="subtitle text-large">
-		{$langData['00_shared-header-nav-services'] || 'Our Services'}
+		{$langData['00_shared-partners-header-our_partners']}
 	</h1>
 	<p>{$langData['HCC_04_services-main-desc-1']}</p>
 	<p>

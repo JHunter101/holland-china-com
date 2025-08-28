@@ -49,7 +49,7 @@
 {#if !(upcomingEvents.length === 0 && page > 1)}
 	<section id="events-past" class="screen-tuck flex-gap-small flex-col">
 		<h2 class="subtitle text-large text-alt">
-			{$langData['00_shared_events-section-title-upcoming_events']}
+			{$langData['00_shared-events-header-upcoming_events']}
 		</h2>
 		{#if loadingUpcoming}
 			<p>Loading upcoming events...</p>
@@ -65,7 +65,7 @@
 
 <section id="events-future" class="screen-tuck flex-gap-small flex-col">
 	<h2 class="subtitle text-large text-alt">
-		{$langData['00_shared_events-section-title-past_events']}
+		{$langData['00_shared-events-header-past_events']}
 	</h2>
 	{#if loadingPast}
 		<p>Loading past events...</p>

@@ -34,6 +34,7 @@ header nav a {
   color: inherit;
   font-size: 1.2rem;
   padding: 0 min(3vw, 1rem);
+  margin: 0;
 }
 
 header .nav-shadow {
@@ -94,7 +95,7 @@ header .language-select {
   text-shadow: none !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .dropdown-content {
     padding-top: min(4vh, 1rem);
     position: absolute;
@@ -125,7 +126,7 @@ header .language-select {
 }
 
 /* Mobile menu */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .nav-close.show {
     display: inline;
     pointer-events: auto;

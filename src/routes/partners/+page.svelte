@@ -19,8 +19,8 @@
 </script>
 
 <section class="screen-tuck flex-natural text--justify flex-col">
-	<h1 class="subtitle text-large">
-		{$langData['00_shared-header-nav-partners'] || 'Our Partners'}
+	<h1 class="subtitle text-large text-center">
+		{$langData['00_shared-partners-header-our_partners']}
 	</h1>
 	<div id="partners-grid" class="grid-nest flex-gap-small">
 		{#each $partners as partner}

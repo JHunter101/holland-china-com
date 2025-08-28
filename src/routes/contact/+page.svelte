@@ -4,7 +4,7 @@
 
 <section class="screen-tuck flex-natural flex-gap-small">
 	<div>
-		<h1 class="subtitle text-large">{$langData['00_shared-header-nav-contact']}</h1>
+		<h1 class="subtitle text-large">{$langData['00_shared-contact-header-contact_us']}</h1>
 		<!-- Main header -->
 		<h2 class="header text-medium">
 			{$langData['00_shared_contact-main-header-1']}

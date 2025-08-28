@@ -24,8 +24,13 @@ id,component,section,item,no,cn,en,nl
 00_shared-header-nav-news,00_shared,header,nav,news,新闻,News,Nieuws
 00_shared-header-nav-partners,00_shared,header,nav,partners,合作伙伴,Partners,Partners
 00_shared-header-nav-services,00_shared,header,nav,services,服务,Services,Diensten
-00_shared-about-header-about_us,00_shared,about,header,about_us,关于我们,About Us,Über uns
-00_shared-about-header-our_team,00_shared,about,header,our_team,我们的团队,Our Team,Unser Team
+00_shared-about-header-about_us,00_shared,about,header,about_us,关于我们,About Us,Over ons
+00_shared-home-header-next_event,00_shared,home,header,next_event,下一个活动,Next Event,Volgend evenement
+00_shared-home-header-latest_news,00_shared,home,header,latest_news,最新消息,Latest News,Laatste nieuws
+00_shared-services-header-our_services,00_shared,services,header,our_services,我们的服务,Our Services,Onze diensten
+00_shared-partners-header-our_partners,00_shared,partners,header,our_partners,我们的合作伙伴,Our Partners,Onze partners
+00_shared-contact-header-contact_us,00_shared,contact,header,contact_us,联系我们,Contact Us,Contact
+00_shared-about-header-our_team,00_shared,about,header,our_team,我们的团队,Our Team,Ons team
 HCC_00_home-hero-header-1,HCC_00_home,hero,header,1,连接欧亚，共创未来。,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
 HCC_00_home-hero-li-1,HCC_00_home,hero,li,1,为中荷及欧盟企业的跨国业务提供高端优质的顾问服务,High-quality consulting services for cross-border China–Netherlands/EU business,Hoogwaardige adviesdiensten voor grens-overschrijdende China–Nederland/EU zaken
 HCC_00_home-hero-li-2,HCC_00_home,hero,li,2,提供中欧两地的商业机遇与合作伙伴甄选,Business opportunities and partner selection in China and Europe,Zakelijke kansen en partnerselectie in China en Europa
@@ -176,8 +181,8 @@ SEAN_01_about-team-member_role-2,SEAN_01_about,team,member_role,2,副主席,Vice
 SEAN_01_about-team-member_role-3,SEAN_01_about,team,member_role,3,董事,Board Member,Bestuurslid
 SEAN_01_about-team-member_role-4,SEAN_01_about,team,member_role,4,董事,Board Member,Bestuurslid
 SEAN_01_about-team-member_role-5,SEAN_01_about,team,member_role,5,亚洲区董事,Asia Board Member,Bestuurslid Azië
-00_shared_events-section-title-past_events,00_shared_events,section,title,past_events,往期活动,Past events,Vorige activiteiten
-00_shared_events-section-title-upcoming_events,00_shared_events,section,title,upcoming_events,活动预告,Upcoming events,Aankomende activiteiten
+00_shared-events-header-past_events,00_shared,events,header,past_events,往期活动,Past events,Vorige activiteiten
+00_shared-events-header-upcoming_events,00_shared,events,header,upcoming_events,活动预告,Upcoming events,Aankomende activiteiten
 SEAN_04_services-list-item-1,SEAN_04_services,list,item,1,在欧洲和亚洲组织商业网络与合作活动,Business networking and collaboration events in Europe and Asia,Zakelijke netwerken en samenwerkingsactiviteiten in Europa en Azië
 SEAN_04_services-list-item-2,SEAN_04_services,list,item,2,组织代表团商务考察，提供市场洞察与战略支持,Delegation business visits to provide market insights and strategic support,Organiseren van zakelijke netwerken en samenwerkingsactiviteiten
 SEAN_04_services-list-item-3,SEAN_04_services,list,item,3,寻找和匹配商业合作伙伴，推动战略联盟,Partner matching and strategic alliance facilitation,"Opsporen en koppelen van zakelijke partners, het stimuleren van strategische allianties"

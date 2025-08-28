@@ -47,12 +47,15 @@
 
 <header id="header" class="nav-solid">
 	<nav class="nav">
-		<div class="nav-icons flex">
+		<div class="nav-icons flex" style="align-items: center !important;">
 			<a href="/" class="nav-logo" rel="external">
 				<i class="carbon-language"></i>
-				{$langData[navKeyMap['home']]}
+				<img
+					src={'img/common/hcc.png'}
+					alt={'HollandChina Logo'}
+					style="object-fit: contain; max-height:5vh"
+				/>
 			</a>
-
 			<i class="nav-burger ri-menu-line" on:click={toggleMenu} class:show={!menuOpen}></i>
 			<i class="nav-close ri-close-line" on:click={toggleMenu} class:show={menuOpen}></i>
 		</div>
