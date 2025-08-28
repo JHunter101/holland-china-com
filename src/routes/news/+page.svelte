@@ -47,7 +47,7 @@
 			<PostNews {post} />
 		{/each}
 	{:else}
-		<p>No news available.</p>
+		<p>{$langData['00_shared-news-subheader-no-recent-found']}</p>
 	{/if}
 
 	<div class="pagination">

@@ -2,6 +2,7 @@
 	import { currentLang } from '$lib/stores';
 	import type { EventPost } from '$lib/models/event';
 	import { derived } from 'svelte/store';
+	import { langData } from '$lib/stores';
 	import EventCalendar from '$lib/components/EventCal.svelte';
 	export let post: EventPost;
 
@@ -37,7 +38,9 @@
 		<div class="post-ps">
 			<p>{$displayContent}</p>
 		</div>
-		<a class="read-more" href={`/events/${post.id}`}>Read more</a>
+		<a class="read-more" href={`/events/${post.id}`}>
+			{$langData['00_shared-events-header-past_events']}</a
+		>
 	</div>
 
 	{#if post.images && post.images.length > 0}

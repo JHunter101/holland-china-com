@@ -5,18 +5,29 @@
 
 	export let post: EventPost;
 
-	const langCode = derived(currentLang, ($currentLang) => $currentLang);
+	const formattedDate = derived(currentLang, ($currentLang) => {
+		const year = post.eventStart.getFullYear();
+		const day = post.eventStart.getDate();
+
+		let month: string;
+
+		if ($currentLang === 'CN') {
+			month = `${post.eventStart.getMonth() + 1}月`; // months are 0-indexed
+			return { year, month, day: `${day}日` };
+		} else {
+			month = post.eventStart.toLocaleString($currentLang, { month: 'short' }).toUpperCase();
+			return { year, month, day };
+		}
+	});
 </script>
 
 <div class="event-date flex-col">
 	<div class="event-cal-top flex-col">
-		<p class="header text-medium text-center">{post.eventStart.getFullYear()}</p>
+		<p class="header text-medium text-center">{$formattedDate.year}</p>
 	</div>
 	<div class="event-cal-bot flex-col">
-		<p class="header text-large text-center">
-			{post.eventStart.toLocaleString($currentLang, { month: 'short' }).toUpperCase()}
-		</p>
-		<p class="header text-large text-center">{post.eventStart.getDate()}</p>
+		<p class="header text-large text-center">{$formattedDate.month}</p>
+		<p class="header text-large text-center">{$formattedDate.day}</p>
 	</div>
 </div>
 

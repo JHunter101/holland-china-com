@@ -58,7 +58,7 @@
 				<PostEvent {post} />
 			{/each}
 		{:else}
-			<p>No upcoming events.</p>
+			<p>{$langData['00_shared-events-subheader-no-upcoming-found']}</p>
 		{/if}
 	</section>
 {/if}
@@ -74,7 +74,7 @@
 			<PostEvent {post} />
 		{/each}
 	{:else}
-		<p>No past events.</p>
+		<p>{$langData['00_shared-events-subheader-no-recent-found']}</p>
 	{/if}
 
 	<div class="pagination">
