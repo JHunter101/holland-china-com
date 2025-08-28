@@ -2,11 +2,10 @@
 	import { onMount } from 'svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { langData, loadNL } from '$lib/stores';
-	import { derived } from 'svelte/store';
+	import { initLang } from '$lib/stores';
 
 	onMount(() => {
-		loadNL();
+		initLang();
 	});
 </script>
 
