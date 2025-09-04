@@ -38,7 +38,7 @@
 
 <style>
 	#partners-grid {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-columns: repeat(5, minmax(0, 1fr));
 		gap: 0;
 	}
 
@@ -47,9 +47,21 @@
 		aspect-ratio: 4 / 2;
 	}
 
+	@media (max-width: 1550px) {
+		#partners-grid {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
 	@media (max-width: 1200px) {
 		#partners-grid {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 768px) {
+		#partners-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 </style>
