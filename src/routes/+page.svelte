@@ -28,10 +28,7 @@
 
 	onMount(async () => {
 		highlightEvent = await loadFirstUpcomingEvent();
-		console.log('Loaded event:', highlightEvent);
-
 		highlightNews = await loadLatestNews(3);
-		console.log('Loaded news:', highlightNews);
 	});
 </script>
 

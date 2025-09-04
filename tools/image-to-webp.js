@@ -12,7 +12,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 // Supported extensions (now includes .avif)
-const exts = [".jpg", ".jpeg", ".png", ".svg", ".avif"];
+const exts = [".jpg", ".jpeg", ".png", ".svg", ".avif", ".webp"];
 
 fs.readdirSync(inputDir).forEach(async (file) => {
     const ext = path.extname(file).toLowerCase();
@@ -31,13 +31,6 @@ fs.readdirSync(inputDir).forEach(async (file) => {
                 .toFile(webpPath);
 
             console.log(`✅ Converted: ${file} → ${baseName}.webp`);
-
-            // Convert to AVIF
-            await sharp(inputPath)
-                .avif({ quality: 100, lossless: true })
-                .toFile(avifPath);
-
-            console.log(`✅ Converted: ${file} → ${baseName}.avif`);
         } catch (err) {
             console.error(`❌ Error converting ${file}:`, err);
         }

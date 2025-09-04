@@ -14,15 +14,5 @@
     },
     "links": [],
     "images": [],
-    "location": {
-        "name": "Beilei Theatre",
-        "streetName": "",
-        "streetNumber": "",
-        "postalCode": "",
-        "city": "Guangzhou",
-        "country": "China"
-    },
-    "eventStart": "2024-12-13T19:00:00.000Z",
-    "eventEnd": "2024-12-13T21:30:00.000Z",
-    "linkSignUp": ""
+    "isPinned": "false"
 }

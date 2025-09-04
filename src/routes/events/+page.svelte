@@ -27,7 +27,7 @@
 		loadingPast = true;
 		const events = await loadEventPosts(page, pageSize);
 		const now = new Date();
-		upcomingEvents = events.filter((e) => e.eventEnd >= now);
+		upcomingEvents = events.filter((e) => e.eventEnd >= now).reverse();
 		loadingUpcoming = false;
 		pastEvents = events.filter((e) => e.eventEnd < now);
 		loadingPast = false;

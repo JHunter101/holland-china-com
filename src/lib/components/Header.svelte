@@ -53,7 +53,7 @@
 				<img
 					src={'img/common/hcc.png'}
 					alt={'HollandChina Logo'}
-					style="object-fit: contain; max-height:5vh"
+					style="object-fit: contain; max-height:7.5vh"
 				/>
 			</a>
 			<i class="nav-burger ri-menu-line" on:click={toggleMenu} class:show={!menuOpen}></i>

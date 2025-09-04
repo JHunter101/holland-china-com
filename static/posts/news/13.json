@@ -14,15 +14,5 @@
     },
     "links": [],
     "images": [],
-    "location": {
-        "name": "Koninklijke IGC",
-        "streetName": "",
-        "streetNumber": "",
-        "postalCode": "",
-        "city": "Amsterdam",
-        "country": "Netherlands"
-    },
-    "eventStart": "2025-06-05T19:00:00.000Z",
-    "eventEnd": "2025-06-05T21:30:00.000Z",
-    "linkSignUp": ""
+    "isPinned": "false"
 }

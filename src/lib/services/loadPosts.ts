@@ -68,7 +68,7 @@ export async function loadNewsPosts(page?: number, pageSize?: number): Promise<N
 
 
 export async function loadFirstUpcomingEvent(): Promise<EventPost | null> {
-    const events = await loadEventPosts();
+    const events = (await loadEventPosts()).reverse();
     const now = new Date();
     const upcomingEvent = events.find(event => event.dateLaunch > now);
     return upcomingEvent || null;

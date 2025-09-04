@@ -27,11 +27,17 @@
 		</a>
 
 		<div class="subheader text-small post-data flex-col">
-			{#if post.location.name}
-				<h3>{post.location.name}</h3>
-			{/if}
-			{#if addressLine}
-				<h3>{addressLine}</h3>
+			{#if post.location.name || addressLine}
+				<h3>
+					<a
+						href={'https://www.google.com/maps/search/?api=1&query=' +
+							encodeURIComponent(`${post.location.name || ''} ${addressLine || ''}`)}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{post.location.name}{post.location.name && addressLine ? ': ' : ''}{addressLine}
+					</a>
+				</h3>
 			{/if}
 		</div>
 
@@ -39,7 +45,7 @@
 			<p>{$displayContent}</p>
 		</div>
 		<a class="read-more" href={`/events/${post.id}`}>
-			{$langData['00_shared-events-header-past_events']}</a
+			{$langData['00_shared-common-span-read_more']}</a
 		>
 	</div>
 

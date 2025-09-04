@@ -2,6 +2,7 @@
 	import { currentLang } from '$lib/stores';
 	import type { NewsPost } from '$lib/models/news';
 	import { derived } from 'svelte/store';
+	import { langData } from '$lib/stores';
 	export let post: NewsPost;
 
 	const displayTitle = derived(
@@ -12,20 +13,8 @@
 		currentLang,
 		($currentLang) => post.contents[$currentLang as keyof typeof post.contents] || post.contents.EN
 	);
-
-	const pinnedLabel = derived(currentLang, ($currentLang) => {
-		if ($currentLang === 'NL') return 'Uitgelicht';
-		if ($currentLang === 'CN') return '置顶帖子';
-		return 'Pinned';
-	});
 </script>
 
-{#if post.isPinned}
-	<div class="pinned-banner">
-		<i class="ri-pushpin-line text-small"></i>
-		<span class="text-small">{$pinnedLabel}</span>
-	</div>
-{/if}
 <div class="post-news flex-responsive flex-gap-large w100">
 	<div class="post-text flex-item-2">
 		<a class="header text-medium" href={`/news/${post.id}`}>
@@ -33,8 +22,10 @@
 		</a>
 		<div class="subheader text-small post-data flex-row">
 			<h3>
-				Posted by Xu Xiao Jia on
-				{post.dateLaunch.toLocaleDateString(
+				{$langData['00_shared-news-subheader-posted_by']} Xu Xiao Jia {$langData[
+					'00_shared-news-subheader-on'
+				]}
+				{new Date(post.dateLaunch).toLocaleDateString(
 					$currentLang === 'NL' ? 'nl' : $currentLang === 'CN' ? 'zh-CN' : 'en'
 				)}
 			</h3>
@@ -42,7 +33,9 @@
 		<div class="post-ps">
 			<p>{$displayContent}</p>
 		</div>
-		<a class="read-more" href={`/news/${post.id}`}>Read more</a>
+		<a class="read-more" href={`/news/${post.id}`}>
+			{$langData['00_shared-common-span-read_more']}</a
+		>
 	</div>
 
 	{#if post.images && post.images.length > 0}
@@ -56,27 +49,3 @@
 		</div>
 	{/if}
 </div>
-
-<style>
-	.ri-pushpin-line {
-		margin: 0;
-	}
-
-	.pinned-banner,
-	.pinned-banner * {
-		color: rgb(var(--color-accent-alt));
-	}
-
-	.pinned-banner {
-		background-color: rgba(var(--color-accent-alt), 0.05);
-		border-bottom: 1px solid rgb(var(--color-accent-alt));
-		padding: min(1vh, 0.25rem) min(3vw, 1rem);
-		display: flex;
-		width: 100%;
-		gap: 0.5rem;
-	}
-
-	.pinned-banner span {
-		margin: 0;
-	}
-</style>

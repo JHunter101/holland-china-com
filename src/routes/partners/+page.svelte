@@ -29,7 +29,7 @@
 					<img src={partner.img} alt={partner.name} class="card-img" />
 				</div>
 				<div class="text-center">
-					<h3 class="header text-medium">{partner.name}</h3>
+					<h3 class="header text-standard">{partner.name}</h3>
 				</div>
 			</div>
 		{/each}
@@ -38,7 +38,7 @@
 
 <style>
 	#partners-grid {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 		gap: 0;
 	}
 
@@ -49,7 +49,7 @@
 
 	@media (max-width: 1200px) {
 		#partners-grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
 </style>

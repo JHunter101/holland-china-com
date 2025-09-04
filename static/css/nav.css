@@ -1,5 +1,5 @@
 main> :first-child:not(.fullscreen-image) {
-  padding-top: min(20vh, 5rem);
+  padding-top: min(24vh, 6rem);
 }
 
 header {
@@ -16,12 +16,12 @@ header nav {
   align-items: center;
   flex-direction: row;
   position: relative;
-  padding: min(4vh, 1rem) 15vw;
+  padding: min(2vh, 0.5rem) 15vw;
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 header nav li {
@@ -95,6 +95,25 @@ header .language-select {
   text-shadow: none !important;
 }
 
+
+/* Burger & close */
+.nav-burger,
+.nav-close {
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  display: none;
+  pointer-events: none;
+}
+
+.nav-icons {
+  flex: 2
+}
+
+#nav-menu {
+  flex: 5
+}
+
 @media (min-width: 1500px) {
   .dropdown-content {
     padding-top: min(4vh, 1rem);
@@ -115,18 +134,15 @@ header .language-select {
   }
 }
 
-/* Burger & close */
-.nav-burger,
-.nav-close {
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: opacity 0.3s, transform 0.3s;
-  display: none;
-  pointer-events: none;
-}
-
 /* Mobile menu */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
+
+  #nav-menu,
+  #nav-menu * {
+    color: rgb(var(--color-black));
+    text-shadow: none;
+  }
+
   .nav-close.show {
     display: inline;
     pointer-events: auto;
@@ -143,7 +159,6 @@ header .language-select {
     align-items: center;
     flex-direction: row;
     position: relative;
-    padding: min(4vh, 1rem) 5vw;
   }
 
   #nav-menu {

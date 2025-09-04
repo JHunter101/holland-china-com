@@ -14,15 +14,5 @@
     },
     "links": [],
     "images": [],
-    "location": {
-        "name": "BYD Global Headquarters",
-        "streetName": "",
-        "streetNumber": "",
-        "postalCode": "",
-        "city": "Shenzhen",
-        "country": "China"
-    },
-    "eventStart": "2024-10-30T09:00:00.000Z",
-    "eventEnd": "2024-10-30T17:00:00.000Z",
-    "linkSignUp": ""
+    "isPinned": "false"
 }

@@ -51,9 +51,13 @@
 	{/if}
 
 	<div class="pagination">
-		<button on:click={() => changePage(page - 1)} disabled={page === 1}>Previous</button>
-		<span>Page {page} of {totalPages}</span>
-		<button on:click={() => changePage(page + 1)} disabled={page === totalPages}>Next</button>
+		<button on:click={() => changePage(page - 1)} disabled={page === 1}
+			>{$langData['00_shared-pagination-span-previous']}</button
+		>
+		<span>{$langData['00_shared-pagination-span-page']} {page} / {totalPages}</span>
+		<button on:click={() => changePage(page + 1)} disabled={page === totalPages}
+			>{$langData['00_shared-pagination-span-next']}</button
+		>
 	</div>
 </section>
 

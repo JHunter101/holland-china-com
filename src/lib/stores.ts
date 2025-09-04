@@ -14,9 +14,6 @@ export async function initLang(): Promise<void> {
 
 async function loadLang(langCode: Locale): Promise<void> {
     currentLang.set(langCode);
-    console.log('Loading language:', langCode);
-    console.trace(); // 👈 this prints the current stack trace
-
 
     if (browser) {
         localStorage.setItem(STORAGE_KEY, langCode);

@@ -33,17 +33,24 @@ id,component,section,item,no,cn,en,nl
 00_shared-header-nav-services,00_shared,header,nav,services,服务,Services,Diensten
 00_shared-home-header-latest_news,00_shared,home,header,latest_news,最新消息,Latest News,Laatste nieuws
 00_shared-home-header-next_event,00_shared,home,header,next_event,下一个活动,Next Event,Volgend evenement
+00_shared-events-span-register_now,00_shared,events,span,register_now,立即注册,Register Now,Registreer nu
 00_shared-news-subheader-no-recent-found,00_shared,news,subheader,no-recent-found,未找到近期新闻,No recent news,Geen recente nieuws
+00_shared-news-subheader-on,00_shared,news,subheader,on,于,on,op
+00_shared-news-subheader-posted_by,00_shared,news,subheader,posted_by,发布者,Posted by,Gepubliceerd door
+00_shared-pagination-span-next,00_shared,pagination,span,next,下一页,Next,Volgende
+00_shared-pagination-span-page,00_shared,pagination,span,page,页面,Page,Pagina
+00_shared-pagination-span-previous,00_shared,pagination,span,previous,上一页,Previous,Vorige
 00_shared-partners-header-our_partners,00_shared,partners,header,our_partners,我们的合作伙伴,Our Partners,Onze partners
 00_shared-services-header-our_services,00_shared,services,header,our_services,我们的服务,Our Services,Onze diensten
-HCC_00_home-hero-header-1,HCC_00_home,hero,header,1,连接欧亚，共创未来。,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
-HCC_00_home-hero-li-1,HCC_00_home,hero,li,1,为中荷及欧盟企业的跨国业务提供高端优质的顾问服务,High-quality consulting services for cross-border China–Netherlands/EU business,Hoogwaardige adviesdiensten voor grens-overschrijdende China–Nederland/EU zaken
-HCC_00_home-hero-li-2,HCC_00_home,hero,li,2,提供中欧两地的商业机遇与合作伙伴甄选,Business opportunities and partner selection in China and Europe,Zakelijke kansen en partnerselectie in China en Europa
-HCC_00_home-hero-li-3,HCC_00_home,hero,li,3,市场洞察与策略咨询,Market insights and strategic consulting,Marktinzichten en strategisch advies
-HCC_00_home-hero-li-4,HCC_00_home,hero,li,4,跨文化、跨语言的企业培训服务,Cross-cultural and cross-linguistic corporate training,Cross-culturele en taalkundige bedrijfstraining
-HCC_00_home-hero-li-5,HCC_00_home,hero,li,5,提供中欧两地的公关活动组织服务,PR and event organization in China and Europe,PR- en evenementenorganisatie in China en Europa
-HCC_00_home-hero-li-6,HCC_00_home,hero,li,6,物业管理及外派人员的相关服务,Property management and expatriate support services,Vastgoedbeheer en expat-ondersteuningsdiensten
-HCC_00_home-hero-li-7,HCC_00_home,hero,li,7,支持采购与产品研发,Support for procurement and product development,Ondersteuning bij inkoop en productontwikkeling
+HCC_00_home-hero-header-1,HCC_00_home,hero,header,1,帮助您在中国同荷兰及欧盟国家的项目合作取得成功!,"Helping you achieve success in project cooperation between China, the Netherlands, and EU countries!","U helpen slagen in project­samenwerking tussen China, Nederland en EU-landen!"
+HCC_00_home-hero-li-1,HCC_00_home,hero,li,1,连接欧亚，共创未来。,"Connecting Eurasia, Creating the Future","Verbinden van Eurazië, Samen de toekomst creëren"
+HCC_00_home-hero-li-2,HCC_00_home,hero,li,2,为中荷及欧盟企业的跨国业务提供高端优质的顾问服务,High-quality consulting services for cross-border China–Netherlands/EU business,Hoogwaardige adviesdiensten voor grens-overschrijdende China–Nederland/EU zaken
+HCC_00_home-hero-li-3,HCC_00_home,hero,li,3,提供中欧两地的商业机遇与合作伙伴甄选,Business opportunities and partner selection in China and Europe,Zakelijke kansen en partnerselectie in China en Europa
+HCC_00_home-hero-li-4,HCC_00_home,hero,li,4,市场洞察与策略咨询,Market insights and strategic consulting,Marktinzichten en strategisch advies
+HCC_00_home-hero-li-5,HCC_00_home,hero,li,5,跨文化、跨语言的企业培训服务,Cross-cultural and cross-linguistic corporate training,Cross-culturele en taalkundige bedrijfstraining
+HCC_00_home-hero-li-6,HCC_00_home,hero,li,6,提供中欧两地的公关活动组织服务,PR and event organization in China and Europe,PR- en evenementenorganisatie in China en Europa
+HCC_00_home-hero-li-7,HCC_00_home,hero,li,7,物业管理及外派人员的相关服务,Property management and expatriate support services,Vastgoedbeheer en expat-ondersteuningsdiensten
+HCC_00_home-hero-li-8,HCC_00_home,hero,li,8,支持采购与产品研发,Support for procurement and product development,Ondersteuning bij inkoop en productontwikkeling
 HCC_01_about-main-desc-1,HCC_01_about,main,desc,1,HollandChina Consulting（荷中咨询）协助中国与欧洲的企业和机构建立联系、发掘商机、设定战略投资目标、并筛选合作伙伴，积极促进中欧双边投资与贸易的发展。我们提供业务设立与拓展的专业咨询、量身定制的跨文化和跨语言企业培训，以及在中欧两地举办各类大型论坛、研讨会、展会及商业活动，为跨国企业提供全方位的高端优质跨境顾问服务。,"HollandChina Consulting (HCC) assists Chinese and European companies and institutions in establishing connections, discovering business opportunities, setting strategic investment goals, and selecting partners. We actively promote bilateral investment and trade development. We provide professional consulting for business setup and expansion, tailored cross-cultural and cross-linguistic corporate training, and organize various large-scale forums, seminars, exhibitions, and business events in China and Europe, offering comprehensive high-end cross-border consulting services.","HollandChina Consulting (HCC) helpt Chinese en Europese bedrijven en instellingen bij het leggen van contacten, het ontdekken van zakelijke kansen, het bepalen van strategische investeringsdoelen en het selecteren van partners. Wij bevorderen actief bilaterale investeringen en handel. Wij bieden professionele consultancy voor bedrijfsopzet en uitbreiding, op maat gemaakte cross-culturele en taalkundige bedrijfstrainingen en organiseren diverse grootschalige forums, seminars, tentoonstellingen en zakelijke evenementen in China en Europa, en bieden een volledige hoogwaardige grensoverschrijdende adviesservice."
 HCC_01_about-main-desc-2,HCC_01_about,main,desc,2,成功的背后是风险与机遇的并存。许多中国企业和机构在欧洲的商业计划因水土不服而失败；很多欧洲和荷兰的企业与机构因准备不足而失意中国市场。只有借助精准高效的专业帮助，才能做出明智的选择，成为企业价值创造的来源。,Success involves both risk and opportunity. Many Chinese companies fail in Europe due to cultural mismatch; many European and Dutch companies fail in China due to lack of preparation. Only with precise professional assistance can wise choices be made and create value.,Succes omvat zowel risico als kans. Veel Chinese bedrijven falen in Europa door culturele mismatch; veel Europese en Nederlandse bedrijven falen in China door gebrek aan voorbereiding. Alleen met nauwkeurige professionele ondersteuning kunnen verstandige keuzes worden gemaakt en waarde gecreëerd.
 HCC_01_about-principle-header-1,HCC_01_about,principle,header,1,精准,Accurate,Accuraat
@@ -121,6 +128,8 @@ HCC_05_partners-partner-img-30,HCC_05_partners,partner,img,30,ncbc,ncbc,ncbc
 HCC_05_partners-partner-img-31,HCC_05_partners,partner,img,31,needs_coltd_japan,needs_coltd_japan,needs_coltd_japan
 HCC_05_partners-partner-img-32,HCC_05_partners,partner,img,32,nexai_coltd_japan,nexai_coltd_japan,nexai_coltd_japan
 HCC_05_partners-partner-img-33,HCC_05_partners,partner,img,33,owsjp_coltd_japan,owsjp_coltd_japan,owsjp_coltd_japan
+HCC_05_partners-partner-img-34,HCC_05_partners,partner,img,34,hk_eatob,hk_eatob,hk_eatob
+HCC_05_partners-partner-img-35,HCC_05_partners,partner,img,35,ewha,ewha,ewha
 HCC_05_partners-partner-img-4,HCC_05_partners,partner,img,4,henkel,henkel,henkel
 HCC_05_partners-partner-img-5,HCC_05_partners,partner,img,5,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs
 HCC_05_partners-partner-img-6,HCC_05_partners,partner,img,6,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs
@@ -150,10 +159,12 @@ HCC_05_partners-partner-title-27,HCC_05_partners,partner,title,27,德维特堡,K
 HCC_05_partners-partner-title-28,HCC_05_partners,partner,title,28,艾音乐厅,Muziekgebouw ‘IJ,Muziekgebouw ‘IJ
 HCC_05_partners-partner-title-29,HCC_05_partners,partner,title,29,绿色游猎,Green Safaris,Green Safaris
 HCC_05_partners-partner-title-3,HCC_05_partners,partner,title,3,富格罗,Fugro,Fugro
-HCC_05_partners-partner-title-30,HCC_05_partners,partner,title,30,荷兰中国商会,Netherlands China Business Council,Netherlands China Business Council
-HCC_05_partners-partner-title-31,HCC_05_partners,partner,title,31,Needs 株式会社,"Needs Co.,Ltd (JAPAN)","Needs Co., Ltd (Japan)"
-HCC_05_partners-partner-title-32,HCC_05_partners,partner,title,32,Nexai 株式会社,"Nexai Co.,Ltd (Japan)","Nexai Co., Ltd (Japan)"
-HCC_05_partners-partner-title-33,HCC_05_partners,partner,title,33,OWSJP 株式会社,"OWSJP Co.,Ltd (Japan)","OWSJP Co., Ltd (Japan)"
+HCC_05_partners-partner-title-30,HCC_05_partners,partner,title,30,荷中商务理事会,Netherlands China Business Council,Netherlands China Business Council
+HCC_05_partners-partner-title-31,HCC_05_partners,partner,title,31,Needs 株式会社,"Needs Co.,Ltd","Needs Co.,Ltd"
+HCC_05_partners-partner-title-32,HCC_05_partners,partner,title,32,Nexai 株式会社,"Nexai Co.,Ltd","Nexai Co.,Ltd"
+HCC_05_partners-partner-title-33,HCC_05_partners,partner,title,33,OWSJP 株式会社,"OWSJP Co.,Ltd","OWSJP Co.,Ltd"
+HCC_05_partners-partner-title-34,HCC_05_partners,partner,title,34,⾹港經濟貿易辦事處,Hong Kong Economic and Trade Office Brussles,Hongkongs Economisch en Handelsbureau Brussel
+HCC_05_partners-partner-title-35,HCC_05_partners,partner,title,35,韩国梨花⼥⼦⼤学,Ewha Womans University,Ewha Womans University
 HCC_05_partners-partner-title-4,HCC_05_partners,partner,title,4,汉高,Henkel,Henkel
 HCC_05_partners-partner-title-5,HCC_05_partners,partner,title,5,荷兰外交部,Dutch Ministry of Foreign Affairs,Ministerie van Buitenlandse Zaken
 HCC_05_partners-partner-title-6,HCC_05_partners,partner,title,6,荷兰经济事务部,Dutch Ministry of Economic Affairs,Ministerie van Economische Zaken

@@ -14,15 +14,5 @@
     },
     "links": [],
     "images": [],
-    "location": {
-        "name": "InterContinental Amstel Amsterdam",
-        "streetName": "",
-        "streetNumber": "",
-        "postalCode": "",
-        "city": "Amsterdam",
-        "country": "Netherlands"
-    },
-    "eventStart": "2025-04-24T18:00:00.000Z",
-    "eventEnd": "2025-04-24T21:00:00.000Z",
-    "linkSignUp": ""
+    "isPinned": "false"
 }

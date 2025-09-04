@@ -7,7 +7,8 @@
 		let i = 1;
 		while ($langData[`HCC_05_partners-partner-title-${i}`]) {
 			list.push({
-				name: $langData[`HCC_05_partners-partner-title-${i}`]
+				name: $langData[`HCC_05_partners-partner-name-${i}`],
+				img: `/img/partners/${$langData[`HCC_05_partners-partner-img-${i}`]}.webp`
 			});
 			i++;
 		}
@@ -49,7 +50,7 @@
 				</h2>
 				<div id="logo-dump" class="flex-row flex-wrap">
 					{#each $partners as partner}
-						<span>{partner.name}</span>
+						<img src={partner.img} alt={partner.name} />
 					{/each}
 				</div>
 			</div>
@@ -83,11 +84,17 @@
 
 <style>
 	#logo-dump {
+		display: flex;
 		flex-wrap: wrap;
+		gap: 1rem;
 		justify-content: space-evenly;
+		align-items: center;
 	}
 
-	#logo-dump span {
-		padding: min(2vh, 0.5rem);
+	#logo-dump img {
+		max-height: 5vh;
+		max-width: 10vh;
+		object-fit: contain;
+		padding: min(1vh, 0.025rem);
 	}
 </style>
