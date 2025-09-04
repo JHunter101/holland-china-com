@@ -183,11 +183,13 @@
 					</span>
 					<div>
 						<a
-							href={post.linkSignUp.startsWith('http')
-								? post.linkSignUp
-								: `https://${post.linkSignUp}`}
-							target="_blank"
-							rel="noopener noreferrer"
+							href={post.linkSignUp.includes('@')
+								? `mailto:${post.linkSignUp}`
+								: post.linkSignUp.startsWith('http')
+									? post.linkSignUp
+									: `https://${post.linkSignUp}`}
+							target={post.linkSignUp.includes('@') ? undefined : '_blank'}
+							rel={post.linkSignUp.includes('@') ? undefined : 'noopener noreferrer'}
 						>
 							{$langData['00_shared-events-span-register_now']}
 						</a>
