@@ -6,7 +6,7 @@
 	import { derived } from 'svelte/store';
 	import type { EventPost } from '$lib/models/event';
 	import type { NewsPost } from '$lib/models/news';
-	import { loadFirstUpcomingEvent, loadLatestNews } from '$lib/services/loadPosts';
+	import { loadUpcomingEvents, loadLatestNews } from '$lib/services/loadPosts';
 
 	const heroPrefix = 'HCC_00_home';
 	const heroTitle = derived(
@@ -23,11 +23,11 @@
 		return points;
 	});
 
-	let highlightEvent: EventPost | null = null;
+	let highlightEvents: EventPost[] = [];
 	let highlightNews: NewsPost[] = [];
 
 	onMount(async () => {
-		highlightEvent = await loadFirstUpcomingEvent();
+		highlightEvents = await loadUpcomingEvents();
 		highlightNews = await loadLatestNews(3);
 	});
 </script>
@@ -47,16 +47,18 @@
 	</div>
 </section>
 
-{#if highlightEvent}
+{#if highlightEvents}
 	<section id="home-event" class="screen-tuck flex-col">
-		<h2 class="subtitle text-large text-alt">Featured Event</h2>
-		<PostEvent post={highlightEvent} />
+		<h2 class="subtitle text-large text-alt">{$langData[`00_shared-home-header-next_event`]}</h2>
+		{#each highlightEvents as post (post.id)}
+			<PostEvent {post} />
+		{/each}
 	</section>
 {/if}
 
 {#if highlightNews.length}
 	<section id="home-news" class="screen-tuck flex-col">
-		<h2 class="subtitle text-large text-alt">Latest News</h2>
+		<h2 class="subtitle text-large text-alt">{$langData[`00_shared-home-header-latest_news`]}</h2>
 		{#each highlightNews as post (post.id)}
 			<PostNews {post} />
 		{/each}
