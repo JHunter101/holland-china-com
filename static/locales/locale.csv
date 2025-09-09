@@ -32,7 +32,7 @@ id,component,section,item,no,cn,en,nl
 00_shared-header-nav-partners,00_shared,header,nav,partners,合作伙伴,Partners,Partners
 00_shared-header-nav-services,00_shared,header,nav,services,服务,Services,Diensten
 00_shared-home-header-latest_news,00_shared,home,header,latest_news,最新消息,Latest News,Laatste nieuws
-00_shared-home-header-next_event,00_shared,home,header,next_event,下一个活动,Next Event,Volgend evenement
+00_shared-home-header-next_event,00_shared,home,header,next_event,活动预告,Upcoming events,Aankomende activiteiten
 00_shared-events-span-register_now,00_shared,events,span,register_now,立即注册,Register Now,Registreer nu
 00_shared-news-subheader-no-recent-found,00_shared,news,subheader,no-recent-found,未找到近期新闻,No recent news,Geen recente nieuws
 00_shared-news-subheader-on,00_shared,news,subheader,on,于,on,op
@@ -130,6 +130,7 @@ HCC_05_partners-partner-img-32,HCC_05_partners,partner,img,32,nexai_coltd_japan,
 HCC_05_partners-partner-img-33,HCC_05_partners,partner,img,33,owsjp_coltd_japan,owsjp_coltd_japan,owsjp_coltd_japan
 HCC_05_partners-partner-img-34,HCC_05_partners,partner,img,34,hk_eatob,hk_eatob,hk_eatob
 HCC_05_partners-partner-img-35,HCC_05_partners,partner,img,35,ewha,ewha,ewha
+HCC_05_partners-partner-img-36,HCC_05_partners,partner,img,36,ccc_dh,ccc_dh,ccc_dh
 HCC_05_partners-partner-img-4,HCC_05_partners,partner,img,4,henkel,henkel,henkel
 HCC_05_partners-partner-img-5,HCC_05_partners,partner,img,5,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs,dutch_ministry_of_foreign_affairs
 HCC_05_partners-partner-img-6,HCC_05_partners,partner,img,6,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs,dutch_ministry_of_economic_affairs
@@ -165,6 +166,7 @@ HCC_05_partners-partner-title-32,HCC_05_partners,partner,title,32,Nexai 株式�
 HCC_05_partners-partner-title-33,HCC_05_partners,partner,title,33,OWSJP 株式会社,"OWSJP Co.,Ltd","OWSJP Co.,Ltd"
 HCC_05_partners-partner-title-34,HCC_05_partners,partner,title,34,⾹港經濟貿易辦事處,Hong Kong Economic and Trade Office Brussles,Hongkongs Economisch en Handelsbureau Brussel
 HCC_05_partners-partner-title-35,HCC_05_partners,partner,title,35,韩国梨花⼥⼦⼤学,Ewha Womans University,Ewha Womans University
+HCC_05_partners-partner-title-36,HCC_05_partners,partner,title,36,中国⽂化中⼼-海⽛,China Cultural Center – The Hague,Chinees Cultureel Centrum – Den Haag
 HCC_05_partners-partner-title-4,HCC_05_partners,partner,title,4,汉高,Henkel,Henkel
 HCC_05_partners-partner-title-5,HCC_05_partners,partner,title,5,荷兰外交部,Dutch Ministry of Foreign Affairs,Ministerie van Buitenlandse Zaken
 HCC_05_partners-partner-title-6,HCC_05_partners,partner,title,6,荷兰经济事务部,Dutch Ministry of Economic Affairs,Ministerie van Economische Zaken
