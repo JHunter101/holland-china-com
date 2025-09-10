@@ -134,7 +134,7 @@ nav .dropdown .dropdown-content i {
 
   #nav-menu {
     position: absolute;
-    top: min(8vh, 4rem);
+    top: min(10.5vh, 5.25rem);
     left: 0;
     width: 100%;
     height: calc(100vh - min(8vh, 4rem));
