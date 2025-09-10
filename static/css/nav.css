@@ -134,10 +134,10 @@ nav .dropdown .dropdown-content i {
 
   #nav-menu {
     position: absolute;
-    top: min(10.5vh, 5.25rem);
+    top: min(9vh, 4.5rem);
     left: 0;
     width: 100%;
-    height: calc(100vh - min(8vh, 4rem));
+    height: calc(100vh - min(9vh, 4.5rem));
     background: rgb(var(--color-bg-main));
     overflow-y: auto;
     transform: translateY(-100%);
