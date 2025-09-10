@@ -30,7 +30,11 @@
 					<p>KvK: 12345678</p>
 					<p>VAT: NL123456789B01</p>
 					<p>
-						<a href="https://www.linkedin.com/company/hollandchina" target="_blank" rel="noopener">
+						<a
+							href="https://www.linkedin.com/company/hollandchina-bv"
+							target="_blank"
+							rel="noopener"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="100"
