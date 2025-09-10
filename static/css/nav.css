@@ -12,10 +12,7 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  position: relative;
   padding: min(2vh, 0.5rem) 15vw;
 }
 
@@ -30,8 +27,6 @@ header nav li {
 
 header nav a {
   font-family: var(--main-font);
-  text-decoration: none;
-  color: inherit;
   font-size: 1.2rem;
   padding: 0 min(3vw, 1rem);
   margin: 0;
@@ -65,34 +60,36 @@ header.nav-transparent * {
   text-shadow: 2px 2px 4px rgb(var(--color-black));
 }
 
-header .language-select {
+.nav-transparent #nav-lan {
   border-left: 2px solid #ddd;
 }
 
-.dropdown {
+.nav-solid #nav-lan {
+  border-left: 2px solid rgb(var(--color-accent-alt));
+}
+
+nav .dropdown {
   overflow: hidden;
 }
 
-.dropdown-content {
+nav .dropdown-content {
   display: none;
   width: inherit;
   z-index: 1;
   flex-direction: column;
   transition: display 5.5s ease;
+  padding-top: min(4vh, 1rem);
+  position: absolute;
 }
 
-.dropdown:hover .dropdown-content {
+nav .dropdown:hover .dropdown-content {
   display: flex;
   gap: min(1vh, 0.25rem);
 }
 
-.nav-solid #nav-lan i {
-  color: rgb(var(--color-accent-alt)) !important;
-}
-
-.nav-transparent #nav-lan .dropdown-content i {
-  color: rgb(var(--color-accent-alt)) !important;
-  text-shadow: none !important;
+nav .dropdown .dropdown-content i {
+  padding: min(2vw, 0.5rem) min(2vw, 0.5rem);
+  box-sizing: unset !important;
 }
 
 
@@ -114,25 +111,7 @@ header .language-select {
   flex: 6;
 }
 
-@media (min-width: 1550px) {
-  .dropdown-content {
-    padding-top: min(4vh, 1rem);
-    position: absolute;
-  }
 
-  .dropdown .dropdown-content i {
-    padding: min(4vw, 1rem) min(4.5vw, 1.5rem);
-    box-sizing: unset !important;
-  }
-
-  .nav-transparent #nav-lan {
-    border-left: 2px solid #ddd;
-  }
-
-  .nav-solid #nav-lan {
-    border-left: 2px solid rgb(var(--color-accent-alt));
-  }
-}
 
 /* Mobile menu */
 @media screen and (max-width: 1550px) {
@@ -151,14 +130,6 @@ header .language-select {
   .nav-burger.show {
     display: inline;
     pointer-events: auto;
-  }
-
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
   }
 
   #nav-menu {
@@ -201,6 +172,11 @@ header .language-select {
   .nav-icons {
     justify-content: space-between;
     width: 100%;
+  }
+
+  .nav-icons i {
+    margin: 0;
+    padding: 0 min(3vw, 1rem);
   }
 }
 

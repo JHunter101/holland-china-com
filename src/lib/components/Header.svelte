@@ -49,7 +49,6 @@
 	<nav class="nav">
 		<div class="nav-icons flex" style="align-items: center !important;">
 			<a href="/" class="nav-logo" rel="external">
-				<i class="carbon-language"></i>
 				<img
 					src={'img/common/hcc.png'}
 					alt={'HollandChina Logo'}
@@ -71,26 +70,26 @@
 						</a>
 					</li>
 				{/each}
-
-				<li id="nav-lan" class="dropdown">
-					<a class="nav-link flex-container dropbtn">
-						<i class={`flag-icon flag-icon-${currentFlag}`}></i>
-						<i class="ri-arrow-down-s-fill"></i>
-					</a>
-
-					<div class="dropdown-content">
-						<a on:click={loadNL}>
-							<i class="nav-link flag-icon flag-icon-nl"></i>
-						</a>
-						<a on:click={loadEN}>
-							<i class="nav-link flag-icon flag-icon-gb"></i>
-						</a>
-						<a on:click={loadCN}>
-							<i class="nav-link flag-icon flag-icon-cn"></i>
-						</a>
-					</div>
-				</li>
 			</ul>
+		</div>
+
+		<div id="nav-lan" class="dropdown">
+			<a class="nav-link flex-container dropbtn">
+				<i class={`flag-icon flag-icon-${currentFlag}`}></i>
+				<i class="ri-arrow-down-s-fill"></i>
+			</a>
+
+			<div class="dropdown-content">
+				<a on:click={loadNL}>
+					<i class="nav-link flag-icon flag-icon-nl"></i>
+				</a>
+				<a on:click={loadEN}>
+					<i class="nav-link flag-icon flag-icon-gb"></i>
+				</a>
+				<a on:click={loadCN}>
+					<i class="nav-link flag-icon flag-icon-cn"></i>
+				</a>
+			</div>
 		</div>
 	</nav>
 </header>
