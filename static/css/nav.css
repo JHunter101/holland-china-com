@@ -193,3 +193,10 @@ footer>* {
   text-decoration: none;
   font-family: var(--main-font);
 }
+
+@media screen and (max-width: 1200px) {
+
+  header nav {
+    padding: min(2vh, 0.5rem) 5vw;
+  }
+}
